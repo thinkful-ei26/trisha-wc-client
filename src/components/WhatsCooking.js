@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './WhatsCooking.css';
-import Header from './Header';
-import Controls from './Controls';
+// import Header from './Header';
+// import Controls from './Controls';
 import Recipes from './RecipeList';
 
 class WhatsCooking extends Component {
@@ -32,7 +32,7 @@ class WhatsCooking extends Component {
   render() {
     return (
       <div className="whats-cooking">
-        < Header  
+        {/* < Header  
           // info={this.state.info}
           // handleInfoClick={ () => this.handleInfoClick()}
           // handleGotItClick={ () => this.handleGotItClick()}
@@ -41,7 +41,7 @@ class WhatsCooking extends Component {
           // handleAddRecipe={ () => this.handleAddRecipe()}
           // handleCancelClick={ () => this.handleCancelClick()}
         />
-        <Controls />
+        <Controls /> */}
         <Recipes />
         {/*
         <Condensed />
