@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './WhatsCooking.css';
 import Header from './Header';
 import Controls from './Controls';
-import Recipes from './Recipes';
+import Recipes from './RecipeList';
 
 class WhatsCooking extends Component {
   constructor(props) {
