@@ -16,25 +16,20 @@ export class RecipeList extends React.Component {
   componentDidMount() {
     this.props.dispatch(fetchRecipes());
   }
-  // const cheeseList = [
-  //   "Bath Blue",
-  //   "Barkham Blue",
-  //   "Buxton Blue"
-  // ];
 
   render () {
     const { recipes } = this.props;
-    const recipe = recipes.map( (recipe, index) => (
-      <li key={index}>
-        {recipe}
-      </li>
-    ));
+    // const recipe = recipes.map( (recipe, index) => (
+    //   <li key={index}>
+    //     {recipe}
+    //   </li>
+    // ));
 
     console.log(this.props);
 
     return (
       <ul className="recipe-list">
-        <li>{recipe}</li>
+        <li>{recipes}</li>
       </ul>
     )
   }

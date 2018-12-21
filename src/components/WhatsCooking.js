@@ -5,41 +5,41 @@ import Controls from './Controls';
 import Recipes from './RecipeList';
 
 class WhatsCooking extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      info: false,
-      addRecipe: false
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     info: false,
+  //     addRecipe: false
+  //   }
+  // }
 
-  handleInfoClick() {
-    this.setState( { info: true } );
-  }
+  // handleInfoClick() {
+  //   this.setState( { info: true } );
+  // }
 
-  handleGotItClick() {
-    this.setState( { info: false } );
-  }
+  // handleGotItClick() {
+  //   this.setState( { info: false } );
+  // }
 
-  handleAddRecipe() {
-    this.setState( { addRecipe: true } );
-  }
+  // handleAddRecipe() {
+  //   this.setState( { addRecipe: true } );
+  // }
 
-  handleCancelClick() {
-    this.setState( { addRecipe: false } );
-  }
+  // handleCancelClick() {
+  //   this.setState( { addRecipe: false } );
+  // }
 
   render() {
     return (
       <div className="whats-cooking">
         < Header  
-          info={this.state.info}
-          handleInfoClick={ () => this.handleInfoClick()}
-          handleGotItClick={ () => this.handleGotItClick()}
+          // info={this.state.info}
+          // handleInfoClick={ () => this.handleInfoClick()}
+          // handleGotItClick={ () => this.handleGotItClick()}
           
-          addRecipe={this.state.addRecipe}
-          handleAddRecipe={ () => this.handleAddRecipe()}
-          handleCancelClick={ () => this.handleCancelClick()}
+          // addRecipe={this.state.addRecipe}
+          // handleAddRecipe={ () => this.handleAddRecipe()}
+          // handleCancelClick={ () => this.handleCancelClick()}
         />
         <Controls />
         <Recipes />
