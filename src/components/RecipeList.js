@@ -19,17 +19,17 @@ export class RecipeList extends React.Component {
 
   render () {
     const { recipes } = this.props;
-    // const recipe = recipes.map( (recipe, index) => (
-    //   <li key={index}>
-    //     {recipe}
-    //   </li>
-    // ));
+    const recipe = recipes.map( (recipe, index) => (
+      <li key={index}>
+        {recipe}
+      </li>
+    ));
 
-    console.log(this.props);
+    console.log('props from RecipeList',this.props);
 
     return (
       <ul className="recipe-list">
-        <li>{recipes}</li>
+        <li>{recipe}</li>
       </ul>
     )
   }
