@@ -24,7 +24,6 @@ export function InfoModal(props) {
 }
 
 export const mapStateToProps = state => ({
-  // info: state.info
   info: state.navReducer.info
 });
 

@@ -5,21 +5,6 @@ import Header from './Header';
 import RecipeList from './RecipeList';
 
 class WhatsCooking extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     info: false,
-  //     addRecipe: false
-  //   }
-  // }
-
-  // handleInfoClick() {
-  //   this.setState( { info: true } );
-  // }
-
-  // handleGotItClick() {
-  //   this.setState( { info: false } );
-  // }
 
   // handleAddRecipe() {
   //   this.setState( { addRecipe: true } );
@@ -32,18 +17,9 @@ class WhatsCooking extends Component {
   render() {
     return (
       <div className="whats-cooking">
-         < Header  
-          // info={this.state.info}
-          // handleInfoClick={ () => this.handleInfoClick()}
-          // handleGotItClick={ () => this.handleGotItClick()}
-          
-          // addRecipe={this.state.addRecipe}
-          // handleAddRecipe={ () => this.handleAddRecipe()}
-          // handleCancelClick={ () => this.handleCancelClick()}
-        />
-        
+         < Header />
         {/*<Controls /> */}
-        {/* <RecipeList /> */}
+        <RecipeList />
         {/*
         <Condensed />
         <Detailed /> */}
