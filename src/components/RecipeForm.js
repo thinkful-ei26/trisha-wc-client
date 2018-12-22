@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { reduxForm, Field, /* SubmissionError, focus */ } from 'redux-form';
+import { Field, FieldArray, reduxForm, /* SubmissionError, focus */ } from 'redux-form';
 import Input from './Input';
 import { cancel } from '../actions/nav';
 // import { required, nonEmpty, validInput } from '../validators';
@@ -7,6 +7,43 @@ import { cancel } from '../actions/nav';
 export class ReportForm extends Component {
   render() {
     const { handleSubmit, pristine, submitting, reset } = this.props;
+
+    const renderField = ({ input, label, type, meta: { touched, error } }) => (
+      <div>
+        <label>{label}</label>
+        <div>
+          <input {...input} type={type} placeholder={label} />
+          {touched && error && <span>{error}</span>}
+        </div>
+      </div>
+    );
+    
+    const renderIng = ({ fields, meta: { error } }) => (
+      <ul>
+        <li>
+          <button type="button" onClick={() => fields.push()}>
+            Add Ingredient
+          </button>
+        </li>
+        {fields.map((ing, index) => (
+          <li key={index}>
+            <button
+              type="button"
+              title="Remove Ingredient"
+              onClick={() => fields.remove(index)}
+            >Remove Ingredient</button>
+            <Field
+              name={ing}
+              type="text"
+              component={renderField}
+              label={`Ingredient #${index + 1}`}
+            />
+          </li>
+        ))}
+        {error && <li className="error">{error}</li>}
+      </ul>
+    );
+    
     return (
       <div className="add-recipe-overlay">
         <form
@@ -34,15 +71,10 @@ export class ReportForm extends Component {
             label="Description:"
           />
 
-          <Field 
-            element="textarea"
-            name="ingredients" 
-            type="textarea"
-            id="ingredients"
-            component={Input}
-            label="Ingredients:"
+          <FieldArray 
+          name="ing"
+          component={renderIng}
           />
-
 
           <Field 
             element="input"
@@ -52,7 +84,6 @@ export class ReportForm extends Component {
             label="Image URL:"
             id="imgUrl" 
           />
-
 
           <Field 
             element="select"
@@ -102,20 +133,6 @@ export class ReportForm extends Component {
             className="close"
             onClick={ () => this.props.dispatch(cancel()) }
             >Cancel</button>
-
-          {/* <button 
-            type="button" 
-            onClick={() => this.props.handleCancelClick()}>Cancel
-          </button> */}
-            {/* 
-            Should use LINK here from redux-form
-            <a 
-              className="cancel" 
-              href="#"
-              onClick={ () => props.handleCancelClick() }
-            >Cancel</a>  
-            
-            */}
 
           </fieldset>
         </form>
