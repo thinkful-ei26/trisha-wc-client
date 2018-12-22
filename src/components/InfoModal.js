@@ -1,6 +1,8 @@
 import React from 'react';
+import { gotIt } from '../actions/nav';
+import { connect } from 'react-redux';
 
-export default function InfoModal(props) {
+export function InfoModal(props) {
     return (
       <div className="info-overlay" id="modal">
         <div className="info-content">
@@ -11,12 +13,17 @@ export default function InfoModal(props) {
             Corned beef cow ground round chuck. Spare ribs pork belly jerky pastrami flank jowl, pork loin landjaeger cow. Leberkas cupim kevin tenderloin beef ribs. Turducken prosciutto swine pork belly corned beef, chuck beef ribs. Swine doner cow, short ribs ribeye pork loin brisket bresaola rump boudin ground round spare ribs landjaeger picanha salami.
             </p>
             <a 
-            className="close" 
-            href="#info"
-            onClick={ () => props.handleGotItClick() }
+            className="close" href="#info"
+            onClick={ () => props.dispatch(gotIt()) }
             >Got It!</a>
           </div>
         </div>
       </div>
     );
 }
+
+export const mapStateToProps = state => ({
+  info: state.info
+});
+
+export default connect(mapStateToProps)(InfoModal);

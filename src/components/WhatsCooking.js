@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './WhatsCooking.css';
 import Header from './Header';
 // import Controls from './Controls';
-import Recipes from './RecipeList';
+import RecipeList from './RecipeList';
 
 class WhatsCooking extends Component {
   // constructor(props) {
@@ -43,7 +43,7 @@ class WhatsCooking extends Component {
         />
         
         {/*<Controls /> */}
-        <Recipes />
+        {/* <RecipeList /> */}
         {/*
         <Condensed />
         <Detailed /> */}
