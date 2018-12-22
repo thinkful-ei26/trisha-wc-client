@@ -1,70 +1,129 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
-import { reduxForm, Field } from 'redux-form';
- 
-// export default function AddRecipe(props) {
-//     return (
-//       <div className="add-recipe-overlay" id="addRecipe">
-//         <form className="newRecipe-form">
-//           <fieldset>
-//             <legend>Create a new recipe</legend>
-            
-//             <label for="title">Recipe Title:</label>
-//             <input for="title" name="title" type="text" className="input-recipe-title" aria-label="New recipe title input" placeholder="Example" required />
-            
-//             <label for="desc">Description:</label>
-//             <textarea for="desc" name="desc" className="input-recipe-desc" aria-label="new recipe input description" placeholder="This is a really awesome description"></textarea>
+import React, { Component } from 'react';
+import { reduxForm, Field, /* SubmissionError, focus */ } from 'redux-form';
+import Input from './Input';
+import { cancel } from '../actions/nav';
+// import { required, nonEmpty, validInput } from '../validators';
 
-//             <label for="ingredients">Ingredients List:</label>
-//             <textarea for="ingredients" name="ingredients" className="input-ingredients" aria-label="new recipe input ingredients" placeholder="Put each ingredient in its own line"></textarea>
-
-//             <label for="url">Image url:</label>
-//             <input for="url" name="url" type="text" className="input-image-url" aria-label="New recipe image url input" placeholder="https://www.example.com/" required />
-            
-//             <label for="prep">Prep Time:</label>
-//             <select for="prep" name="prep" className="input-prep" aria-label="new recipe dropdown prep time input">
-//               <option selected disabled>Prep time</option>
-//               <option value="15">15 minutes</option>
-//               <option value="30">30 minutes</option>
-//               <option value="60">1 hour</option>
-//               <option value="90">1.5 hours</option>
-//               <option value="120">2 hours</option>
-//             </select>
-
-//             <label for="cook">Cook Time:</label>
-//             <select for="cook" name="cook" className="input-cook" aria-label="new recipe dropdown cook time input">
-//               <option selected disabled>Prep time</option>
-//               <option value="15">15 minutes</option>
-//               <option value="30">30 minutes</option>
-//               <option value="60">1 hour</option>
-//               <option value="90">1.5 hours</option>
-//               <option value="120">2 hours</option>
-//             </select>
-            
-//             <p className="error-message js-error-message"></p>
-            
-//             <button type="submit" className="create-recipe-button">
-//               SAVE RECIPE
-//             </button>
-            
-//             <a 
-//               className="cancel" 
-//               href="#"
-//               onClick={ () => props.handleCancelClick() }
-//             >Cancel</a> 
-//             {/* <button type="button" className="cancel-create-recipe-button">CANCEL</button> */}
-//           </fieldset>
-//         </form>
-//       </div>
-//     );
-// }
-
-export class RecipeForm extends React.Component {
+export class ReportForm extends Component {
   render() {
-    return
+    const { handleSubmit, pristine, submitting, reset } = this.props;
+    return (
+      <div className="add-recipe-overlay">
+        <form
+          onSubmit={handleSubmit(values => this.onSubmit(values) )}
+        >
+        <fieldset>
+          <legend>Create a new recipe</legend>
+     {/*    {successMessage}
+        {errorMessage} */}
+          <Field 
+            element="input"
+            name="recipeTitle" 
+            type="text"
+            component={Input}
+            label="Recipe Title:"
+            id="recipeTitle" 
+          />
+
+          <Field 
+            element="textarea"
+            name="desc" 
+            type="textarea"
+            id="desc"
+            component={Input}
+            label="Description:"
+          />
+
+          <Field 
+            element="textarea"
+            name="ingredients" 
+            type="textarea"
+            id="ingredients"
+            component={Input}
+            label="Ingredients:"
+          />
+
+
+          <Field 
+            element="input"
+            name="imgUrl" 
+            type="text"
+            component={Input}
+            label="Image URL:"
+            id="imgUrl" 
+          />
+
+
+          <Field 
+            element="select"
+            name="prep"
+            component={Input}
+            id="prep"
+            label="Prep Time:"
+          >
+            <option>Duration:</option>
+            <option value="15">15 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="60">1 hour</option>
+            <option value="90">1 hour 30 minutes</option>
+            <option value="120">2 hours</option>
+          </Field>
+
+          <Field 
+            element="select"
+            name="cook"
+            component={Input}
+            id="cook"
+            label="Cook Time:"
+          >
+            <option>Duration:</option>
+            <option value="15">15 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="60">1 hour</option>
+            <option value="90">1 hour 30 minutes</option>
+            <option value="120">2 hours</option>
+          </Field>
+
+          {/* disable button if user hasn't touched form */ }
+          <button 
+            type="submit"
+            disabled={pristine || submitting}
+          >
+            Save Recipe
+          </button>
+
+          <button 
+            type="button" 
+            disabled={pristine || submitting} 
+            onClick={reset}>Clear Values
+          </button>
+
+          <button 
+            className="close"
+            onClick={ () => this.props.dispatch(cancel()) }
+            >Cancel</button>
+
+          {/* <button 
+            type="button" 
+            onClick={() => this.props.handleCancelClick()}>Cancel
+          </button> */}
+            {/* 
+            Should use LINK here from redux-form
+            <a 
+              className="cancel" 
+              href="#"
+              onClick={ () => props.handleCancelClick() }
+            >Cancel</a>  
+            
+            */}
+
+          </fieldset>
+        </form>
+      </div>
+    );
   }
 }
 
 export default reduxForm({
   form: 'addRecipe'
-})
+})(ReportForm);

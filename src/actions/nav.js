@@ -15,3 +15,7 @@ export const addRecipe = data => ({
   data
 })
 
+export const CANCEL_ADD_RECIPE = ' CANCEL_ADD_RECIPE';
+export const cancel = () => ({
+  type: CANCEL_ADD_RECIPE 
+})

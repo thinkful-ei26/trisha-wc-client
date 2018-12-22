@@ -13,10 +13,14 @@ export function InfoModal(props) {
             <p>
             Corned beef cow ground round chuck. Spare ribs pork belly jerky pastrami flank jowl, pork loin landjaeger cow. Leberkas cupim kevin tenderloin beef ribs. Turducken prosciutto swine pork belly corned beef, chuck beef ribs. Swine doner cow, short ribs ribeye pork loin brisket bresaola rump boudin ground round spare ribs landjaeger picanha salami.
             </p>
-            <a 
+            {/* <a 
             className="close" href="#info"
             onClick={ () => props.dispatch(gotIt()) }
-            >Got It!</a>
+            >Got It!</a> */}
+             <button 
+            className="close"
+            onClick={ () => props.dispatch(gotIt()) }
+            >Got It!</button>
           </div>
         </div>
       </div>
