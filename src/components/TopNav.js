@@ -6,7 +6,7 @@ import InfoModal from './InfoModal';
 export function TopNav(props) {
 
   if(props.info) { 
-    console.log(props.info)
+    console.log('props.info on TopNav', props.info)
     return ( 
       < InfoModal />
     ) 
@@ -18,7 +18,6 @@ export function TopNav(props) {
         <a 
           className="info" href="#info"
           aria-label="How to use this app"
-          // info={props.info}
           onClick={ () => {
             console.log('clicked info btn');
             props.dispatch(infoClick() )
@@ -33,7 +32,6 @@ export function TopNav(props) {
           href="#add-recipe"
           className="new"
           aria-label="Create a new recipe"
-          // addRecipe={props.addRecipe}
           onClick={() => {
             console.log('clicked addRecipe btn'); 
             props.dispatch(addRecipe() )
@@ -48,8 +46,10 @@ export function TopNav(props) {
 }
 
 export const mapStateToProps = state => ({
-  info: state.info,
-  addRecipe: state.addRecipe
+  // info: state.info,
+  // addRecipe: state.addRecipe
+  info: state.navReducer.info,
+  addRecipe: state.navReducer.addRecipe
 });
 
 export default connect(mapStateToProps)(TopNav);

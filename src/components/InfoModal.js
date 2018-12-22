@@ -3,6 +3,7 @@ import { gotIt } from '../actions/nav';
 import { connect } from 'react-redux';
 
 export function InfoModal(props) {
+  
     return (
       <div className="info-overlay" id="modal">
         <div className="info-content">
@@ -23,7 +24,8 @@ export function InfoModal(props) {
 }
 
 export const mapStateToProps = state => ({
-  info: state.info
+  // info: state.info
+  info: state.navReducer.info
 });
 
 export default connect(mapStateToProps)(InfoModal);
