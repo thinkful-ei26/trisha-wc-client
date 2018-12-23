@@ -8,3 +8,7 @@ export const nonEmpty = value => value.trim() !== '' ? undefined : 'Cannot be em
 export const validInput = value => ( /[a-z0-9~@#\^\$&\*\(\)-_\+=\[\]\{\}\|\\,.?'"!`%\s]*/i.test(value) ? undefined : 'Must contain valid input. Ok special characters: ~`!@#$%^&*()-_=+{}[];:"/,.?');
 
 export const validURL = value => (/^(http|https):\/\/[^ "]+$/.test(value) ? undefined : 'Must containd valid url');
+
+//values is returning undefined at this point
+// goal is to loop through values.ing and require/non-empty for each ingredient
+export const validIngredient = values => ( values ? undefined : console.log('something in ingredients', values));

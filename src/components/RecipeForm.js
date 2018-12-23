@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Field, FieldArray, reduxForm, /* SubmissionError, focus */ } from 'redux-form';
 import Input from './Input';
 import { cancel } from '../actions/nav';
-import { required, nonEmpty, validInput, validURL } from '../validators';
+import { required, nonEmpty, validInput, validURL, validIngredient } from '../validators';
+// import { Values } from "redux-form-website-template";
 
 export class ReportForm extends Component {
   onSubmit(values) {
@@ -97,7 +98,9 @@ export class ReportForm extends Component {
           <FieldArray 
           name="ing"
           component={renderIng}
+          validate={[validIngredient]}
           />
+           {/* <Values form="fieldArrays" /> */}
 
           <Field 
             element="input"
@@ -176,5 +179,6 @@ export class ReportForm extends Component {
 }
 
 export default reduxForm({
-  form: 'addRecipe'
+  form: 'addRecipe',
+  validIngredient
 })(ReportForm);
