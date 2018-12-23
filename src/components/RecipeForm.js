@@ -2,12 +2,30 @@ import React, { Component } from 'react';
 import { Field, FieldArray, reduxForm, /* SubmissionError, focus */ } from 'redux-form';
 import Input from './Input';
 import { cancel } from '../actions/nav';
-// import { required, nonEmpty, validInput } from '../validators';
+import { required, nonEmpty, validInput, validURL } from '../validators';
 
 export class ReportForm extends Component {
+  onSubmit(values) {
+    console.log('RecipeForm onSubmit values:',values);
+}
   render() {
-    const { handleSubmit, pristine, submitting, reset } = this.props;
+    const { handleSubmit, pristine, submitting, reset, submitSucceeded, error } = this.props;
 
+    let successMessage;
+    if (submitSucceeded) {
+      successMessage = (
+        <div className="message message-success">
+          Report submitted successfully
+        </div>
+      );
+    }
+
+    let errorMessage;
+    if (error) {
+        errorMessage = (
+          <div className="message message-error">{this.props.error}</div>
+        );
+    }
     const renderField = ({ input, label, type, meta: { touched, error } }) => (
       <div>
         <label>{label}</label>
@@ -54,8 +72,8 @@ export class ReportForm extends Component {
         >
         <fieldset>
           <legend>Create a new recipe</legend>
-     {/*    {successMessage}
-        {errorMessage} */}
+        {successMessage}
+        {errorMessage}
           <Field 
             element="input"
             name="recipeTitle" 
@@ -63,6 +81,7 @@ export class ReportForm extends Component {
             component={Input}
             label="Recipe Title:"
             id="recipeTitle" 
+            validate={[required, nonEmpty, validInput]}
           />
 
           <Field 
@@ -72,6 +91,7 @@ export class ReportForm extends Component {
             id="desc"
             component={Input}
             label="Description:"
+            validate={[required, nonEmpty, validInput]}
           />
 
           <FieldArray 
@@ -86,6 +106,7 @@ export class ReportForm extends Component {
             component={Input}
             label="Image URL:"
             id="imgUrl" 
+            validate={[validURL]}
           />
 
           <Field 
@@ -117,6 +138,16 @@ export class ReportForm extends Component {
             <option value="90">1 hour 30 minutes</option>
             <option value="120">2 hours</option>
           </Field>
+
+          <Field 
+            element="textarea"
+            name="directions" 
+            type="textarea"
+            id="directions"
+            component={Input}
+            label="Directions:"
+            validate={[required, nonEmpty, validInput]}
+          />
 
           {/* disable button if user hasn't touched form */ }
           <button 

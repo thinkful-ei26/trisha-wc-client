@@ -4,7 +4,7 @@ export default class Input extends Component {
 
   //React lifecycle added to help with focus
   componentDidUpdate(prevProps){
-    console.log('prevProps: ',prevProps)
+    // console.log('prevProps: ',prevProps)
     if(!prevProps.meta.active && this.props.meta.active) {
       this.input.focus();
     }
