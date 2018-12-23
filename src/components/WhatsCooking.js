@@ -5,15 +5,7 @@ import Header from './Header';
 import RecipeList from './RecipeList';
 
 class WhatsCooking extends Component {
-
-  // handleAddRecipe() {
-  //   this.setState( { addRecipe: true } );
-  // }
-
-  // handleCancelClick() {
-  //   this.setState( { addRecipe: false } );
-  // }
-
+  
   render() {
     return (
       <div className="whats-cooking">

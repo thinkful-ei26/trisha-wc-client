@@ -20,26 +20,29 @@ export class ReportForm extends Component {
     
     const renderIng = ({ fields, meta: { error } }) => (
       <ul>
-        <li>
-          <button type="button" onClick={() => fields.push()}>
-            Add Ingredient
-          </button>
-        </li>
         {fields.map((ing, index) => (
           <li key={index}>
-            <button
-              type="button"
-              title="Remove Ingredient"
-              onClick={() => fields.remove(index)}
-            >Remove Ingredient</button>
             <Field
               name={ing}
               type="text"
               component={renderField}
               label={`Ingredient #${index + 1}`}
             />
+             <button
+              type="button"
+              title="Remove Ingredient"
+              onClick={() => fields.remove(index)}
+            >
+              Remove Ingredient
+            </button>
           </li>
         ))}
+
+        <li>
+          <button type="button" onClick={() => fields.push()}>
+            Add Ingredient
+          </button>
+        </li>
         {error && <li className="error">{error}</li>}
       </ul>
     );
