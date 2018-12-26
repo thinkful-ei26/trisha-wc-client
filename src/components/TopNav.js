@@ -5,7 +5,7 @@ import InfoModal from './InfoModal';
 import RecipeForm from './RecipeForm';
 
 export function TopNav(props) {
-  console.log('props on TopNav', props)
+  // console.log('props on TopNav', props)
 
   if(props.info) { 
     return ( 
@@ -15,7 +15,7 @@ export function TopNav(props) {
 
   if(props.addRecipe) { 
     //this will always print if props.addRecipe is true
-    console.log('props.addRecipe on TopNav', props.addRecipe)
+    // console.log('props.addRecipe on TopNav', props.addRecipe)
     return ( 
       < RecipeForm />
     ) 
