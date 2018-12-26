@@ -3,7 +3,6 @@ import { Field, FieldArray, reduxForm, /* SubmissionError, focus */ } from 'redu
 import Input from './Input';
 import { cancel } from '../actions/nav';
 import { required, nonEmpty, validInput, validURL, validIngredient } from '../validators';
-// import { Values } from "redux-form-website-template";
 
 export class ReportForm extends Component {
   onSubmit(values) {

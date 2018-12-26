@@ -3,9 +3,9 @@ import { FETCH_RECIPES_REQUEST, FETCH_RECIPES_SUCCESS, FETCH_RECIPES_ERROR } fro
 
 const initialState = {
   recipes: [
-    // "Bath Blue",
-    // "Barkham Blue",
-    // "Buxton Blue"
+    // "Zucchini Meatballs",
+    // "Ddukbokki",
+    // "Bacon Scallop with Vinegrette Reduction"
   ],
   loading: false,
   error: null

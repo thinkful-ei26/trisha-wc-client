@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import fetchRecipes from '../actions';
+import './recipe-list.css';
 
 export class RecipeList extends React.Component {
 
@@ -9,17 +10,21 @@ export class RecipeList extends React.Component {
   }
 
   render () {
+    console.log('this.props on RecipeList', this.props);
     const { recipes } = this.props;
     const recipe = recipes.map( (recipe, index) => (
-      <li key={index}>
-        {recipe}
+      <li key={index} className="recipe">
+        {console.log('recipe inside of li',recipe)}
+        <h3>{`${recipe.title}`}</h3>
+        <p>{`${recipe.desc}`}</p>
+        <img src={recipe.imgUrl} alt={`recipe img for ${recipe.title}`} width="200px"/>
       </li>
     ));
-
-    console.log('props from RecipeList',this.props);
+ 
+    console.log('recipes from RecipeList',recipes);
 
     return (
-      <ul className="recipe-list">
+      <ul className="recipe-list" aria-live="polite">
         {recipe}
       </ul>
     )

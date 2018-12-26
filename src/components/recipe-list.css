@@ -1,0 +1,9 @@
+.recipe {
+  background-color: #666666;
+  padding: 1vh;
+  list-style: none;
+}
+
+.recipe:nth-child(even) {
+  background-color: #999999
+}
