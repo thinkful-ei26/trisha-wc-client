@@ -1,44 +1,97 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# What's Cooking App
+Not sure what to cook for your next meal? What's Cooking is a full-stack app that can help you narrow down your choices. On page load, a user can see a list of recipes. They can click on a recipe to see the necessary information to make the desired dish. A user can also click the "surprise me" button to generate a random recipe. In addition, a user can add a new recipe to the "What's Cooking?" app database. A user does not need to login in order to use my app.
 
-## Available Scripts
+## Requirements
+- [Curriculum Link](https://courses.thinkful.com/dev-301v1/assignment/2.9.4)
 
-In the project directory, you can run:
+## User Stories 
+What can my app do?
 
-### `npm start`
+### MVP
+**1. User can see a list of recipes when they first open the app** 
+All recipes in the list default to a "condensed" view showing only:
+* recipe title
+* image
+* description
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**2. My app will find and import enough recipes for it to be useful**
+- Choice 1: Use an open source recipe API. I included three possible API links below ( just incase something bad happens), but my go to is [Spoonacular's recipe API](https://spoonacular.com/api/docs/recipes-api).
+   - A. [Spoonacular's recipe API](https://spoonacular.com/api/docs/recipes-api)
+   - B. [RapidAPI's Recipe API](https://rapidapi.com/webknox/api/recipe/details)
+   - C. [Food2Fork](https://www.food2fork.com/about/api)
+- Choice 2: Manually write my recipe list (at least 10)
+- Choice 3: Do both choice 1 & 2
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+**3. User can click on “Surprise Me!” button and a random recipe will be generated.**
 
-### `npm test`
+**4. When a user clicks on a recipe they are taken to a display with "detailed" view
+Detailed view expands to additionally display:**
+    * ingredients
+    * directions
+    * number of servings
+    * prep time
+    * cooking time 
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**5. User can add a new recipe to the recipe list** 
+When a user clicks on "+ New Recipe", they are taken to this create new recipe form.
+* Recipe title
+* Description
+* Ingredients
+* Image url
+* Number of servings
+* Prep time 
+* Cook time
 
-### `npm run build`
+**6. User will receive the appropriate error feedback when they cannot submit a new recipe.**
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Post MVP
+- **User can click on "INFO" for instructions on how to use the app**
+- **User can search a recipe using the search box**
+- **User can filter the recipe list a by example categories below:**
+    * Filter by:
+    * Dairy-free
+    * Vegetarian
+    * Gluten-free
+    * Slow Cooker
+    * Under 30 Minutes
+    * Freezer Friendly
+    * Kid Friendly
+- **User can filter the recipe list a by ingredients**
+- **User can edit a recipe**
+- **User can print the desired recipe**
+- **User can bookmark a recipe**
+- Multiple users, who can have their own “playlist” of favorite recipes. When you hit surprise me, it’ll pull from your own recipe playlist
+- Share button (FaceBook, E-mail, SMS)
+- Upload a photo as opposed to a URL
+- User can link other recipes and save it on their recipe playlist
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Wireframes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### MVP
 
-### `npm run eject`
+#### **Condensed recipe list on page load:**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<img src="https://sweettootsco.files.wordpress.com/2018/12/page1.png" alt="Condensed recipe list on page load" width=500px />
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### **React components condensed view:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<img src="https://sweettootsco.files.wordpress.com/2018/12/Components.png" alt="Components condensed view" />
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### **What's Cooking App Info:**
 
-## Learn More
+<img src="https://sweettootsco.files.wordpress.com/2018/12/Info.png" alt="What's Cooking App Info" width=500px />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### **Recipe list detailed view:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="https://sweettootsco.files.wordpress.com/2018/12/RecipeDetailed.png" alt="Recipe detailed view" width=500px/>
+
+#### **Create a new recipe:**
+
+<img src="https://sweettootsco.files.wordpress.com/2018/12/NewRecipe.png" alt="Create a new recipe" />
+
+### Post-MVP
+After MVP, at minimum I want to be able to filter by category. It's the fate of lactose-intolerant people like me. 
+
+#### **Filter by a category**
+
+<img src="https://sweettootsco.files.wordpress.com/2018/12/Filter.png" alt="filter by category" width=500px />
