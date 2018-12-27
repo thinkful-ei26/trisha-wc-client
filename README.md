@@ -8,7 +8,7 @@ Not sure what to cook for your next meal? What's Cooking is a full-stack app tha
 What can my app do?
 
 ### MVP
-**1. User can see a list of recipes when they first open the app** 
+**1. User can see a list of recipes when they first open the app.** 
 All recipes in the list default to a "condensed" view showing only:
 * recipe title
 * image
