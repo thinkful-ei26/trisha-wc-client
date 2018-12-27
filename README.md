@@ -24,7 +24,7 @@ All recipes in the list default to a "condensed" view showing only:
 
 **3. User can click on “Surprise Me!” button and a random recipe will be generated.**
 
-**4. When a user clicks on a recipe they are taken to a display with "detailed" view
+**4. When a user clicks on a recipe they are taken to a display with "detailed" view.
 Detailed view expands to additionally display:**
     * ingredients
     * directions
@@ -47,7 +47,7 @@ When a user clicks on "+ New Recipe", they are taken to this create new recipe f
 ### Post MVP
 - **User can click on "INFO" for instructions on how to use the app**
 - **User can search a recipe using the search box**
-- **User can filter the recipe list a by example categories below:**
+- **User can filter the recipe list by the example categories below:**
     * Filter by:
     * Dairy-free
     * Vegetarian
