@@ -111,6 +111,30 @@ export class ReportForm extends Component {
             validate={[validURL]}
           />
 
+
+          <Field 
+            element="select"
+            name="serving"
+            component={Input}
+            id="serving"
+            label="Number of Servings:"
+          >
+            <option># of servings:</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13+">13+</option>
+          </Field>
+
           <Field 
             element="select"
             name="prep"
@@ -121,6 +145,7 @@ export class ReportForm extends Component {
             <option>Duration:</option>
             <option value="15">15 minutes</option>
             <option value="30">30 minutes</option>
+            <option value="45">45 minutes</option>
             <option value="60">1 hour</option>
             <option value="90">1 hour 30 minutes</option>
             <option value="120">2 hours</option>
@@ -136,6 +161,7 @@ export class ReportForm extends Component {
             <option>Duration:</option>
             <option value="15">15 minutes</option>
             <option value="30">30 minutes</option>
+            <option value="45">45 minutes</option>
             <option value="60">1 hour</option>
             <option value="90">1 hour 30 minutes</option>
             <option value="120">2 hours</option>

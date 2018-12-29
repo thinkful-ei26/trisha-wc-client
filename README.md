@@ -3,6 +3,16 @@ Not sure what to cook for your next meal? What's Cooking is a full-stack app tha
 
 ## Requirements
 - [Curriculum Link](https://courses.thinkful.com/dev-301v1/assignment/2.9.4)
+- In development, your local machine should have [Node.js](https://nodejs.org/en/) and [Mongo](https://www.mongodb.com/) set-up
+
+## Instructions (development)
+1. Change directory into your desired directory. Then, clone both the server and client side of this app:
+* [Server](https://github.com/thinkful-ei26/trisha-wc-server.git) or `git clone https://github.com/thinkful-ei26/trisha-wc-server.git`
+* [Client](https://github.com/thinkful-ei26/trisha-wc-client.git) or `git clone https://github.com/thinkful-ei26/trisha-wc-client.git`
+2. `npm install` for both repos
+3. First, make sure that `mongod` is running in a separate terminal shell. 
+4. `cd` into the server side and run `node server.js`
+5. Finally, `cd` into the client side and run `npm start`. A new browser window should open containing the app. 
 
 ## User Stories 
 What can my app do?
@@ -26,11 +36,11 @@ All recipes in the list default to a "condensed" view showing only:
 
 **4. When a user clicks on a recipe they are taken to a display with "detailed" view.
 Detailed view expands to additionally display:**
-    * ingredients
-    * directions
-    * number of servings
-    * prep time
-    * cooking time 
+* Ingredients
+* Directions
+* Number of servings
+* Prep time
+* Cooking time 
 
 **5. User can add a new recipe to the recipe list** 
 When a user clicks on "+ New Recipe", they are taken to this create new recipe form.
@@ -60,10 +70,10 @@ When a user clicks on "+ New Recipe", they are taken to this create new recipe f
 - **User can edit a recipe**
 - **User can print the desired recipe**
 - **User can bookmark a recipe**
-- Multiple users, who can have their own “playlist” of favorite recipes. When you hit surprise me, it’ll pull from your own recipe playlist
-- Share button (FaceBook, E-mail, SMS)
-- Upload a photo as opposed to a URL
-- User can link other recipes and save it on their recipe playlist
+- **Multiple users, who can have their own “playlist” of favorite recipes. When you hit surprise me, it’ll pull from your own recipe playlist**
+- **Share button (FaceBook, E-mail, SMS)**
+- **Upload a photo as opposed to a URL**
+- **User can link other recipes and save it on their recipe playlist**
 
 ## Wireframes
 
