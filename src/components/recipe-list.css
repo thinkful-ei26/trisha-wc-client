@@ -7,3 +7,11 @@
 .recipe:nth-child(even) {
   background-color: #999999
 }
+
+.hidden {
+  display: none;
+}
+
+.expanded {
+  display: inline-block;
+}
