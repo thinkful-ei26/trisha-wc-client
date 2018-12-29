@@ -6,12 +6,12 @@ Not sure what to cook for your next meal? What's Cooking is a full-stack app tha
 - In development, your local machine should have [Node.js](https://nodejs.org/en/) and [Mongo](https://www.mongodb.com/) set-up
 
 ## Instructions (development)
-1. Change directory into your desired directory. Then, clone both the server and client side of this app:
+1. Clone both the server and client side of this app:
 * [Server](https://github.com/thinkful-ei26/trisha-wc-server.git) or `git clone https://github.com/thinkful-ei26/trisha-wc-server.git`
 * [Client](https://github.com/thinkful-ei26/trisha-wc-client.git) or `git clone https://github.com/thinkful-ei26/trisha-wc-client.git`
-2. `npm install` for both repos
-3. First, make sure that `mongod` is running in a separate terminal shell. 
-4. `cd` into the server side and run `node server.js`
+2. `npm install` the requirements on each of the repos
+3. Run `mongod` in a separate terminal shell. 
+4. Then `cd` into the server side and run `node server.js`
 5. Finally, `cd` into the client side and run `npm start`. A new browser window should open containing the app. 
 
 ## User Stories 
