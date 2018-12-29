@@ -2,22 +2,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 import fetchRecipes from '../actions';
 import './recipe-list.css';
-import { toggleExpand } from '../actions/recipe';
-import recipeListReducer from '../reducers/recipeListReducer';
+// import { toggleExpand } from '../actions/recipe';
+// import recipeListReducer from '../reducers/recipeListReducer';
 
 export class RecipeList extends React.Component {
 
   componentDidMount() {
     this.props.dispatch(fetchRecipes());
-    console.log(this.props);
+    // console.log(this.props);
   }
 
   render () {
 
-    // if (this.props) {
-      console.log('this.props',this.props);
-    // }
-    // console.log('this.props on RecipeList', this.props);
     const { recipes } = this.props;
     // const recipe = recipes.map( (recipe, index) => (
     //   <li 
@@ -30,13 +26,13 @@ export class RecipeList extends React.Component {
     //     //   // console.log('this.props.recipe on RecipeList',recipe);
     //     //   // console.log(e.currentTarget);
 
-    //     //   if (!recipe.expanded) {
-    //     //     console.log('expanded in li is false');
-    //     //     recipe.expanded = true;
-    //     //     console.log(recipe.expanded);
-    //     //   }
-    //     // }
-    //     // }
+        //   if (!recipe.expanded) {
+        //     console.log('expanded in li is false');
+        //     recipe.expanded = true;
+        //     console.log(recipe.expanded);
+        //   }
+        // }
+        // }
     //   >
     //     {/* {console.log('recipe inside of li',recipe)} */}
     //     <h3>{`${recipe.title}`}</h3>
@@ -44,13 +40,12 @@ export class RecipeList extends React.Component {
     //     <img src={recipe.imgUrl} alt={`recipe img for ${recipe.title}`} width="200px"/>
     //   </li>
     // ));
- 
 
     const recipe = recipes.map( (recipe, index) => (
       <li 
         key={index} 
         className="recipe"
-        expanded={recipe.expanded.toString()}
+        // expanded={recipe.expanded.toString()}
       >
         <h3>{`${recipe.title}`}</h3>
         <img src={recipe.imgUrl} alt={`recipe img for ${recipe.title}`} width="200px"/>
@@ -71,22 +66,15 @@ export class RecipeList extends React.Component {
           </p>
           <p><strong>Directions:</strong> {recipe.directions}</p>
         </div>
-       
       </li>
     ));
+  
+    // console.log(this.props.recipes);
 
     return (
       <ul 
       className="recipe-list" 
       aria-live="polite"
-      // onClick={
-      //   e => { 
-      //     e.preventDefault();
-      //     console.log('e.currentTarget', e.currentTarget);
-      //     console.log('e.currentTarget.closest', e.currentTarget.closest);
-      //     console.log('this.props.recipes', this.props.recipes)
-      //   }
-      // }
       >
         {recipe}
       </ul>
@@ -97,7 +85,7 @@ export class RecipeList extends React.Component {
 const mapStateToProps = state => {
   return {
     recipes: state.recipeReducer.recipes,
-    expanded: state.recipeReducer.recipes.expanded
+    // expanded: state.recipeReducer.recipes.expanded
   }
 }
 
