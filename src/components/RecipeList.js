@@ -9,7 +9,6 @@ export class RecipeList extends React.Component {
 
   componentDidMount() {
     this.props.dispatch(fetchRecipes());
-    // console.log(this.props);
   }
 
   render () {
@@ -40,18 +39,44 @@ export class RecipeList extends React.Component {
     //     <img src={recipe.imgUrl} alt={`recipe img for ${recipe.title}`} width="200px"/>
     //   </li>
     // ));
+    let expand;
+
+    const setExpand = (data) => {
+      if (!data) {
+        // console.log('expanded');
+        expand = 'expanded';
+        console.log(expand);
+        return true;
+      } else {
+        // console.log('hidden');
+        expand = 'hidden';
+        console.log(expand);
+        return false;
+      }
+    }
+
+    // const setExpandClass = (data) => {
+    //   if (!data) {
+    //     return 'hidden';
+    //   } else {
+    //     return 'expanded';
+    //   }
+    // }
 
     const recipe = recipes.map( (recipe, index) => (
       <li 
         key={index} 
         className="recipe"
-        // expanded={recipe.expanded.toString()}
+        onClick={e => {
+          recipe.expanded = setExpand(recipe.expanded);
+          console.log(recipe);
+        }}
       >
         <h3>{`${recipe.title}`}</h3>
         <img src={recipe.imgUrl} alt={`recipe img for ${recipe.title}`} width="200px"/>
         <p>{recipe.desc}</p>
         {/* ON CLICK OF LI, TOGGLE className from "hidden" to expanded */}
-        <div className="hidden">
+        <div className={`${recipe.expanded}`}>
           <p>
             <strong>Prep Time:</strong> {recipe.prep}
           </p>
@@ -68,17 +93,57 @@ export class RecipeList extends React.Component {
         </div>
       </li>
     ));
-  
-    // console.log(this.props.recipes);
 
-    return (
-      <ul 
-      className="recipe-list" 
-      aria-live="polite"
+    const expandedRecipe = recipes.map( (recipe, index) => (
+      <li 
+        key={index} 
+        className="recipe"
+        onClick={e => {
+          recipe.expanded = setExpand(recipe.expanded);
+          console.log(recipe);
+        }}
       >
-        {recipe}
-      </ul>
-    )
+        <h3>{`${recipe.title}`}</h3>
+        <img src={recipe.imgUrl} alt={`recipe img for ${recipe.title}`} width="200px"/>
+        <p>{recipe.desc}</p>
+        {/* ON CLICK OF LI, TOGGLE className from "hidden" to expanded */}
+        <div className="expanded">
+          <p>
+            <strong>Prep Time:</strong> {recipe.prep}
+          </p>
+          <p>
+            <strong>Cook Time:</strong> {recipe.cook}
+          </p>
+          <p>
+            <strong>Number of Servings:</strong> {recipe.serving}
+          </p>
+          <p>
+            <strong>Ingredients:</strong> {recipe.ing}
+          </p>
+          <p><strong>Directions:</strong> {recipe.directions}</p>
+        </div>
+      </li>
+    ));
+
+    if(recipe.expanded) {
+      return (
+        <ul 
+        className="recipe-list" 
+        aria-live="polite"
+        >
+          {expandedRecipe}
+        </ul>
+      )
+    } else {
+      return (
+        <ul 
+        className="recipe-list" 
+        aria-live="polite"
+        >
+          {recipe}
+        </ul>
+      )
+    }
   }
 }
 

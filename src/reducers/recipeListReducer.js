@@ -7,11 +7,11 @@ const initialState = {
 const recipeListReducer = (state=initialState, action) => {
   switch (action.type) {
     case TOGGLE_EXPAND : 
-      return Object.assign({}, state, { expanded: !action.expanded })
-    // if(action.type.expanded) {
+      return Object.assign({}, state, { expanded: true })
+    // if(action.type) {
     //   return Object.assign({}, state, { expanded: false})
     // } 
-    // if (!action.type.expanded) {
+    // if (!action.type) {
     //   return Object.assign({}, state, { expanded: true})
     // }
     // break;
