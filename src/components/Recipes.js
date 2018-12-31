@@ -20,10 +20,10 @@ export class Recipes extends Component {
         className="recipe"
         onClick={e => {
           this.props.dispatch(toggleExpand(recipe.id))
-          // console.log(recipe);
+          console.log(recipe);
         }}
       >
-        <h3>{`${recipe.title}`}</h3>
+        <h3>{recipe.title}</h3>
         <img src={recipe.imgUrl} alt={`recipe img for ${recipe.title}`} width="200px"/>
         <p>{recipe.desc}</p>
         {/* ON CLICK OF LI, TOGGLE className from "hidden" to expanded */}

@@ -29,18 +29,15 @@ export const recipeReducer = (state=initialState, action) => {
 
     case TOGGLE_EXPAND :
       console.log('state', state);
-      console.log('state.recipes', state.recipes)
-      console.log('action', action);
-      console.log('action.id', action.id);
 
       const findById = (recipes, recipeId) => {
         const recipe = recipes.filter( recipe => recipeId === recipe.id )
+        console.log('recipe[0].expanded findById',recipe[0].expanded);
         return recipe;
       }
 
       const clickedRecipe = findById(state.recipes, action.id);
       console.log('clickedRecipe', clickedRecipe);
-
       console.log('state.recipes', state.recipes)
 
       return Object.assign({}, state, {
