@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import fetchRecipes from '../actions';
 
+import { toggleExpand } from '../actions/recipe';
+// import recipeListReducer from '../reducers/recipeListReducer';
+
 export class Recipes extends Component {
 
   componentDidMount() {
@@ -9,22 +12,22 @@ export class Recipes extends Component {
   }
 
   render() { 
-    let expand;
+    // let expand;
     const { recipes } = this.props;
 
-     const setExpand = (data) => {
-      if (!data) {
-        // console.log('expanded');
-        expand = true;
-        console.log(expand);
-        return true;
-      } else {
-        // console.log('hidden');
-        expand = false;
-        console.log(expand);
-        return false;
-      }
-    }
+    //  const setExpand = (data) => {
+    //   if (!data) {
+    //     // console.log('expanded');
+    //     expand = true;
+    //     console.log(expand);
+    //     return true;
+    //   } else {
+    //     // console.log('hidden');
+    //     expand = false;
+    //     console.log(expand);
+    //     return false;
+    //   }
+    // }
 
     // let expandClass;
     // const setExpandClass = (data) => {
@@ -52,12 +55,19 @@ export class Recipes extends Component {
     //   </li>
     // ));
 
+    // const handleClick = (e) => {
+    //   console.log('from handleClick',e);
+    // }
+
     const expandedRecipe = recipes.map( (recipe, index) => (
       <li 
         key={index} 
         className="recipe"
         onClick={e => {
-          recipe.expanded = setExpand(recipe.expanded);
+          // recipe.expanded = setExpand(recipe.expanded);
+          // console.log(recipe);
+          // this.props.dispatch(handleClick(recipe.expanded))
+          this.props.dispatch(toggleExpand(recipe.expanded))
           console.log(recipe);
         }}
       >
@@ -92,8 +102,7 @@ export class Recipes extends Component {
 
 const mapStateToProps = state => {
   return {
-    recipes: state.recipeReducer.recipes,
-    // expanded: state.recipeReducer.recipes.expanded
+    recipes: state.recipeReducer.recipes
   }
 }
 

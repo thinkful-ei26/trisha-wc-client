@@ -8,15 +8,15 @@ import Recipes from './Recipes';
 
 export class RecipeList extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {expanded: false};
-    this.handleClick = this.handleClick.bind(this);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {expanded: false};
+  //   this.handleClick = this.handleClick.bind(this);
+  // }
 
-  handleClick(e) {
-    this.setState({expanded: !this.state.expanded});
-  }
+  // handleClick(e) {
+  //   this.setState({expanded: !this.state.expanded});
+  // }
 
   render () {
     // if(recipe.expanded) {
@@ -32,7 +32,7 @@ export class RecipeList extends React.Component {
       return (
         <div>
           <button onClick={e => console.log(this.props)}>
-
+            this.props on RecipeList
           </button>
            <ul 
           className="recipe-list" 
