@@ -26,9 +26,8 @@ export class Recipes extends Component {
         <h3>{recipe.title}</h3>
         <img src={recipe.imgUrl} alt={`recipe img for ${recipe.title}`} width="200px"/>
         <p>{recipe.desc}</p>
-        {/* ON CLICK OF LI, TOGGLE className from "hidden" to expanded */}
         <div 
-          className="expanded"
+          className="detailed"
           style={{display: recipe.expanded ? 'block': 'none'}}
         >
           <p>

@@ -42,10 +42,9 @@ export const recipeReducer = (state=initialState, action) => {
       console.log('expandedRecipe',expandedRecipe);
 
       return Object.assign({}, state, {
-        recipes: [...state.recipes, ...clickedRecipe] 
+        recipes: [...state.recipes] 
       })
-
-    // eslint-disable-next-line no-fallthrough
+      
     default: return state
   }
 }
