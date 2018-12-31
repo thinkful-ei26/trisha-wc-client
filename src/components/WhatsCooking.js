@@ -12,9 +12,6 @@ class WhatsCooking extends Component {
         < Header />
         <Controls />
         <RecipeList />
-        {/*
-        <Condensed />
-        <Detailed /> */}
       </div>
     );
   }

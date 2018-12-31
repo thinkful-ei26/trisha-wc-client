@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import fetchRecipes from '../actions';
-
 import { toggleExpand } from '../actions/recipe';
-// import recipeListReducer from '../reducers/recipeListReducer';
 
 export class Recipes extends Component {
 

@@ -1,6 +1,4 @@
-// import * as actions from '../actions';
 import { FETCH_RECIPES_REQUEST, FETCH_RECIPES_SUCCESS, FETCH_RECIPES_ERROR } from '../actions';
-
 import { TOGGLE_EXPAND } from '../actions/recipe';
 
 const initialState = {
@@ -34,6 +32,7 @@ export const recipeReducer = (state=initialState, action) => {
         return recipe;
       }
 
+      /* ==== CONDITIONALLY CHANGE EXPANDED TRUE || FALSE ON CLICK OF LI ====*/
       const clickedRecipe = findById(state.recipes, action.id);
       console.log('clickedRecipe', clickedRecipe);
 
