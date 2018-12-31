@@ -1,0 +1,19 @@
+.remove-btn {
+  background-color: rgb(212, 82, 82);
+}
+
+.add-btn {
+  background-color:greenyellow;
+}
+
+.ing-container {
+  background-color: rgb(74, 221, 74);
+}
+
+.ing-container:nth-child(even) {
+  background-color: rgb(112, 187, 112);
+}
+
+li {
+  list-style-type: none;
+}

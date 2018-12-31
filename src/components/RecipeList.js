@@ -12,34 +12,8 @@ export class RecipeList extends React.Component {
   }
 
   render () {
-
-    const { recipes } = this.props;
-    // const recipe = recipes.map( (recipe, index) => (
-    //   <li 
-    //     key={index} 
-    //     className="recipe"
-    //     // onClick={ (e) => { 
-    //     //   // e.preventDefault(); 
-    //     //   this.props.dispatch(toggleExpand());
-    //     //   console.log(recipe);
-    //     //   // console.log('this.props.recipe on RecipeList',recipe);
-    //     //   // console.log(e.currentTarget);
-
-        //   if (!recipe.expanded) {
-        //     console.log('expanded in li is false');
-        //     recipe.expanded = true;
-        //     console.log(recipe.expanded);
-        //   }
-        // }
-        // }
-    //   >
-    //     {/* {console.log('recipe inside of li',recipe)} */}
-    //     <h3>{`${recipe.title}`}</h3>
-    //     <p>{`${recipe.desc}`}</p>
-    //     <img src={recipe.imgUrl} alt={`recipe img for ${recipe.title}`} width="200px"/>
-    //   </li>
-    // ));
     let expand;
+    const { recipes } = this.props;
 
     const setExpand = (data) => {
       if (!data) {
@@ -75,22 +49,6 @@ export class RecipeList extends React.Component {
         <h3>{`${recipe.title}`}</h3>
         <img src={recipe.imgUrl} alt={`recipe img for ${recipe.title}`} width="200px"/>
         <p>{recipe.desc}</p>
-        {/* ON CLICK OF LI, TOGGLE className from "hidden" to expanded */}
-        <div className={`${recipe.expanded}`}>
-          <p>
-            <strong>Prep Time:</strong> {recipe.prep}
-          </p>
-          <p>
-            <strong>Cook Time:</strong> {recipe.cook}
-          </p>
-          <p>
-            <strong>Number of Servings:</strong> {recipe.serving}
-          </p>
-          <p>
-            <strong>Ingredients:</strong> {recipe.ing}
-          </p>
-          <p><strong>Directions:</strong> {recipe.directions}</p>
-        </div>
       </li>
     ));
 

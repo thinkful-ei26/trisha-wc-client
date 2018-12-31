@@ -3,6 +3,7 @@ import { Field, FieldArray, reduxForm, /* SubmissionError, focus */ } from 'redu
 import Input from './Input';
 import { cancel } from '../actions/nav';
 import { required, nonEmpty, validInput, validURL, validIngredient } from '../validators';
+import './recipe-form.css';
 
 export class ReportForm extends Component {
   onSubmit(values) {
@@ -39,7 +40,10 @@ export class ReportForm extends Component {
     const renderIng = ({ fields, meta: { error } }) => (
       <ul>
         {fields.map((ing, index) => (
-          <li key={index}>
+          <li   
+            key={index}
+            className="ing-container"
+          >
             <Field
               name={ing}
               type="text"
@@ -47,17 +51,22 @@ export class ReportForm extends Component {
               label={`Ingredient #${index + 1}`}
             />
              <button
+              className="remove-btn"
               type="button"
               title="Remove Ingredient"
               onClick={() => fields.remove(index)}
             >
-              Remove Ingredient
+              X
             </button>
           </li>
         ))}
 
         <li>
-          <button type="button" onClick={() => fields.push()}>
+          <button 
+            className="add-btn"
+            type="button" 
+            onClick={() => fields.push()}
+          >
             Add Ingredient
           </button>
         </li>
