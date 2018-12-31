@@ -1,12 +1,10 @@
 // import * as actions from '../actions';
 import { FETCH_RECIPES_REQUEST, FETCH_RECIPES_SUCCESS, FETCH_RECIPES_ERROR } from '../actions';
 
+import { TOGGLE_EXPAND } from '../actions/recipe';
+
 const initialState = {
-  recipes: [
-    // "Zucchini Meatballs",
-    // "Ddukbokki",
-    // "Bacon Scallop with Vinegrette Reduction"
-  ],
+  recipes: [],
   loading: false,
   error: null
 }
@@ -28,6 +26,13 @@ export const recipeReducer = (state=initialState, action) => {
       loading: true,
       error: action.error
     })
+
+    case TOGGLE_EXPAND :
+    if (action.id) {
+      console.log('state', state);
+      console.log('action', action);
+      return Object.assign({}, state, {recipes: ['bananas']})
+    }
 
     default: return state
   }

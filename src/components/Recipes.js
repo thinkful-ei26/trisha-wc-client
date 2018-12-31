@@ -12,63 +12,15 @@ export class Recipes extends Component {
   }
 
   render() { 
-    // let expand;
     const { recipes } = this.props;
-
-    //  const setExpand = (data) => {
-    //   if (!data) {
-    //     // console.log('expanded');
-    //     expand = true;
-    //     console.log(expand);
-    //     return true;
-    //   } else {
-    //     // console.log('hidden');
-    //     expand = false;
-    //     console.log(expand);
-    //     return false;
-    //   }
-    // }
-
-    // let expandClass;
-    // const setExpandClass = (data) => {
-    //   if (!data) {
-    //     expandClass = 'hidden';
-    //   } else {
-    //     expandClass 'expanded';
-    //   }
-    // }
-
-    // const recipe = recipes.map( (recipe, index) => (
-    //   <li 
-    //     key={index} 
-    //     className="recipe"
-    //     recipe-id={recipe.id}
-    //     onClick={e => {
-    //     recipe.expanded = setExpand(recipe.expanded);
-    //     console.log(recipe);
-    //     }}
-    //   >
-    //     <h3>{`${recipe.title}`}</h3>
-    //     <br/>
-    //     <img src={recipe.imgUrl} alt={`recipe img for ${recipe.title}`} width="200px"/>
-    //     <p>{recipe.desc}</p>
-    //   </li>
-    // ));
-
-    // const handleClick = (e) => {
-    //   console.log('from handleClick',e);
-    // }
 
     const expandedRecipe = recipes.map( (recipe, index) => (
       <li 
         key={index} 
         className="recipe"
         onClick={e => {
-          // recipe.expanded = setExpand(recipe.expanded);
+          this.props.dispatch(toggleExpand(recipe.id))
           // console.log(recipe);
-          // this.props.dispatch(handleClick(recipe.expanded))
-          this.props.dispatch(toggleExpand(recipe.expanded))
-          console.log(recipe);
         }}
       >
         <h3>{`${recipe.title}`}</h3>
