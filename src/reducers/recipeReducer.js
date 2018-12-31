@@ -28,13 +28,22 @@ export const recipeReducer = (state=initialState, action) => {
     })
 
     case TOGGLE_EXPAND :
-    if (action.id) {
       console.log('state', state);
+      console.log('state.recipes', state.recipes)
       console.log('action', action);
+      console.log('action.id', action.id);
+
+      const findById = (recipes, recipeId) => {
+        const recipe = recipes.filter( recipe => recipeId === recipe.id )
+        return recipe;
+      }
+
+      const clickedRecipe = findById(state.recipes, action.id);
+      console.log('clickedRecipe', clickedRecipe);
+
       return Object.assign({}, state, {
-        recipes: [state.recipes[0]] 
+        recipes: clickedRecipe 
       })
-    } 
 
     // eslint-disable-next-line no-fallthrough
     default: return state
