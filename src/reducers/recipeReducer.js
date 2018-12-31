@@ -41,8 +41,10 @@ export const recipeReducer = (state=initialState, action) => {
       const clickedRecipe = findById(state.recipes, action.id);
       console.log('clickedRecipe', clickedRecipe);
 
+      console.log('state.recipes', state.recipes)
+
       return Object.assign({}, state, {
-        recipes: clickedRecipe 
+        recipes: [...state.recipes, ...clickedRecipe] 
       })
 
     // eslint-disable-next-line no-fallthrough
