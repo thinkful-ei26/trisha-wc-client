@@ -18,13 +18,13 @@ Not sure what to cook for your next meal? What's Cooking is a full-stack app tha
 What can my app do?
 
 ### MVP
-**1. User can see a list of recipes when they first open the app.** 
+- [x] **1. User can see a list of recipes when they first open the app.** 
 All recipes in the list default to a "condensed" view showing only:
 * recipe title
 * image
 * description
 
-**2. My app will find and import enough recipes for it to be useful**
+- [x] **2. My app will find and import enough recipes for it to be useful**
 - Choice 1: Use an open source recipe API. I included three possible API links below ( just incase something bad happens), but my go to is [Spoonacular's recipe API](https://spoonacular.com/api/docs/recipes-api).
    - A. [Spoonacular's recipe API](https://spoonacular.com/api/docs/recipes-api)
    - B. [RapidAPI's Recipe API](https://rapidapi.com/webknox/api/recipe/details)
@@ -32,9 +32,9 @@ All recipes in the list default to a "condensed" view showing only:
 - Choice 2: Manually write my recipe list (at least 10)
 - Choice 3: Do both choice 1 & 2
 
-**3. User can click on “Surprise Me!” button and a random recipe will be generated.**
+- [ ] **3. User can click on “Surprise Me!” button and a random recipe will be generated.**
 
-**4. When a user clicks on a recipe they are taken to a display with "detailed" view.
+- [x] **4. When a user clicks on a recipe they are taken to a display with "detailed" view.**
 Detailed view expands to additionally display:**
 * Ingredients
 * Directions
@@ -42,7 +42,7 @@ Detailed view expands to additionally display:**
 * Prep time
 * Cooking time 
 
-**5. User can add a new recipe to the recipe list** 
+- [ ] **5. User can add a new recipe to the recipe list** 
 When a user clicks on "+ New Recipe", they are taken to this create new recipe form.
 * Recipe title
 * Description
@@ -52,7 +52,7 @@ When a user clicks on "+ New Recipe", they are taken to this create new recipe f
 * Prep time 
 * Cook time
 
-**6. User will receive the appropriate error feedback when they cannot submit a new recipe.**
+- [x] **6. User will receive the appropriate error feedback when they cannot submit a new recipe.**
 
 ### Post MVP
 - **User can click on "INFO" for instructions on how to use the app**
