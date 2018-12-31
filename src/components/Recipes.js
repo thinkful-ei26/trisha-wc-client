@@ -2,57 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import fetchRecipes from '../actions';
 
-// class Recipes extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {isToggle: false};
-//     this.handleClick = this.handleClick.bind(this);
-//   }
-
-//   handleClick(e) {
-//     this.setState({isToggle: !this.state.isToggle});
-//   }
-
-//   render() { 
-
-//     return (
-//         <div
-          // style={{display: this.state.isToggle ? 'block': 'none'}}
-//           className="container"
-//         >
-//         <button
-//           className="btn btn-primary"
-//           onClick={this.handleClick}
-//         >
-//           Toggle
-//         </button>
-//         <h3>{`${this.props.title}`}</h3>
-//         {/* <img src={recipe.imgUrl} alt={`recipe img for ${recipe.title}`} width="200px"/>
-//         <p>{recipe.desc}</p> */}
-//         </div>
-//     );
-//   }
-// }
-
-
 export class Recipes extends Component {
 
   componentDidMount() {
     this.props.dispatch(fetchRecipes());
   }
-
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {isToggle: false};
-  //   this.handleClick = this.handleClick.bind(this);
-  // }
-
-  // handleClick(e) {
-  //   this.setState({isToggle: !this.state.isToggle});
-  // }
-
-// 1. fn takes in recipe id and expanded property, if expanded === true then render detailed, otherwise render condensed. 
-
 
   render() { 
     let expand;

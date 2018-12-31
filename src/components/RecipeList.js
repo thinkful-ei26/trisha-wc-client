@@ -19,7 +19,6 @@ export class RecipeList extends React.Component {
   }
 
   render () {
-    console.log(this.props);
     // if(recipe.expanded) {
     //   return (
     //     <ul 
@@ -31,12 +30,18 @@ export class RecipeList extends React.Component {
     //   )
     // } else {
       return (
-        <ul 
-        className="recipe-list" 
-        aria-live="polite"
-        >
-          <Recipes />
-        </ul>
+        <div>
+          <button onClick={e => console.log(this.props)}>
+
+          </button>
+           <ul 
+          className="recipe-list" 
+          aria-live="polite"
+          >
+            <Recipes />
+          </ul>
+        </div>
+       
       )
     // }
   }
