@@ -4,7 +4,7 @@ import Header from './Header';
 import Controls from './Controls';
 import RecipeList from './RecipeList';
 
-class WhatsCooking extends Component {
+export class WhatsCooking extends Component {
   
   render() {
     return (
