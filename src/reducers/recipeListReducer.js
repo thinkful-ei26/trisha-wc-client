@@ -1,7 +1,7 @@
 import { TOGGLE_EXPAND } from '../actions/recipe';
 
 const initialState = {
-  expanded: false,
+  expanded: false
 }
 
 const recipeListReducer = (state=initialState, action) => {
