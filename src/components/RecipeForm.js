@@ -234,6 +234,7 @@ export class ReportForm extends Component {
 
           {/* disable button if user hasn't touched form */ }
           <button 
+            className="save-recipe-btn"
             type="submit"
             disabled={pristine || submitting}
           >
@@ -241,13 +242,14 @@ export class ReportForm extends Component {
           </button>
 
           <button 
+            className="clear-values-btn"
             type="button" 
             disabled={pristine || submitting} 
             onClick={reset}>Clear Values
           </button>
 
           <button 
-            className="close"
+            className="cancel-add-recipe-btn"
             onClick={ () => this.props.dispatch(cancel()) }
             >Cancel</button>
 

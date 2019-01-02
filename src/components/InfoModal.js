@@ -17,7 +17,7 @@ export function InfoModal(props) {
             </p>
             
             <button 
-            className="close"
+            className="got-it-btn"
             onClick={ () => props.dispatch(gotIt()) }
             >
               Got It!

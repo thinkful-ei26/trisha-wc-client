@@ -15,10 +15,10 @@ export function TopNav(props) {
   }
 
   return (
-    <ul className="top-nav">
+      <ul className="top-nav">
       <li className="info">
-        <a 
-          className="info-link" href="#info"
+        <button
+          className="info-btn" href="#info"
           aria-label="How to use this app"
           onClick={ () => {
             props.dispatch(infoClick()) 
@@ -26,12 +26,11 @@ export function TopNav(props) {
           }
         >
           Info
-        </a>
+        </button>
       </li>
       <li className="add-recipe">
-        <a
-          href="#add-recipe"
-          className="add-recipe-link"
+        <button
+          className="add-recipe-btn"
           aria-label="Create a new recipe"
           onClick={() => {
             props.dispatch(addRecipe() )
@@ -39,7 +38,7 @@ export function TopNav(props) {
         }
         >
           + Add Recipe
-        </a>
+        </button>
       </li>
     </ul>
   );
