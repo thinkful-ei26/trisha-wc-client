@@ -9,14 +9,11 @@
 
 .ing-container {
   background-color:rgb(55, 71, 57);
+  list-style-type: none;
 }
 
 .ing-container:nth-child(odd) {
   background-color: rgb(40, 52, 41);
-}
-
-li {
-  list-style-type: none;
 }
 
 .message-error {

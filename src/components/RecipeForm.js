@@ -104,8 +104,6 @@ export class ReportForm extends Component {
             </button>
           </li>
         ))}
-
-        <li>
           <button 
             className="add-btn"
             type="button" 
@@ -113,7 +111,6 @@ export class ReportForm extends Component {
           >
             Add Ingredient
           </button>
-        </li>
         {
           error && 
           <li className="error">{error}</li>

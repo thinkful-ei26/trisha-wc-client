@@ -13,21 +13,16 @@ export class Recipes extends Component {
     const { recipes } = this.props;
 
     const ingredient = (recipe) => {
-      console.log('HERE',recipe);
-      // recipe.ing.map( (ingredients, index) => (
-      // <li
-      //   key={index} 
-      //   className="ingredient"
-      // >
-      //   {ingredients}
-      // </li>
       const _ing = recipe.ing;
-      console.log('_ing', _ing);
-      const ingr = _ing.forEach(element => {
-        console.log(element);
-      });
-      return ingr;
-    // ))
+      return _ing.map((ingredient, index) => {
+        return (
+        <li
+          key={index}
+          className="ing-list"
+        >
+          {ingredient}
+        </li>); 
+      })
   }
 
     const expandedRecipe = recipes.map( (recipe, index) => (
@@ -64,11 +59,11 @@ export class Recipes extends Component {
             <strong>Number of Servings:</strong> {recipe.serving}
           </p>
           <p><strong>Ingredients:</strong> 
-            {recipe.ing}
+            {/* {recipe.ing} */}
           </p>
-            {/* <ul>
+            <ul>
               <li>{ingredient(recipe)}</li>
-            </ul> */}
+            </ul>
           <p><strong>Directions:</strong> {recipe.directions}</p>
         </div>
       </li>
