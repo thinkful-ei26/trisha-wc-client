@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Field, FieldArray, reduxForm, /* SubmissionError, focus */ } from 'redux-form';
+import { Field, FieldArray, reduxForm, SubmissionError, focus } from 'redux-form';
 import Input from './Input';
 import { cancel } from '../actions/nav';
 import { required, nonEmpty, validInput, validURL, validIngredient } from '../validators';
@@ -8,6 +8,49 @@ import './recipe-form.css';
 export class ReportForm extends Component {
   onSubmit(values) {
     console.log('RecipeForm onSubmit values:',values);
+    return fetch('/api/recipes/', {
+      method: 'POST',
+      body: JSON.stringify(values),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => {
+      if (!res.ok) {
+          if (
+              res.headers.has('content-type') &&
+              res.headers
+                  .get('content-type')
+                  .startsWith('application/json')
+          ) {
+              // It's a nice JSON error returned by us, so decode it
+              return res.json().then(err => Promise.reject(err));
+          }
+          // It's a less informative error returned by express
+          return Promise.reject({
+              code: res.status,
+              message: res.statusText
+          });
+      }
+      return;
+  })
+  .then(() => console.log('Submitted with values', values))
+  .catch(err => {
+      const {reason, message, location} = err;
+      if (reason === 'ValidationError') {
+          // Convert ValidationErrors into SubmissionErrors for Redux Form
+          return Promise.reject(
+              new SubmissionError({ //coming from Redux form https://redux-form.com/7.1.2/docs/api/submissionerror.md/
+                  [location]: message
+              })
+          );
+      }
+      return Promise.reject(
+          new SubmissionError({
+              _error: 'Error submitting message'
+          })
+      );
+  });
 }
   render() {
     const { handleSubmit, pristine, submitting, reset, submitSucceeded, error } = this.props;
@@ -70,7 +113,10 @@ export class ReportForm extends Component {
             Add Ingredient
           </button>
         </li>
-        {error && <li className="error">{error}</li>}
+        {
+          error && 
+          <li className="error">{error}</li>
+          }
       </ul>
     );
     
@@ -108,8 +154,7 @@ export class ReportForm extends Component {
           component={renderIng}
           validate={[validIngredient]}
           />
-           {/* <Values form="fieldArrays" /> */}
-
+          
           <Field 
             element="input"
             name="imgUrl" 
@@ -214,5 +259,7 @@ export class ReportForm extends Component {
 
 export default reduxForm({
   form: 'addRecipe',
-  validIngredient
+  validIngredient,
+  onSubmitFail: (errors, dispatch) =>
+  dispatch(focus('contact', Object.keys(errors)[0]))
 })(ReportForm);

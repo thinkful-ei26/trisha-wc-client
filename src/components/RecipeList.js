@@ -9,8 +9,8 @@ export class RecipeList extends React.Component {
 
   render () {
     return (
-      <div>
-        <div className="controls">
+      <div className="container">
+        <section className="controls">
           <button onClick={ () => {
             this.props.dispatch(surpriseClick())
             }}>
@@ -21,7 +21,7 @@ export class RecipeList extends React.Component {
             }}>
             Show All Recipes
           </button>
-        </div>
+        </section>
         <ul 
           className="recipe-list" 
           aria-live="polite"

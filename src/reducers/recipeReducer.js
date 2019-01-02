@@ -46,7 +46,6 @@ export const recipeReducer = (state=initialState, action) => {
     case TOGGLE_EXPAND :
       const findById = (recipes, recipeId) => {
         const recipe = recipes.filter( recipe => recipeId === recipe.id )
-        console.log('recipe[0].expanded findById',recipe[0].expanded);
         return recipe;
       }
 
