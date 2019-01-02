@@ -25,7 +25,7 @@ export function TopNav(props) {
             }
           }
         >
-          Info
+          <span className="info-text">Info</span>
         </button>
       </li>
       <li className="add-recipe">
@@ -37,7 +37,7 @@ export function TopNav(props) {
           }
         }
         >
-          + Add Recipe
+          <span className="add-recipe-text">+ Add Recipe</span>
         </button>
       </li>
     </ul>
