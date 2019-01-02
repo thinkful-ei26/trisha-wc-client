@@ -95,14 +95,14 @@ header {
 }
 
 .info-btn {
-  padding: 10px;
+  /* padding: 10px; */
   background-color: transparent;
   color: white;
   border: none;
 }
 
 .add-recipe-btn {
-  padding: 10px;
+  /* padding: 10px; */
   background-color: transparent;
   color: white;
   border: none;
@@ -122,4 +122,8 @@ button {
 
 .info-text {
   font-size: 2vh;
+}
+
+.info-text:hover {
+  text-shadow: 1px 1px grey;
 }
