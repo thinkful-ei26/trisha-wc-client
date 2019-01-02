@@ -97,7 +97,7 @@ export class ReportForm extends Component {
              <button
               className="remove-btn"
               type="button"
-              title="Remove Ingredient"
+              title={`Remove Ingredient ${index +1}`}
               onClick={() => fields.remove(index)}
             >
               X

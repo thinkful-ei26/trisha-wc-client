@@ -8,13 +8,13 @@
   background-color: #999999
 }
 
-.hidden {
+/* .hidden {
   display: none;
 }
 
 .expanded {
   display: inline-block;
-}
+} */
 
 .false {
   display: none;
@@ -22,4 +22,9 @@
 
 .true {
   display: inline-block;
+}
+
+.recipe-condensed {
+  background-color: transparent;
+  border: none;
 }

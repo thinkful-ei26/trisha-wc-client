@@ -16,14 +16,20 @@ export class Recipes extends Component {
       <li 
         key={index} 
         className="recipe"
+        tabIndex="0"
         onClick={e => {
           this.props.dispatch(toggleExpand(recipe.id))
           console.log(recipe);
         }}
       >
-        <h3>{recipe.title}</h3>
-        <img src={recipe.imgUrl} alt={`recipe img for ${recipe.title}`} width="200px"/>
-        <p>{recipe.desc}</p>
+        <div
+          className="recipe-condensed"
+        >
+          <h3>{recipe.title}</h3>
+          <img src={recipe.imgUrl} alt={`recipe img for ${recipe.title}`} width="200px"/>
+          <p>{recipe.desc}</p>
+        </div>
+        <br/>
         <div 
           className="detailed"
           style={{display: recipe.expanded ? 'block': 'none'}}
