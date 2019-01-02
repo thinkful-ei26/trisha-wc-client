@@ -12,9 +12,8 @@ export class Recipes extends Component {
   render() { 
     const { recipes } = this.props;
 
-    const ingredient = (recipe) => {
-      const _ing = recipe.ing;
-      return _ing.map((ingredient, index) => {
+    const ingredient = (ingredients) => {
+      return ingredients.map((ingredient, index) => {
         return (
         <li
           key={index}
@@ -23,7 +22,23 @@ export class Recipes extends Component {
           {ingredient}
         </li>); 
       })
-  }
+    }
+
+    const steps = (directions) => {
+      return <li>{directions}</li>};
+
+    // const steps = (directions) => {
+    //   return directions.map((step, index) => {
+    //     console.log('step');
+    //     // return (
+    //     // <li
+    //     //   key={index}
+    //     //   className="directions"
+    //     // >
+    //     //   {step}
+    //     // </li>); 
+    //   })
+    // }
 
     const expandedRecipe = recipes.map( (recipe, index) => (
       <li 
@@ -58,13 +73,19 @@ export class Recipes extends Component {
           <p>
             <strong>Number of Servings:</strong> {recipe.serving}
           </p>
-          <p><strong>Ingredients:</strong> 
-            {/* {recipe.ing} */}
+          <p>
+            <strong>Ingredients:</strong> 
           </p>
-            <ul>
-              <li>{ingredient(recipe)}</li>
-            </ul>
-          <p><strong>Directions:</strong> {recipe.directions}</p>
+          <ul>
+            {ingredient(recipe.ing)}
+          </ul>
+          {/* <p><strong>Directions:</strong> {recipe.directions}</p> */}
+          <p>
+            <strong>Directions:</strong> 
+          </p>
+          <ol>
+            {steps(recipe.directions)}
+          </ol>
         </div>
       </li>
     ));
