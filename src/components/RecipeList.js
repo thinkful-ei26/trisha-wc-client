@@ -11,13 +11,17 @@ export class RecipeList extends React.Component {
     return (
       <div className="container">
         <section className="controls">
-          <button onClick={ () => {
-            this.props.dispatch(surpriseClick())
+          <button 
+            className="surprise-btn"
+            onClick={ () => {
+              this.props.dispatch(surpriseClick())
             }}>
             Surprise Me
           </button>
-          <button onClick={ () => {
-            this.props.dispatch(fetchRecipes());
+          <button 
+            className="show-all-btn"
+            onClick={ () => {
+              this.props.dispatch(fetchRecipes());
             }}>
             Show All Recipes
           </button>

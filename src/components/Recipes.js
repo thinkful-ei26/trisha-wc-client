@@ -17,7 +17,7 @@ export class Recipes extends Component {
         key={index} 
         className="recipe"
         tabIndex="0"
-        onClick={e => {
+        onClick={ () => {
           this.props.dispatch(toggleExpand(recipe.id))
           console.log(recipe);
         }}

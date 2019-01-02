@@ -1,28 +1,13 @@
 .recipe {
-  background-color: #666666;
+  /* background-color: #666666; */
   padding: 1vh;
   list-style: none;
+  border: 1px solid white;
 }
 
-.recipe:nth-child(even) {
+/* .recipe:nth-child(even) {
   background-color: #999999
-}
-
-/* .hidden {
-  display: none;
-}
-
-.expanded {
-  display: inline-block;
 } */
-
-.false {
-  display: none;
-}
-
-.true {
-  display: inline-block;
-}
 
 .recipe-condensed {
   background-color: transparent;
