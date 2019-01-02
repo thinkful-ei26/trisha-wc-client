@@ -18,39 +18,39 @@ export class ReportForm extends Component {
     })
     .then(res => {
       if (!res.ok) {
-          if (
-              res.headers.has('content-type') &&
-              res.headers
-                  .get('content-type')
-                  .startsWith('application/json')
-          ) {
-              // It's a nice JSON error returned by us, so decode it
-              return res.json().then(err => Promise.reject(err));
-          }
-          // It's a less informative error returned by express
-          return Promise.reject({
-              code: res.status,
-              message: res.statusText
-          });
+        if (
+          res.headers.has('content-type') &&
+          res.headers
+            .get('content-type')
+            .startsWith('application/json')
+        ) {
+          // It's a nice JSON error returned by us, so decode it
+          return res.json().then(err => Promise.reject(err));
+        }
+        // It's a less informative error returned by express
+        return Promise.reject({
+          code: res.status,
+          message: res.statusText
+        });
       }
       return;
   })
   .then(() => console.log('Submitted with values', values))
   .catch(err => {
-      const {reason, message, location} = err;
-      if (reason === 'ValidationError') {
-          // Convert ValidationErrors into SubmissionErrors for Redux Form
-          return Promise.reject(
-              new SubmissionError({ 
-                  [location]: message
-              })
-          );
-      }
+    const {reason, message, location} = err;
+    if (reason === 'ValidationError') {
+      // Convert ValidationErrors into SubmissionErrors for Redux Form
       return Promise.reject(
-          new SubmissionError({
-              _error: 'Error submitting message'
-          })
+        new SubmissionError({ 
+          [location]: message
+        })
       );
+    }
+    return Promise.reject(
+      new SubmissionError({
+        _error: 'Error submitting message'
+      })
+    );
   });
 }
   render() {
@@ -104,7 +104,7 @@ export class ReportForm extends Component {
             </button>
           </li>
         ))}
-          <button 
+          <button
             className="add-btn"
             type="button" 
             onClick={() => fields.push()}
