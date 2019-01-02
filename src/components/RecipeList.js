@@ -2,18 +2,22 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './recipe-list.css';
 import Recipes from './Recipes';
+import { surpriseClick } from '../actions/surprise';
 
 export class RecipeList extends React.Component {
 
   render () {
     return (
       <div>
-        <button onClick={e => console.log(this.props)}>
-          this.props on RecipeList
+        <button onClick={e => {
+          console.log('this.props.recipes', this.props.recipes);
+          this.props.dispatch(surpriseClick(this.props.recipes))
+          }}>
+          Surprise Me
         </button>
-          <ul 
-        className="recipe-list" 
-        aria-live="polite"
+        <ul 
+          className="recipe-list" 
+          aria-live="polite"
         >
           <Recipes />
         </ul>

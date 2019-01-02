@@ -1,14 +1,33 @@
 import { FETCH_RECIPES_REQUEST, FETCH_RECIPES_SUCCESS, FETCH_RECIPES_ERROR } from '../actions';
 import { TOGGLE_EXPAND } from '../actions/recipe';
 
+import {/*  FETCH_RECIPE_REQUEST, FETCH_RECIPE_SUCCESS, FETCH_RECIPE_ERROR, */ SURPRISE_CLICK } from '../actions/surprise';
+
 const initialState = {
   recipes: [],
   loading: false,
-  error: null
+  error: null,
+  surprise: null
 }
 
 export const recipeReducer = (state=initialState, action) => {
   switch (action.type) {
+
+    case SURPRISE_CLICK : 
+    const randomRecipePicker = (recipes) => {
+
+      //add a random index generator 
+      console.log('recipes on surpriseclick', recipes)
+      return recipes[6];
+    }
+
+    const randomRecipe = randomRecipePicker(state.recipes);
+
+    return Object.assign({}, state, { 
+      recipes: [randomRecipe],
+      surprise: true
+    })
+
     case FETCH_RECIPES_REQUEST : 
     return Object.assign({}, state, { loading: true })
 
@@ -33,17 +52,32 @@ export const recipeReducer = (state=initialState, action) => {
       }
 
       /* ==== CONDITIONALLY CHANGE EXPANDED TRUE || FALSE ON CLICK OF LI ====*/
-      const clickedRecipe = findById(state.recipes, action.id);
+      let clickedRecipe = findById(state.recipes, action.id);
       console.log('clickedRecipe', clickedRecipe);
 
-      const expandedRecipe = Object.assign([], clickedRecipe, [...clickedRecipe, clickedRecipe[0].expanded = true ])
-
+      const expandedRecipe = Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = !state.expanded ])
       console.log('expandedRecipe',expandedRecipe);
 
       return Object.assign({}, state, {
         recipes: [...state.recipes] 
       })
       
+      // case FETCH_RECIPE_REQUEST : 
+      // return Object.assign({}, state, { loading: true })
+  
+      // case FETCH_RECIPE_SUCCESS :
+      // return Object.assign({}, state, { 
+      //   loading: false, 
+      //   recipes: action.recipes, 
+      //   error: null
+      // })
+  
+      // case FETCH_RECIPE_ERROR :
+      // return Object.assign({}, state, { 
+      //   loading: true,
+      //   error: action.error
+      // })
+
     default: return state
   }
 }
