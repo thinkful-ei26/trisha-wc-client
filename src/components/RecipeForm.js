@@ -8,6 +8,7 @@ import './recipe-form.css';
 export class ReportForm extends Component {
   onSubmit(values) {
     console.log('RecipeForm onSubmit values:',values);
+    //API endpoint should be config vars
     return fetch('http://localhost:8080/api/recipes/', {
       method: 'POST',
       body: JSON.stringify(values),
@@ -40,7 +41,7 @@ export class ReportForm extends Component {
       if (reason === 'ValidationError') {
           // Convert ValidationErrors into SubmissionErrors for Redux Form
           return Promise.reject(
-              new SubmissionError({ //coming from Redux form https://redux-form.com/7.1.2/docs/api/submissionerror.md/
+              new SubmissionError({ 
                   [location]: message
               })
           );
@@ -59,7 +60,7 @@ export class ReportForm extends Component {
     if (submitSucceeded) {
       successMessage = (
         <div className="message message-success">
-          Report submitted successfully
+          Recipe saved successfully
         </div>
       );
     }

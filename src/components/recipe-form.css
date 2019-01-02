@@ -17,3 +17,11 @@
 li {
   list-style-type: none;
 }
+
+.message-error {
+  color: red;
+}
+
+.message-success {
+  color: green;
+}

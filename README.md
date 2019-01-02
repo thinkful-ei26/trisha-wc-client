@@ -42,7 +42,7 @@ Detailed view expands to additionally display:**
 * Prep time
 * Cooking time 
 
-:x: **5. User can add a new recipe to the recipe list** 
+:white_check_mark: **5. User can add a new recipe to the recipe list** 
 When a user clicks on "+ New Recipe", they are taken to this create new recipe form.
 * Recipe title
 * Description
@@ -55,8 +55,8 @@ When a user clicks on "+ New Recipe", they are taken to this create new recipe f
 :white_check_mark: **6. User will receive the appropriate error feedback when they cannot submit a new recipe.**
 
 ### Post MVP
-- **User can click on "INFO" for instructions on how to use the app**
-- **User can search a recipe using the search box**
+:white_check_mark: **User can click on "INFO" for instructions on how to use the app**
+:construction: **User can search a recipe using the search box**
 - **User can filter the recipe list by the example categories below:**
     * Filter by:
     * Dairy-free
