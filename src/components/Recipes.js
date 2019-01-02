@@ -24,12 +24,6 @@ export class Recipes extends Component {
       })
     }
 
-    // const regex = /<br\s*[/]?>/gi
-    // const steps = (directions) => {
-    //   console.log(directions.replace(regex, "\n" ));
-    //   return <li>{directions.replace(regex, "\n" )}</li>
-    // };
-
     const stepsArray = (directions) => {
       console.log(directions.split('\n'));
       return directions.split('\n')
@@ -67,30 +61,28 @@ export class Recipes extends Component {
           <h3>{recipe.title}</h3>
           <p>{recipe.desc}</p>
         </div>
-        <br/>
         <div 
           className="detailed"
           style={{display: recipe.expanded ? 'block': 'none'}}
         >
+          <hr/>
           <p>
             <strong>Prep Time:</strong> {recipe.prep}
-          </p>
-          <p>
+            <br/>
             <strong>Cook Time:</strong> {recipe.cook}
-          </p>
-          <p>
+            <br/>
             <strong>Number of Servings:</strong> {recipe.serving}
           </p>
           <p>
             <strong>Ingredients:</strong> 
           </p>
-          <ul>
+          <ul className="ingredients-list">
             {ingredient(recipe.ing)}
           </ul>
           <p>
             <strong>Directions:</strong> 
           </p>
-          <ol>
+          <ol className="directions-list">
             {steps(stepsArray(recipe.directions))}
           </ol>
         </div>
