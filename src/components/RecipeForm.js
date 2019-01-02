@@ -5,11 +5,11 @@ import { cancel } from '../actions/nav';
 import { required, nonEmpty, validInput, validURL, validIngredient } from '../validators';
 import './recipe-form.css';
 
+import { API_BASE_URL } from '../config';
+
 export class ReportForm extends Component {
   onSubmit(values) {
-    console.log('RecipeForm onSubmit values:',values);
-    //API endpoint should be config vars
-    return fetch('http://localhost:8080/api/recipes/', {
+    return fetch(`${API_BASE_URL}/api/recipes/`, {
       method: 'POST',
       body: JSON.stringify(values),
       headers: {
