@@ -1,7 +1,7 @@
 import { FETCH_RECIPES_REQUEST, FETCH_RECIPES_SUCCESS, FETCH_RECIPES_ERROR } from '../actions';
 import { TOGGLE_EXPAND } from '../actions/recipe';
 
-import {/*  FETCH_RECIPE_REQUEST, FETCH_RECIPE_SUCCESS, FETCH_RECIPE_ERROR, */ SURPRISE_CLICK } from '../actions/surprise';
+import { SURPRISE_CLICK } from '../actions/surprise';
 
 const initialState = {
   recipes: [],
@@ -15,14 +15,13 @@ export const recipeReducer = (state=initialState, action) => {
 
     case SURPRISE_CLICK : 
     const randomRecipePicker = (recipes) => {
-
-      //add a random index generator 
       console.log('recipes on surpriseclick', recipes)
-      return recipes[6];
+      var recipe = recipes[Math.floor(Math.random()*recipes.length)];
+      return recipe;
     }
 
     const randomRecipe = randomRecipePicker(state.recipes);
-
+    
     return Object.assign({}, state, { 
       recipes: [randomRecipe],
       surprise: true

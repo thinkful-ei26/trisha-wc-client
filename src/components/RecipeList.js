@@ -10,8 +10,7 @@ export class RecipeList extends React.Component {
     return (
       <div>
         <button onClick={e => {
-          console.log('this.props.recipes', this.props.recipes);
-          this.props.dispatch(surpriseClick(this.props.recipes))
+          this.props.dispatch(surpriseClick())
           }}>
           Surprise Me
         </button>

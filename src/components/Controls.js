@@ -1,11 +1,9 @@
 import React from 'react';
-// import Surprise from './Surprise';
 
 export default function Controls(props) {
 
   return (
     <section className="controls">
-     {/* <Surprise /> */}
       <div className="search-form">
         <form onSubmit={e => e.preventDefault()}>
           <label htmlFor="search">Search</label>&emsp;

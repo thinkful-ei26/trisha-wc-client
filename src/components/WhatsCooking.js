@@ -3,7 +3,6 @@ import './WhatsCooking.css';
 import Header from './Header';
 import Controls from './Controls';
 import RecipeList from './RecipeList';
-import Surprise from './RecipeList';
 
 export class WhatsCooking extends Component {
   
@@ -12,8 +11,7 @@ export class WhatsCooking extends Component {
       <div className="whats-cooking">
         < Header />
         <Controls />
-        {/* <RecipeList /> */}
-        <Surprise />
+        <RecipeList />
       </div>
     );
   }
