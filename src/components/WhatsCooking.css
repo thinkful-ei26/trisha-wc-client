@@ -132,3 +132,12 @@ button {
   width: 85%;
   margin: auto;
 }
+
+.recipe {
+  cursor: pointer;
+}
+
+.recipe:hover {
+  background-color: aliceblue;
+  color: black;
+}
