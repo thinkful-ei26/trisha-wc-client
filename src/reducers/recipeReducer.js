@@ -1,7 +1,7 @@
 import { FETCH_RECIPES_REQUEST, FETCH_RECIPES_SUCCESS, FETCH_RECIPES_ERROR } from '../actions';
 import { TOGGLE_EXPAND } from '../actions/recipe';
 
-import { SURPRISE_CLICK } from '../actions/surprise';
+import { SURPRISE_CLICK } from '../actions/controls';
 
 const initialState = {
   recipes: [],
@@ -60,23 +60,7 @@ export const recipeReducer = (state=initialState, action) => {
       return Object.assign({}, state, {
         recipes: [...state.recipes] 
       })
-      
-      // case FETCH_RECIPE_REQUEST : 
-      // return Object.assign({}, state, { loading: true })
-  
-      // case FETCH_RECIPE_SUCCESS :
-      // return Object.assign({}, state, { 
-      //   loading: false, 
-      //   recipes: action.recipes, 
-      //   error: null
-      // })
-  
-      // case FETCH_RECIPE_ERROR :
-      // return Object.assign({}, state, { 
-      //   loading: true,
-      //   error: action.error
-      // })
-
+    
     default: return state
   }
 }
