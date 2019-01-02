@@ -12,10 +12,12 @@
 .whats-cooking-header {
   font-size: calc(1.5rem + 2vmin);
   font-weight: bolder;
+  /* margin-bottom: 5px; */
   /* background-color: #999999; */
 }
 
 .top-nav {
+  margin: 0;
   list-style-type: none;
   /* background-color: grey; */
 }
