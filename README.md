@@ -3,7 +3,7 @@ Not sure what to cook for your next meal? What's Cooking is a full-stack app tha
 
 ## Requirements
 - [Curriculum Link](https://courses.thinkful.com/dev-301v1/assignment/2.9.4)
-- In development, your local machine should have [Node.js](https://nodejs.org/en/) and [Mongo](https://www.mongodb.com/) set-up
+- In development, your local machine should have [Node.js](https://nodejs.org/en/) and [Mongo](https://www.mongodb.com/)
 
 ## Instructions (development)
 1. Clone both the server and client side of this app:
@@ -32,7 +32,7 @@ All recipes in the list default to a "condensed" view showing only:
 - Choice 2: Manually write my recipe list (at least 10)
 - Choice 3: Do both choice 1 & 2
 
-:x: **3. User can click on “Surprise Me!” button and a random recipe will be generated.**
+:white_check_mark: **3. User can click on “Surprise Me!” button and a random recipe will be generated.**
 
 :white_check_mark: **4. When a user clicks on a recipe they are taken to a display with "detailed" view.**
 Detailed view expands to additionally display:**
