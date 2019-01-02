@@ -24,21 +24,29 @@ export class Recipes extends Component {
       })
     }
 
-    const steps = (directions) => {
-      return <li>{directions}</li>};
-
+    // const regex = /<br\s*[/]?>/gi
     // const steps = (directions) => {
-    //   return directions.map((step, index) => {
-    //     console.log('step');
-    //     // return (
-    //     // <li
-    //     //   key={index}
-    //     //   className="directions"
-    //     // >
-    //     //   {step}
-    //     // </li>); 
-    //   })
-    // }
+    //   console.log(directions.replace(regex, "\n" ));
+    //   return <li>{directions.replace(regex, "\n" )}</li>
+    // };
+
+    const stepsArray = (directions) => {
+      console.log(directions.split('\n'));
+      return directions.split('\n')
+    };
+
+    const steps = (dirArray) => {
+      return dirArray.map((step, index) => {
+        console.log('step');
+        return (
+        <li
+          key={index}
+          className="directions"
+        >
+          {step}
+        </li>); 
+      })
+    }
 
     const expandedRecipe = recipes.map( (recipe, index) => (
       <li 
@@ -79,12 +87,11 @@ export class Recipes extends Component {
           <ul>
             {ingredient(recipe.ing)}
           </ul>
-          {/* <p><strong>Directions:</strong> {recipe.directions}</p> */}
           <p>
             <strong>Directions:</strong> 
           </p>
           <ol>
-            {steps(recipe.directions)}
+            {steps(stepsArray(recipe.directions))}
           </ol>
         </div>
       </li>
