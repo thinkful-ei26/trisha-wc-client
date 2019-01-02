@@ -8,7 +8,7 @@ import './recipe-form.css';
 export class ReportForm extends Component {
   onSubmit(values) {
     console.log('RecipeForm onSubmit values:',values);
-    return fetch('/api/recipes/', {
+    return fetch('http://localhost:8080/api/recipes/', {
       method: 'POST',
       body: JSON.stringify(values),
       headers: {
@@ -131,11 +131,11 @@ export class ReportForm extends Component {
         {errorMessage}
           <Field 
             element="input"
-            name="recipeTitle" 
+            name="title" 
             type="text"
             component={Input}
             label="Recipe Title:"
-            id="recipeTitle" 
+            id="title" 
             validate={[required, nonEmpty, validInput]}
           />
 
