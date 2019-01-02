@@ -127,3 +127,8 @@ button {
 .info-text:hover {
   text-shadow: 1px 1px grey;
 }
+
+.recipe-list {
+  width: 85%;
+  margin: auto;
+}
