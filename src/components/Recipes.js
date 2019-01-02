@@ -63,10 +63,12 @@ export class Recipes extends Component {
           <p>
             <strong>Number of Servings:</strong> {recipe.serving}
           </p>
-          <p><strong>Ingredients:</strong> </p>
-            <ul>
+          <p><strong>Ingredients:</strong> 
+            {recipe.ing}
+          </p>
+            {/* <ul>
               <li>{ingredient(recipe)}</li>
-            </ul>
+            </ul> */}
           <p><strong>Directions:</strong> {recipe.directions}</p>
         </div>
       </li>
