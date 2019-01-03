@@ -1,12 +1,19 @@
 import React from 'react';
+import {searchRecipes} from '../actions/search';
 
 export default function Controls(props) {
 
   return (
-    <section className="search-form">
-        <form onSubmit={e => {
+    <section className="search-section">
+        <form 
+          id="search-form"
+          onSubmit={e => {
             e.preventDefault();
-            console.log(e.target);
+            let inputs = document.getElementById("search-form").elements;
+            console.log('inputs', inputs);
+            let searchTerm = inputs[0].value;
+            console.log('searchTerm', searchTerm);
+            // this.props.dispatch(searchRecipes(searchTerm))
           }
         }>
           <label htmlFor="search">Search</label>&emsp;
