@@ -41,6 +41,7 @@ export function TopNav(props) {
           <span className="add-recipe-text">+ Add Recipe</span>
         </button>
       </li>
+      <div class="wc-header-bar"></div>
     </ul>
   );
 }
