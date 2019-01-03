@@ -17,7 +17,7 @@ a {
 .show-all-btn {
   padding: 10px;
   margin: 10px;
-}
+} 
 
 .surprise-btn {
   padding: 10px;
@@ -106,20 +106,6 @@ button {
   text-shadow: 1px 1px grey;
 }
 
-<<<<<<< HEAD
-.recipe-list {
-  width: 85%;
-  margin: auto;
-}
-
-.recipe {
-  cursor: pointer;
-}
-
-.recipe:hover {
-  background-color: aliceblue;
-  color: black;
-=======
 .info-content {
   margin-top: 15%;
 }
@@ -201,5 +187,4 @@ a {
   box-sizing: border-box;
   z-index: 99;
   margin-top: 0;
->>>>>>> styles
 }
