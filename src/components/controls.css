@@ -18,15 +18,21 @@
   line-height: 1.445;
   text-rendering: optimizeLegibility;
   box-sizing: border-box;
-  color:rgb(244, 117, 33);
-  box-shadow: inset 0 0 0 0.125rem rgb(244, 117, 33);
   background-color: initial;
+/* off-white buttons: */
+  color: #b0aebb;
+  box-shadow: inset 0 0 0 0.125rem #b0aebb;
+
+/* orange buttons: */
+  /* color:rgb(244, 117, 33);
+  box-shadow: inset 0 0 0 0.125rem rgb(244, 117, 33); */
 }
 
 .surprise-btn:hover {
   color: #1b1a26;
   box-shadow: inset 0 0 0 0.125rem rgb(244, 117, 33);
-  background-color:  rgb(244, 117, 33);
+  /* background-color:  rgb(244, 117, 33); */
+  background-image: linear-gradient(to top left,#ff8a00,#da1b60);
 }
 
 .show-all-btn {
@@ -49,13 +55,23 @@
   line-height: 1.445;
   text-rendering: optimizeLegibility;
   box-sizing: border-box;
-  color:rgb(244, 117, 33);
-  box-shadow: inset 0 0 0 0.125rem rgb(244, 117, 33);
   background-color: initial;
+/* off-white buttons: */
+  color: #b0aebb;
+  box-shadow: inset 0 0 0 0.125rem #b0aebb;
+
+/* orange buttons: */
+  /* color:rgb(244, 117, 33);
+  box-shadow: inset 0 0 0 0.125rem rgb(244, 117, 33); */
 }
 
 .show-all-btn:hover {
   color: #1b1a26;
   box-shadow: inset 0 0 0 0.125rem rgb(244, 117, 33);
-  background-color:  rgb(244, 117, 33);
+  /* background-color:  rgb(244, 117, 33); */
+  background-image: linear-gradient(to top left,#ff8a00,#da1b60);
+}
+
+.controls {
+  margin-bottom: 2.5rem;
 }

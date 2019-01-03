@@ -21,3 +21,10 @@
 .directions-list {
   text-align: left;
 }
+
+.recipe-list {
+  max-width: 65.63rem;
+  overflow: hidden;
+  padding: 0 1.25rem;
+  margin: 0 auto;
+}
