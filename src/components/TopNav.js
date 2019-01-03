@@ -15,8 +15,8 @@ export function TopNav(props) {
   }
 
   return (
-      <ul className="top-nav">
-      <li className="info">
+    <ul className="header-content">
+      <li className="header-left">
         <button
           className="info-btn" href="#info"
           aria-label="How to use this app"
@@ -28,7 +28,8 @@ export function TopNav(props) {
           <span className="info-text">Info</span>
         </button>
       </li>
-      <li className="add-recipe">
+      <li className="header-center"><h1 className="logo-content">What's Cooking?</h1></li>
+      <li className="header-right">
         <button
           className="add-recipe-btn"
           aria-label="Create a new recipe"
