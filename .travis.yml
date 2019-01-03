@@ -1,5 +1,14 @@
- language: node_js
- node_js: node
- cache:
-   directories:
-     - node_modules
+language: node_js
+node_js: node
+cache:
+  directories:
+    - node_modules
+env:
+  - CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: ZhXNz75YVLBKriWW0QifYNZzl/D71GUKZJqFxGb1n4ncsCwinYAjeztbsArb6s1CkUZdM3ue3rRn1Lg1FKXiNEu1i2RYsY0z9IOB4MvfkQ0mZe9gTg/jc8NH59TnKLH+d8zFOoTWfdPVHzSUjijCgATTacjcc/kc6uKTUAAmCKoQZLdsux32KUWV6M4wk4Q0Z9mVVCqg6qDgsmtOXxlmJMMq5oeBRd6zYb7LgFUHgzsIUoiOgzQ1Xn/N6hTOayKdyoImx9EOwxRydoi6d5HQ7vAkKuH+zmGHKvREra09h6pd2LqggrzmJqgk4jKYMqP0NxAVpsCZ/iPMYU98uX0r17OXlURB8GuFG2SwOTtCqzE+mB51UaRGxBkrGF5rWaJhAybg7x8YWi+ZClfGyYYhiuOCQEjHCk32WGndh/O3paiwsD6Qt8ZQ3yZajZhrJvNJTGnBHbF4UON+aic7R34X6RSYDWkbidsZ4HgMuDD5ON4+1vwQtychJBo6cakLbN2WeLMEDU2CDsCVTOD+6nQT48H2H5LZLRnvv/M6Zfhq0m5ABvIVc8an3WyhBAFEWwo50l1++RFw7y/f6WWVSGdx6ybmlM2nhWT8AsN+cyKjruh5qclBvH7MTqw0093E7sU46vY/pfkKfYH8bzJ9IKALV+Rdlqsi0gy7if/VHvYPPds=
+  app: protected-depths-66567
+  on:
+    repo: thinkful-ei26/trisha-wc-client
