@@ -25,13 +25,11 @@ export class Recipes extends Component {
     }
 
     const stepsArray = (directions) => {
-      console.log(directions.split('\n'));
       return directions.split('\n')
     };
 
     const steps = (dirArray) => {
       return dirArray.map((step, index) => {
-        console.log('step');
         return (
         <li
           key={index}
@@ -49,7 +47,6 @@ export class Recipes extends Component {
         tabIndex="0"
         onClick={ () => {
           this.props.dispatch(toggleExpand(recipe.id))
-          console.log(recipe);
         }}
       >
         <div

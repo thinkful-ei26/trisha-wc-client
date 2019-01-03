@@ -1,0 +1,61 @@
+.surprise-btn {
+  margin: 1.25rem 0 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 10rem;
+  max-width: 25rem;
+  width: 100%;
+  height: 3.375rem;
+  padding: 0 1.25rem;
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color .1s ease,background-color .1s ease,box-shadow .1s ease;
+  font-family: markpro,Helvetica Neue,helvetica,sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.445;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  color:rgb(244, 117, 33);
+  box-shadow: inset 0 0 0 0.125rem rgb(244, 117, 33);
+  background-color: initial;
+}
+
+.surprise-btn:hover {
+  color: #1b1a26;
+  box-shadow: inset 0 0 0 0.125rem rgb(244, 117, 33);
+  background-color:  rgb(244, 117, 33);
+}
+
+.show-all-btn {
+  margin: 1.25rem 0 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 10rem;
+  max-width: 25rem;
+  width: 100%;
+  height: 3.375rem;
+  padding: 0 1.25rem;
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color .1s ease,background-color .1s ease,box-shadow .1s ease;
+  font-family: markpro,Helvetica Neue,helvetica,sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.445;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  color:rgb(244, 117, 33);
+  box-shadow: inset 0 0 0 0.125rem rgb(244, 117, 33);
+  background-color: initial;
+}
+
+.show-all-btn:hover {
+  color: #1b1a26;
+  box-shadow: inset 0 0 0 0.125rem rgb(244, 117, 33);
+  background-color:  rgb(244, 117, 33);
+}

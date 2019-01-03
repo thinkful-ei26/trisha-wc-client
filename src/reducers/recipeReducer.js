@@ -15,7 +15,6 @@ export const recipeReducer = (state=initialState, action) => {
 
     case SURPRISE_CLICK : 
     const randomRecipePicker = (recipes) => {
-      console.log('recipes on surpriseclick', recipes)
       var recipe = recipes[Math.floor(Math.random()*recipes.length)];
       return recipe;
     }
@@ -51,7 +50,6 @@ export const recipeReducer = (state=initialState, action) => {
 
       /* ==== CONDITIONALLY CHANGE EXPANDED TRUE || FALSE ON CLICK OF LI ====*/
       let clickedRecipe = findById(state.recipes, action.id);
-      console.log('clickedRecipe', clickedRecipe);
 
       const expandedRecipe = Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = !state.expanded ])
       console.log('expandedRecipe',expandedRecipe);

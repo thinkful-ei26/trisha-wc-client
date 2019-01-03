@@ -4,6 +4,7 @@ import './recipe-list.css';
 import Recipes from './Recipes';
 import { surpriseClick } from '../actions/controls';
 import fetchRecipes from '../actions';
+import './controls.css'
 
 export class RecipeList extends React.Component {
 
