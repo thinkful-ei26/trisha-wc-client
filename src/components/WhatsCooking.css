@@ -35,7 +35,6 @@ a {
 }
 
 button {
-  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -183,3 +182,33 @@ button {
   z-index: 99;
 }
 
+.github-repo {
+  color: #b0aebb;
+  font-weight: 700;
+  border: 1px solid #b0aebb;
+  padding: 0.5rem;
+}
+
+.github-repo:hover {
+  /* background-color: #28a745; */
+  font-weight: 700;
+  padding: 0.5rem;
+  background-color: #474658;
+  color: white;
+}
+
+.got-it-btn {
+  color: #b0aebb;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  background-color: inherit;
+}
+
+.got-it-btn:hover {
+  font-weight: 700;
+  padding: 0.5rem;
+  /* background-color: #28a745; */
+  background-color: #474658;
+  color: white;
+}
