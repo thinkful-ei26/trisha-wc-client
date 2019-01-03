@@ -16,8 +16,11 @@
 }
 
 .top-nav {
+  margin-top: 0;
+  margin-bottom: 5px;
+  width: 100%;
   list-style-type: none;
-  /* background-color: grey; */
+  background-color: grey;
 }
 
 a {
@@ -32,10 +35,6 @@ header {
   width: 100%; /* Full width */
 }
 
-/* .container {
-  margin-top: 150px;
-} */
-
 .show-all-btn {
   padding: 10px;
   margin: 10px;
@@ -45,7 +44,7 @@ header {
   padding: 10px;
 }
 
-/* .info-overlay {
+.info-overlay {
   position: fixed;
   display: block;
   width: 100%;
@@ -54,10 +53,10 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(	40, 44, 52,0.9);
+  background-color: rgba(	40, 44, 52, 1);
   z-index: 2;
   cursor: pointer;
-} */
+}
 
 .got-it-btn {
   padding: 10px;
@@ -126,4 +125,8 @@ button {
 
 .info-text:hover {
   text-shadow: 1px 1px grey;
+}
+
+.info-content {
+  margin-top: 15%;
 }
