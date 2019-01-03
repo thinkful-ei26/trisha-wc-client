@@ -196,12 +196,14 @@ export class ReportForm extends Component {
             label="Prep Time: "
           >
             <option>Duration:</option>
-            <option value="15">15 minutes</option>
-            <option value="30">30 minutes</option>
-            <option value="45">45 minutes</option>
-            <option value="60">1 hour</option>
-            <option value="90">1 hour 30 minutes</option>
-            <option value="120">2 hours</option>
+            <option value="5 minutes">5 minutes</option>
+            <option value="15 minutes">15 minutes</option>
+            <option value="30 minutes">30 minutes</option>
+            <option value="45 minutes">45 minutes</option>
+            <option value="1 hour">1 hour</option>
+            <option value="1 hour 30 minutes">1 hour 30 minutes</option>
+            <option value="2 hours">2 hours</option>
+            <option value="2+ hours">2+ hours</option>
           </Field>
 
           <Field 
@@ -212,12 +214,14 @@ export class ReportForm extends Component {
             label="Cook Time: "
           >
             <option>Duration:</option>
-            <option value="15">15 minutes</option>
-            <option value="30">30 minutes</option>
-            <option value="45">45 minutes</option>
-            <option value="60">1 hour</option>
-            <option value="90">1 hour 30 minutes</option>
-            <option value="120">2 hours</option>
+            <option value="5 minutes">5 minutes</option>
+            <option value="15 minutes">15 minutes</option>
+            <option value="30 minutes">30 minutes</option>
+            <option value="45 minutes">45 minutes</option>
+            <option value="1 hour">1 hour</option>
+            <option value="1 hour 30 minutes">1 hour 30 minutes</option>
+            <option value="2 hours">2 hours</option>
+            <option value="2+ hours">2+ hours</option>
           </Field>
 
           <Field 
