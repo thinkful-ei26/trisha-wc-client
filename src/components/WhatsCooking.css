@@ -6,11 +6,11 @@
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
-  color: white;
+  color: #e8e8e9;
 }
 
 a {
-  color: white;
+  color: #e8e8e9;
   text-decoration: none;
 }
 
@@ -82,7 +82,7 @@ a {
 .add-recipe-btn {
   /* padding: 10px; */
   background-color: transparent;
-  color: white;
+  color: #e8e8e9;
   border: none;
 }
 
@@ -104,44 +104,30 @@ button {
 
 .info-text:hover {
   text-shadow: 1px 1px grey;
+  color: white;
 }
 
 .info-content {
   margin-top: 15%;
 }
 
-/* WHAT'S COOKING TOP-NAV
+/* WHAT'S COOKING TOP-NAV */
+
 .header-content {
-  position: relative;
-  flex: 0 0 4.5rem;
-  min-width: 20rem;
-}
-
-.header-left {
+  position: fixed;
+  left: 0;
+  right: 0;
   display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 4.5rem;
+  padding-bottom: .125rem;
+  min-width: 20rem;
+  background-color: #1b1a26;
+  box-sizing: border-box;
+  z-index: 99;
+  margin-top: 0;
 }
-
-.header-center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.whats-cooking-logo {
-  display: block;
-  transition: .2s ease;
-  padding: .375rem .625rem;
-}
-
-a {
-  font-weight: 400;
-  text-decoration: none;
-  cursor: pointer;
-  color: #00b4ff;
-  background: none;
-  border: none;
-} */
 
 .header-left {
   display: flex;
@@ -173,18 +159,12 @@ a {
   font-weight: bolder;
 }
 
-.header-content {
-  position: fixed;
+.wc-header-bar {
+  position: absolute;
   left: 0;
-  right: 0;
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  height: 4.5rem;
-  padding-bottom: .125rem;
-  min-width: 20rem;
-  background-color: #1b1a26;
-  box-sizing: border-box;
+  bottom: 0;
+  width: 100%;
+  height: .125rem;
+  background-color: rgb(244, 117, 33);
   z-index: 99;
-  margin-top: 0;
 }
