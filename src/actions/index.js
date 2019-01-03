@@ -20,7 +20,7 @@ export const fetchRecipesError = (error) => ({
 
 export default function fetchRecipes() {
   return dispatch => {
-    dispatch(fetchRecipesRequest);
+    dispatch(fetchRecipesRequest());
 
     fetch(`${API_BASE_URL}/api/recipes`)
       .then(res => {
