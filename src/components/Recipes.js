@@ -43,7 +43,7 @@ export class Recipes extends Component {
     const expandedRecipe = recipes.map( (recipe, index) => (
       <li 
         key={index} 
-        className="recipe"
+        className="recipe float"
         tabIndex="0"
         onClick={ () => {
           this.props.dispatch(toggleExpand(recipe.id))
