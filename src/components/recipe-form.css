@@ -1,3 +1,7 @@
+.new-recipe-form {
+  margin-top: 15%;
+}
+
 .remove-btn {
   background-color: rgb(212, 82, 82);
 }
@@ -7,12 +11,12 @@
   margin: 10px;
 }
 
-.ing-container {
+.ingredient {
   background-color:rgb(55, 71, 57);
   list-style-type: none;
 }
 
-.ing-container:nth-child(odd) {
+.ingredient:nth-child(odd) {
   background-color: rgb(40, 52, 41);
 }
 
@@ -22,4 +26,18 @@
 
 .message-success {
   color: green;
+}
+
+textarea {
+  width: 293px;
+  min-width: 80%;
+  max-width: 80%;
+}
+
+input {
+  width: 80%;
+}
+
+.ingredients-container {
+  width: 80%;
 }

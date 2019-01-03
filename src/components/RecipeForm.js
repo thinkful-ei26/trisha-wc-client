@@ -82,11 +82,11 @@ export class ReportForm extends Component {
     );
     
     const renderIng = ({ fields, meta: { error } }) => (
-      <ul>
+      <ul className="ingredients-container">
         {fields.map((ing, index) => (
           <li   
             key={index}
-            className="ing-container"
+            className="ingredient"
           >
             <Field
               name={ing}
@@ -121,6 +121,7 @@ export class ReportForm extends Component {
     return (
       <div className="add-recipe-overlay">
         <form
+          className="new-recipe-form"
           onSubmit={handleSubmit(values => this.onSubmit(values) )}
         >
         <fieldset>
@@ -132,7 +133,7 @@ export class ReportForm extends Component {
             name="title" 
             type="text"
             component={Input}
-            label="Recipe Title:"
+            label="Recipe Title: "
             id="title" 
             validate={[required, nonEmpty, validInput]}
           />
@@ -143,7 +144,7 @@ export class ReportForm extends Component {
             type="textarea"
             id="desc"
             component={Input}
-            label="Description:"
+            label="Description: "
             validate={[required, nonEmpty, validInput]}
           />
 
@@ -158,7 +159,7 @@ export class ReportForm extends Component {
             name="imgUrl" 
             type="text"
             component={Input}
-            label="Image URL:"
+            label="Image URL: "
             id="imgUrl" 
             validate={[validURL]}
           />
@@ -169,7 +170,7 @@ export class ReportForm extends Component {
             name="serving"
             component={Input}
             id="serving"
-            label="Number of Servings:"
+            label="Number of Servings: "
           >
             <option># of servings:</option>
             <option value="1">1</option>
@@ -192,7 +193,7 @@ export class ReportForm extends Component {
             name="prep"
             component={Input}
             id="prep"
-            label="Prep Time:"
+            label="Prep Time: "
           >
             <option>Duration:</option>
             <option value="15">15 minutes</option>
@@ -208,7 +209,7 @@ export class ReportForm extends Component {
             name="cook"
             component={Input}
             id="cook"
-            label="Cook Time:"
+            label="Cook Time: "
           >
             <option>Duration:</option>
             <option value="15">15 minutes</option>
@@ -225,7 +226,7 @@ export class ReportForm extends Component {
             type="textarea"
             id="directions"
             component={Input}
-            label="Directions:"
+            label="Directions: "
             validate={[required, nonEmpty, validInput]}
           />
 
