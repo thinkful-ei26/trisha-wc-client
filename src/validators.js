@@ -11,4 +11,4 @@ export const validURL = value => (/^(http|https):\/\/[^ "]+$/.test(value) ? unde
 
 //values is returning undefined at this point
 // goal is to loop through values.ing and require/non-empty for each ingredient
-export const validIngredient = values => ( values ? undefined : console.log('something in ingredients', values));
+export const validIngredient = values => ( values ? undefined : console.log('validating ingredients in progress', values));

@@ -12,41 +12,6 @@
   cursor: pointer;
 }
 
-.got-it-btn {
-  padding: 10px;
-  margin: 10px;
-  cursor: pointer;
-}
-
-.add-recipe-overlay {
-  position: fixed;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(27, 26, 38, 1);
-  z-index: 2;
-  cursor: pointer;
-}
-
-.cancel-add-recipe-btn {
-  padding: 10px;
-  margin: 10px;
-}
-
-.clear-values-btn {
-  padding: 10px;
-  margin: 10px;
-}
-
-.save-recipe-btn {
-  padding: 10px;
-  margin: 10px;
-}
-
 .info-btn {
   background-color: transparent;
   color: white;
@@ -179,4 +144,5 @@
   /* background-color: #28a745; */
   background-color: #474658;
   color: white;
+  cursor: pointer;
 }

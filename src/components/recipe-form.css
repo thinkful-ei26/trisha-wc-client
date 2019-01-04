@@ -2,6 +2,29 @@
   margin-top: 15%;
 }
 
+.add-recipe-overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(27, 26, 38, 1);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.cancel-add-recipe-btn, .clear-values-btn, .save-recipe-btn, .add-btn {
+  color: #b0aebb;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  background-color: inherit;
+  cursor: pointer;
+} 
+
 .remove-btn {
   background-color: rgb(212, 82, 82);
 }
