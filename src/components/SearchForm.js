@@ -41,8 +41,7 @@ export class SearchForm extends React.Component {
   }
 
   renderResults() {
-    const { loading, error } = this.props;
-
+    const { loading, error, recipes } = this.props;
     if (loading) {
       return <Spinner spinnerName="circle" noFadeIn />
     }
@@ -50,21 +49,20 @@ export class SearchForm extends React.Component {
     if (error) {
       return <strong>{error}</strong>
     }
-    
+
+    console.log('recipes on SearchForm',recipes);
+
+    const stuff = recipes.map((recipe, index) =>
+      <li key={index}>
+        {recipe.title}
+      </li>
+    );
+
     return (
-      <p>From Controls</p>
-    )
-
-  //   const recipes = this.props.recipes.map((recipe, index) =>
-  //       <li key={index}>{recipe}</li>
-  //     );
-
-  //     return (
-  //       <ul className="recipe-search-results">
-  //           {recipes}
-  //           testing...
-  //       </ul>
-  //     );
+      <ul className="recipe-search-results">
+        {stuff}
+      </ul>
+    );
   }
 
   search(e) {

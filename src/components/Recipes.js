@@ -11,7 +11,7 @@ export class Recipes extends Component {
 
   render() { 
     const { recipes } = this.props;
-
+   
     const ingredient = (ingredients) => {
       return ingredients.map((ingredient, index) => {
         return (
