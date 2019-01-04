@@ -23,21 +23,8 @@ export function search(term) {
         if (!res.ok) {
             return Promise.reject(res.statusText);
         }
-        console.log('res', res)
-        console.log('term', term);
         return res.json();
     })
-    .then(recipes => 
-    {
-        let filter;
-        if (term) {
-          filter = recipes.filter( recipe => {
-            return recipe.title === term;
-        })
-            // console.log('filter 2nd then', filter)
-            return filter;
-        }
-    });
 }
 
 export const searchRecipes = searchTerm => dispatch => {

@@ -36,6 +36,10 @@ import {searchRecipes} from '../actions/search';
 
 export class SearchForm extends React.Component {
 
+  componentDidMount() {
+    this.props.dispatch(searchRecipes());
+  }
+
   renderResults() {
     const { loading, error } = this.props;
 
@@ -73,12 +77,13 @@ export class SearchForm extends React.Component {
   }
 
   render() {
+    console.log('this.props on SearchForm', this.props);
     return (
       <section className="search-section">
           <form 
             id="search-form"
             onSubmit={e => {
-              this.search(e)
+              this.search(e);
               // let inputs = document.getElementById("search-form").elements;
               // console.log('inputs', inputs);
               // let searchTerm = inputs[0].value;
