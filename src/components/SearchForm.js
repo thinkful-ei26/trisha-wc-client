@@ -37,7 +37,6 @@ import {searchRecipes} from '../actions/search';
 export class SearchForm extends React.Component {
 
   renderResults() {
-
     const { loading, error } = this.props;
 
     if (loading) {
@@ -47,11 +46,22 @@ export class SearchForm extends React.Component {
     if (error) {
       return <strong>{error}</strong>
     }
-    console.log('props on Controls',this.props);
+    console.log('props on Controls',this.props.recipes);
 
     return (
       <p>From Controls</p>
     )
+
+    // const recipes = this.props.recipes.map((recipe, index) =>
+    //     <li key={index}>{recipe}</li>
+    //   );
+
+    //   return (
+    //     <ul className="recipe-search-results">
+    //         {recipes}
+    //         testing...
+    //     </ul>
+    //   );
   }
 
   search(e) {
@@ -89,6 +99,7 @@ export class SearchForm extends React.Component {
           </form>
           <ul className="recipe-search-results">
             {this.renderResults()}
+            Testing...
           </ul>
       </section>
     );

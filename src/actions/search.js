@@ -18,25 +18,23 @@ export const searchRecipesError = error => ({
 });
 
 export function search(term) {
-    return fetch(`${API_BASE_URL}/api/recipes/?search=${term}`).then(res => {
+    return fetch(`${API_BASE_URL}/api/recipes/?search=${term}`)
+    .then(res => {
         if (!res.ok) {
             return Promise.reject(res.statusText);
         }
+        console.log('res', res)
         return res.json();
-    }).then(data => data.results.map(recipe => {
-        console.log('_search log: recipe', recipe)
-    }));
+    })
+    // .then(data => data.results.map(recipe => {
+    //     console.log('_search log: recipe', recipe)
+    //     return recipe;
+    // }));
 }
 
 export const searchRecipes = searchTerm => dispatch => {
     dispatch(searchRecipesRequest());
     search(searchTerm)
-    //   .then(res => {
-    //     if(!res.ok) {
-    //       return Promise.reject(res.statusText);
-    //     }
-    //     return res.json()
-    //   })
         .then(recipes => dispatch(searchRecipesSuccess(recipes)))
         .catch(error => dispatch(searchRecipesError(error)));
 };
