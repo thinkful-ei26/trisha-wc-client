@@ -13,16 +13,18 @@ export function SearchSection(props) {
   }
 
   return (
-    <button
-      className="search-btn" href="#info"
-      onClick={ () => {
-        console.log('clicked', props.search)
-        props.dispatch(searchClick()) 
+    <div className="butt">
+      <button
+        className="search-btn" href="#info"
+        onClick={ () => {
+          console.log('clicked', props.search)
+          props.dispatch(searchClick()) 
+          }
         }
-      }
     >
       <span className="search-text">SEARCH BUTTON</span>
     </button>
+    </div>
   );
 }
 
