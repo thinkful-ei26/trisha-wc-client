@@ -1,30 +1,104 @@
+// import React from 'react';
+// import {searchRecipes} from '../actions/search';
+
+// export default function Controls(props) {
+
+//   return (
+//     <section className="search-section">
+//         <form 
+//           id="search-form"
+//           onSubmit={e => {
+//             e.preventDefault();
+//             let inputs = document.getElementById("search-form").elements;
+//             console.log('inputs', inputs);
+//             let searchTerm = inputs[0].value;
+//             console.log('searchTerm', searchTerm);
+//             // this.props.dispatch(searchRecipes(searchTerm))
+//           }
+//         }>
+//           <label htmlFor="search">Search</label>&emsp;
+//           <input
+//               aria-controls="recipe-count"
+//               type="search"
+//               id="search"
+//               name="search"
+//               placeholder="recipe search"
+//           />
+//         </form>
+//     </section>
+//   );
+// };
+
 import React from 'react';
+import { connect } from 'react-redux'; 
+import Spinner from 'react-spinkit';
 import {searchRecipes} from '../actions/search';
 
-export default function Controls(props) {
+export class SearchForm extends React.Component {
 
-  return (
-    <section className="search-section">
-        <form 
-          id="search-form"
-          onSubmit={e => {
-            e.preventDefault();
-            let inputs = document.getElementById("search-form").elements;
-            console.log('inputs', inputs);
-            let searchTerm = inputs[0].value;
-            console.log('searchTerm', searchTerm);
-            // this.props.dispatch(searchRecipes(searchTerm))
-          }
-        }>
-          <label htmlFor="search">Search</label>&emsp;
-          <input
-              aria-controls="recipe-count"
-              type="search"
-              id="search"
-              name="search"
-              placeholder="recipe search"
-          />
-        </form>
-    </section>
-  );
+  renderResults() {
+
+    const { loading, error } = this.props;
+
+    if (loading) {
+      return <Spinner spinnerName="circle" noFadeIn />
+    }
+
+    if (error) {
+      return <strong>{error}</strong>
+    }
+    console.log('props on Controls',this.props);
+
+    return (
+      <p>From Controls</p>
+    )
+  }
+
+  search(e) {
+    e.preventDefault();
+    if (this.input.value.trim() === '') {
+      return;
+    }
+    this.props.dispatch(searchRecipes(this.input.value));
+  }
+
+  render() {
+    return (
+      <section className="search-section">
+          <form 
+            id="search-form"
+            onSubmit={e => {
+              this.search(e)
+              // let inputs = document.getElementById("search-form").elements;
+              // console.log('inputs', inputs);
+              // let searchTerm = inputs[0].value;
+              // console.log('searchTerm', searchTerm);
+              // this.props.dispatch(searchRecipes(searchTerm))
+            }
+          }>
+            <label htmlFor="search">Search</label>&emsp;
+            <input
+                aria-controls="recipe-count"
+                type="search"
+                id="search"
+                name="search"
+                placeholder="recipe search"
+                ref={input => this.input = input}
+            />
+            <button>Search</button>
+          </form>
+          <ul className="recipe-search-results">
+            {this.renderResults()}
+          </ul>
+      </section>
+    );
+  }
 };
+
+const mapStateToProps = state => ({
+  recipes: state.recipes,
+  loading: state.loading,
+  error: state.error
+});
+
+export default connect(mapStateToProps)(SearchForm);
