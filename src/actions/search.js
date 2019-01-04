@@ -27,20 +27,16 @@ export function search(term) {
         console.log('term', term);
         return res.json();
     })
-    .then(data => 
-        {
-            console.log('data', data);
-           const search = data.filter( recipe => {
-               console.log('search', search);
-               return recipe.title === '30 minute Buffalo Chicken Calzone';
-           })
-            return search;
+    .then(recipes => 
+    {
+        let filter;
+        if (term) {
+          filter = recipes.filter( recipe => {
+            return recipe.title === term;
+        })
+            return filter;
         }
-        // data.results.map(recipe => {
-        // console.log('_search log: recipe', recipe)
-        // return recipe;
-        // })
-    );
+    });
 }
 
 export const searchRecipes = searchTerm => dispatch => {
