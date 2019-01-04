@@ -46,22 +46,21 @@ export class SearchForm extends React.Component {
     if (error) {
       return <strong>{error}</strong>
     }
-    console.log('props on Controls',this.props.recipes);
-
+    
     return (
       <p>From Controls</p>
     )
 
-    // const recipes = this.props.recipes.map((recipe, index) =>
-    //     <li key={index}>{recipe}</li>
-    //   );
+  //   const recipes = this.props.recipes.map((recipe, index) =>
+  //       <li key={index}>{recipe}</li>
+  //     );
 
-    //   return (
-    //     <ul className="recipe-search-results">
-    //         {recipes}
-    //         testing...
-    //     </ul>
-    //   );
+  //     return (
+  //       <ul className="recipe-search-results">
+  //           {recipes}
+  //           testing...
+  //       </ul>
+  //     );
   }
 
   search(e) {
@@ -69,6 +68,7 @@ export class SearchForm extends React.Component {
     if (this.input.value.trim() === '') {
       return;
     }
+    console.log(e);
     this.props.dispatch(searchRecipes(this.input.value));
   }
 
@@ -85,7 +85,7 @@ export class SearchForm extends React.Component {
               // console.log('searchTerm', searchTerm);
               // this.props.dispatch(searchRecipes(searchTerm))
             }
-          }>
+          }> 
             <label htmlFor="search">Search</label>&emsp;
             <input
                 aria-controls="recipe-count"

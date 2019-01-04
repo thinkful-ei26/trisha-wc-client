@@ -34,6 +34,7 @@ export function search(term) {
           filter = recipes.filter( recipe => {
             return recipe.title === term;
         })
+            // console.log('filter 2nd then', filter)
             return filter;
         }
     });
@@ -43,7 +44,7 @@ export const searchRecipes = searchTerm => dispatch => {
     dispatch(searchRecipesRequest());
     search(searchTerm)
         .then(recipes => {
-            console.log(recipes)
+            console.log('filtered recipe', recipes)
             dispatch(searchRecipesSuccess(recipes))
         })
         .catch(error => dispatch(searchRecipesError(error)));

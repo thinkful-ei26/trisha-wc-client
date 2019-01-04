@@ -86,7 +86,7 @@
 .logo-content:hover {
   font-size: calc(1rem + 2vmin);
   font-weight: bolder;
-  background: -webkit-linear-gradient(#ff8a00, #da1b60);
+  background: -webkit-linear-gradient( #da1b60, #ff8a00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
