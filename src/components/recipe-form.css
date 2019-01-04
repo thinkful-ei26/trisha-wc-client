@@ -34,13 +34,20 @@
   margin: 10px;
 }
 
-.ingredient {
-  background-color:rgb(55, 71, 57);
+.ingredient, .ing-container {
   list-style-type: none;
+  display: flex;
+  align-self: auto;
+  align-items: center;
+  margin: 10px;
 }
 
-.ingredient:nth-child(odd) {
-  background-color: rgb(40, 52, 41);
+.ing-input {
+  width: 90%;
+}
+
+.ingredient {
+  border: 1px solid #b0aebb;
 }
 
 .message-error {
@@ -63,4 +70,7 @@ input {
 
 .ingredients-container {
   width: 90%;
+  margin: 0;
+  padding: 5px;
+  display: inline-block;
 }

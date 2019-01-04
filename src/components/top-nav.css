@@ -1,3 +1,7 @@
+.info-content {
+  margin-top: 15%;
+}
+
 .info-overlay {
   position: fixed;
   display: block;
@@ -24,28 +28,13 @@
   border: none;
 }
 
-.add-recipe-text {
+.add-recipe-text, .info-text {
   font-size: 2vh;
 }
 
-.add-recipe-text:hover {
+.add-recipe-text:hover, .info-text:hover {
   text-shadow: 1px 1px grey;
 }
-
-.info-text {
-  font-size: 2vh;
-}
-
-.info-text:hover {
-  text-shadow: 1px 1px grey;
-  color: white;
-}
-
-.info-content {
-  margin-top: 15%;
-}
-
-/* WHAT'S COOKING TOP-NAV */
 
 .header-content {
   position: fixed;

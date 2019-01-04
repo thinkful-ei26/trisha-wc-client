@@ -72,12 +72,17 @@ export class ReportForm extends Component {
         );
     }
     const renderField = ({ input, label, type, meta: { touched, error } }) => (
-      <div>
+      <div className="ing-container">
         <label>{label}</label>
-        <div>
-          <input {...input} type={type} placeholder={label} />
-          {touched && error && <span>{error}</span>}
-        </div>
+          <div className="ing-items">
+            <input 
+              {...input} 
+              type={type} 
+              placeholder={label} 
+              className="ing-input"
+            />
+              {touched && error && <span>{error}</span>}
+          </div>
       </div>
     );
     
