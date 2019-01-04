@@ -82,7 +82,7 @@ export class ReportForm extends Component {
     );
     
     const renderIng = ({ fields, meta: { error } }) => (
-      <ul className="ingredients-container">
+      <ul className="ingredients-container float">
         {fields.map((ing, index) => (
           <li   
             key={index}
@@ -121,7 +121,7 @@ export class ReportForm extends Component {
     return (
       <div className="add-recipe-overlay">
         <form
-          className="new-recipe-form"
+          className="new-recipe-form float"
           onSubmit={handleSubmit(values => this.onSubmit(values) )}
         >
         <fieldset>

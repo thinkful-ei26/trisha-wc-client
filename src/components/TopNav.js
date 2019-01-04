@@ -3,6 +3,7 @@ import { infoClick, addRecipe } from '../actions/nav.js';
 import { connect } from 'react-redux';
 import InfoModal from './InfoModal';
 import RecipeForm from './RecipeForm';
+import './top-nav.css';
 
 export function TopNav(props) {
 
@@ -28,7 +29,11 @@ export function TopNav(props) {
           <span className="info-text">Info</span>
         </button>
       </li>
-      <li className="header-center"><h1 className="logo-content">What's Cooking?</h1></li>
+      <li className="header-center">
+        <h1 className="logo-content">
+          What's Cooking?
+        </h1>
+      </li>
       <li className="header-right">
         <button
           className="add-recipe-btn"
