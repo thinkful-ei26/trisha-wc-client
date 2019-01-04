@@ -1,5 +1,5 @@
 .new-recipe-form {
-  margin-top: 15%;
+  margin-top: 5%;
 }
 
 .add-recipe-overlay {
@@ -73,4 +73,8 @@ input {
   margin: 0;
   padding: 5px;
   display: inline-block;
+}
+
+.form-input {
+  margin-bottom: 10px;
 }
