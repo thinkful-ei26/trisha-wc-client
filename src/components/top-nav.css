@@ -135,3 +135,14 @@
   color: white;
   cursor: pointer;
 }
+
+.user-actions-item {
+  list-style-type: none;
+}
+
+.header-svg-icon {
+  height: 1.25rem;
+  width: 100%;
+  fill: #b0aebb;
+  transition: fill .2s ease;
+}
