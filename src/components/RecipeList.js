@@ -12,6 +12,7 @@ export class RecipeList extends React.Component {
   render () {
     return (
       <div className="container">
+        <SearchSection />
         <section className="controls">
           <button 
             className="surprise-btn"
@@ -28,7 +29,6 @@ export class RecipeList extends React.Component {
             Show All Recipes
           </button>
         </section>
-        <SearchSection />
         <ul 
           className="recipe-list" 
           aria-live="polite"

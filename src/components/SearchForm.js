@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'; 
 import Spinner from 'react-spinkit';
 import {searchRecipes} from '../actions/search';
+import { homeClick } from '../actions/controls';
 import './search-form.css';
 
 export class SearchForm extends React.Component {
@@ -45,7 +46,6 @@ export class SearchForm extends React.Component {
   }
 
   render() {
-    console.log('this.props on SearchForm', this.props);
     return (
       <section className="search-section">
           <form 
@@ -72,8 +72,13 @@ export class SearchForm extends React.Component {
           </form>
           <ul className="recipe-search-results">
             {this.renderResults()}
-            Testing...
           </ul>
+          <button 
+            className="home-btn"
+            onClick={ () => this.props.dispatch(homeClick())}
+          >
+            Home
+          </button>
       </section>
     );
   }

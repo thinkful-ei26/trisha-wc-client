@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux'; 
-import Spinner from 'react-spinkit';
+// import Spinner from 'react-spinkit';
 // import {searchRecipes} from '../actions/search';
 import './search-form.css';
-import { searchClick, homeClick } from '../actions/controls';
+import { searchClick } from '../actions/controls';
 import SearchForm from './SearchForm';
 
 export function SearchSection(props) {
