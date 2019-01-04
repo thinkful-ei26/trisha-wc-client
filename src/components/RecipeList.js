@@ -5,6 +5,7 @@ import Recipes from './Recipes';
 import { surpriseClick } from '../actions/controls';
 import fetchRecipes from '../actions';
 import './controls.css';
+import SearchSection from './SearchSection';
 
 export class RecipeList extends React.Component {
 
@@ -27,6 +28,7 @@ export class RecipeList extends React.Component {
             Show All Recipes
           </button>
         </section>
+        <SearchSection />
         <ul 
           className="recipe-list" 
           aria-live="polite"

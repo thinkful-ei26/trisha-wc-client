@@ -5,17 +5,32 @@ import {
 } from '../actions/search';
 
 import { TOGGLE_EXPAND } from '../actions/recipe';
-import { SURPRISE_CLICK } from '../actions/controls';
+
+import { 
+  SURPRISE_CLICK, 
+  VIEW_ALL_RECIPES,
+  SEARCH_CLICK,
+  HOME_CLICK 
+} from '../actions/controls';
 
 const initialState = {
   recipes: [],
   loading: false,
   error: null,
-  surprise: null
+  surprise: null,
+  search: false
 }
 
 export const searchReducer = (state=initialState, action) => {
   switch (action.type) {
+
+    case SEARCH_CLICK : 
+    return Object.assign({}, state, { search: true })
+
+    case HOME_CLICK :
+    return Object.assign({}, state, { 
+      search: false 
+    })
 
     case SURPRISE_CLICK : 
     const randomRecipePicker = (recipes) => {
