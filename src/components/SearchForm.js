@@ -23,7 +23,7 @@ export class SearchForm extends React.Component {
 
     console.log('recipes on SearchForm',recipes);
 
-    const stuff = recipes.map((recipe, index) =>
+    const recipe = recipes.map((recipe, index) =>
       <li key={index}>
         {recipe.title}
       </li>
@@ -31,7 +31,7 @@ export class SearchForm extends React.Component {
 
     return (
       <ul className="recipe-search-results">
-        {stuff}
+        {recipe}
       </ul>
     );
   }
