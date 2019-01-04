@@ -107,7 +107,7 @@ export class SearchForm extends React.Component {
 };
 
 const mapStateToProps = state => ({
-  recipes: state.recipes,
+  recipes: state.searchReducer.recipes,
   loading: state.loading,
   error: state.error
 });
