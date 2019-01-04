@@ -30,7 +30,11 @@ export function search(term) {
     .then(data => 
         {
             console.log('data', data);
-            return data;
+           const search = data.filter( recipe => {
+               console.log('search', search);
+               return recipe.title === '30 minute Buffalo Chicken Calzone';
+           })
+            return search;
         }
         // data.results.map(recipe => {
         // console.log('_search log: recipe', recipe)
