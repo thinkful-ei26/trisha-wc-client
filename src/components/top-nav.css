@@ -67,10 +67,13 @@
 }
 
 .header-right {
-  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 0 .625rem;
+  /* position: absolute;
   left: 80%;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); */
   list-style-type: none;
 }
 
