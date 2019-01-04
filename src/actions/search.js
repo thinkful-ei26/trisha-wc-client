@@ -24,18 +24,28 @@ export function search(term) {
             return Promise.reject(res.statusText);
         }
         console.log('res', res)
+        console.log('term', term);
         return res.json();
     })
-    // .then(data => data.results.map(recipe => {
-    //     console.log('_search log: recipe', recipe)
-    //     return recipe;
-    // }));
+    .then(data => 
+        {
+            console.log('data', data);
+            return data;
+        }
+        // data.results.map(recipe => {
+        // console.log('_search log: recipe', recipe)
+        // return recipe;
+        // })
+    );
 }
 
 export const searchRecipes = searchTerm => dispatch => {
     dispatch(searchRecipesRequest());
     search(searchTerm)
-        .then(recipes => dispatch(searchRecipesSuccess(recipes)))
+        .then(recipes => {
+            console.log(recipes)
+            dispatch(searchRecipesSuccess(recipes))
+        })
         .catch(error => dispatch(searchRecipesError(error)));
 };
 
