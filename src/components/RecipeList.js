@@ -5,14 +5,12 @@ import Recipes from './Recipes';
 import { surpriseClick } from '../actions/controls';
 import fetchRecipes from '../actions';
 import './controls.css';
-// import SearchSection from './SearchSection';
 
 export class RecipeList extends React.Component {
 
   render () {
     return (
       <div className="container">
-        {/* <SearchSection /> */}
         <section className="controls">
           <button 
             className="surprise-btn"
