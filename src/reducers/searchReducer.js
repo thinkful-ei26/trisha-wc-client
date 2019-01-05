@@ -8,7 +8,7 @@ import { TOGGLE_EXPAND } from '../actions/recipe';
 
 import { 
   SURPRISE_CLICK, 
-  VIEW_ALL_RECIPES,
+  // VIEW_ALL_RECIPES,
   SEARCH_CLICK,
   HOME_CLICK 
 } from '../actions/controls';

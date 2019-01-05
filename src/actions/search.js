@@ -1,4 +1,5 @@
 import { API_BASE_URL } from '../config';
+console.log('API_BASE_URL SEARCH client-side:', API_BASE_URL);
 
 export const SEARCH_RECIPES_REQUEST = 'SEARCH_RECIPES_REQUEST';
 export const searchRecipesRequest = () => ({
@@ -31,7 +32,7 @@ export const searchRecipes = searchTerm => dispatch => {
     dispatch(searchRecipesRequest());
     search(searchTerm)
         .then(recipes => {
-            console.log('filtered recipe', recipes)
+            console.log('filtered recipe on search actions', recipes)
             dispatch(searchRecipesSuccess(recipes))
         })
         .catch(error => dispatch(searchRecipesError(error)));

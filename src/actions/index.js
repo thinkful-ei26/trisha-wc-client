@@ -1,5 +1,4 @@
 import { API_BASE_URL } from '../config';
-console.log('API_BASE_URL on client-side:', API_BASE_URL);
 
 export const FETCH_RECIPES_REQUEST = 'FETCH_RECIPES_REQUEST';
 export const fetchRecipesRequest = () => ({

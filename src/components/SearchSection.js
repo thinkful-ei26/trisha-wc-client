@@ -13,7 +13,7 @@ export function SearchSection(props) {
   }
 
   return (
-    <div className="butt">
+    <div className="search-container-click">
       <button
         className="search-btn" href="#info"
         onClick={ () => {
