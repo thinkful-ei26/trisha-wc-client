@@ -9,7 +9,9 @@ import SearchForm from './SearchForm';
 export function SearchSection(props) {
 
   if(props.search) { 
-    return <SearchForm />
+    return (
+    <SearchForm />
+    )
   }
 
   return (
