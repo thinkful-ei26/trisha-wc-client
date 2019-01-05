@@ -46,6 +46,7 @@ export class Recipes extends Component {
         className="recipe float"
         tabIndex="0"
         onClick={ () => {
+          console.log('recipe.js',recipe);
           this.props.dispatch(toggleExpand(recipe.id))
         }}
       >

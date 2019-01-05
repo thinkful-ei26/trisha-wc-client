@@ -62,21 +62,28 @@ export const searchReducer = (state=initialState, action) => {
     })
 
     case TOGGLE_EXPAND :
-      const findById = (recipes, recipeId) => {
-        const recipe = recipes.filter( recipe => recipeId === recipe.id )
-        return recipe;
+
+      console.log('searchReducer state',state);
+
+      if (state === undefined) {
+        return state;
+      } else {
+        const findById = (recipes, recipeId) => {
+          const recipe = recipes.filter( recipe => recipeId === recipe.id )
+          return recipe;
+        }
+
+        /* ==== CONDITIONALLY CHANGE EXPANDED TRUE || FALSE ON CLICK OF LI ====*/
+
+        // let clickedRecipe = findById(state.recipes, action.id);
+
+        // const expandedRecipe = Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = !state.expanded ])
+        // console.log('expandedRecipe',expandedRecipe);
+
+        return Object.assign({}, state, {
+          recipes: [...state.recipes] 
+        })
       }
-
-      /* ==== CONDITIONALLY CHANGE EXPANDED TRUE || FALSE ON CLICK OF LI ====*/
-      let clickedRecipe = findById(state.recipes, action.id);
-
-      const expandedRecipe = Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = !state.expanded ])
-      console.log('expandedRecipe',expandedRecipe);
-
-      return Object.assign({}, state, {
-        recipes: [...state.recipes] 
-      })
-    
     default: return state
   }
 }

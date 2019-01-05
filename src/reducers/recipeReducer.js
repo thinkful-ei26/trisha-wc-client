@@ -11,7 +11,8 @@ const initialState = {
   recipes: [],
   loading: false,
   error: null,
-  surprise: null
+  surprise: null, 
+  search: false
 }
 
 export const recipeReducer = (state=initialState, action) => {
@@ -47,6 +48,8 @@ export const recipeReducer = (state=initialState, action) => {
     })
 
     case TOGGLE_EXPAND :
+
+      console.log('recipeReducer state',state);
       const findById = (recipes, recipeId) => {
         const recipe = recipes.filter( recipe => recipeId === recipe.id )
         return recipe;
@@ -59,7 +62,9 @@ export const recipeReducer = (state=initialState, action) => {
       console.log('expandedRecipe',expandedRecipe);
 
       return Object.assign({}, state, {
-        recipes: [...state.recipes] 
+        recipes: [...state.recipes], 
+        search: false, 
+        error: false 
       })
     
     default: return state
