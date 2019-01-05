@@ -4,7 +4,7 @@ import {
   SEARCH_RECIPES_ERROR 
 } from '../actions/search';
 
-import { TOGGLE_EXPAND } from '../actions/recipe';
+import { TOGGLE_EXPAND_SEARCH } from '../actions/recipe';
 
 import { 
   SURPRISE_CLICK, 
@@ -61,29 +61,27 @@ export const searchReducer = (state=initialState, action) => {
       error: action.error
     })
 
-    case TOGGLE_EXPAND :
+    case TOGGLE_EXPAND_SEARCH :
+
+      //returns the recipe that is clicked from searchForm id
+      const findById = (state_recipes_array, action_id) => {
+        const recipe = state_recipes_array.filter( recipe => action_id === recipe.id )
+        return recipe;
+      }
+
+      let clickedRecipeSearch = findById(state.recipes, action.id);
 
       console.log('searchReducer state',state);
+      console.log('clickedRecipeSearch', clickedRecipeSearch);
 
-      if (state === undefined) {
-        return state;
-      } else {
-        const findById = (recipes, recipeId) => {
-          const recipe = recipes.filter( recipe => recipeId === recipe.id )
-          return recipe;
-        }
+      // const expandedRecipeSearch = Object.assign({}, state,[clickedRecipeSearch[0].expanded = !state.expanded])
+      // const expandedRecipe = Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = !state.expanded ])
+      // console.log('expandedRecipe clicked',expandedRecipe);
 
-        /* ==== CONDITIONALLY CHANGE EXPANDED TRUE || FALSE ON CLICK OF LI ====*/
-
-        // let clickedRecipe = findById(state.recipes, action.id);
-
-        // const expandedRecipe = Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = !state.expanded ])
-        // console.log('expandedRecipe',expandedRecipe);
-
-        return Object.assign({}, state, {
-          recipes: [...state.recipes] 
-        })
-      }
+      //   return Object.assign({}, state, {
+      //     recipes: [...state.recipes] 
+      //   })
+      // }
     default: return state
   }
 }
