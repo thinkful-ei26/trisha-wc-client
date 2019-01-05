@@ -216,7 +216,8 @@ export class SearchForm extends React.Component {
 
   render() {
     return (
-      <div className="search-overlay">
+      // <div className="search-overlay">
+      <div className="overlay">
          <section className="search-section">
           <form 
             id="search-form"
@@ -246,7 +247,8 @@ export class SearchForm extends React.Component {
           >
             Home
           </button>
-          <ul className="recipe-search-results">
+          {/* <ul className="recipe-search-results"> */}
+          <ul className="overlay-content">
             {this.renderResults()}
           </ul>
       </section>
