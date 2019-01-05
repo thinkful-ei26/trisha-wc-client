@@ -48,7 +48,7 @@
   min-width: 20rem;
   background-color: #1b1a26;
   box-sizing: border-box;
-  z-index: 99;
+  z-index: 1;
   margin-top: 0;
 }
 

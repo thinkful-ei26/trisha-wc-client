@@ -1,12 +1,22 @@
-/* .search-content {
+.search-content {
   margin-top: 15%;
-} */
-
-#search-form {
-  padding: 50px;
 }
 
-.search-section {
+/* #search-form {
+  margin-top: 0;
+  padding: 50px;
+}
+*/
+
+.butt {
+  margin-top: 80px;
+}
+
+/* .search-section {
+  background-color: azure;
+} */
+
+.search-overlay {
   position: fixed;
   display: block;
   width: 100%;
@@ -17,9 +27,6 @@
   bottom: 0;
   background-color: rgb(27, 26, 38, 1);
   z-index: 1;
+  margin-top: 0;
   cursor: pointer;
-}
-
-.butt {
-  margin-top: 80px;
 }

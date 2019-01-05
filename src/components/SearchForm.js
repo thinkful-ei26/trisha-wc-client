@@ -47,7 +47,8 @@ export class SearchForm extends React.Component {
 
   render() {
     return (
-      <section className="search-section">
+      <div className="search-overlay">
+         <section className="search-section">
           <form 
             id="search-form"
             onSubmit={e => {
@@ -80,6 +81,7 @@ export class SearchForm extends React.Component {
             Home
           </button>
       </section>
+      </div>
     );
   }
 };
