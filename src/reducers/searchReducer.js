@@ -83,15 +83,15 @@ export const searchReducer = (state=initialState, action) => {
     // change the clickedRecipe to expanded true
     console.log('state.recipes',state.recipes)
     console.log('clickedRecipe[0]',clickedRecipe[0])
-    const setExpandedTrue = Object.assign({}, clickedRecipe, clickedRecipe[0].expanded = true)
+    // const setExpandedTrue = Object.assign({}, clickedRecipe, clickedRecipe[0].expanded = true)
+
+    const setExpandedTrue = Object.assign({}, clickedRecipe[0], {expanded: true})
     console.log('setExpandedTrue', setExpandedTrue);
 
     // // console.log('action',action);
-    // return Object.assign({}, state, {
-    //   recipes: [...state.recipes], 
-    //   search: false, 
-    //   error: false 
-    // })
+    return Object.assign({}, state, {
+      recipes: [setExpandedTrue]
+    })
     
     default: return state
   }
