@@ -40,3 +40,15 @@
   cursor: pointer;
   flex: 1;
 }
+
+.recipe {
+  padding: 1vh;
+  list-style: none;
+  border: 0.05px solid #e8e8e9;
+  margin-bottom: 10px;
+}
+
+.recipe:hover {
+  background-color: #e8e8e9;
+  color: #1b1a26;
+}
