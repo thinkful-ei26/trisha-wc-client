@@ -8,7 +8,7 @@ const initialState = {
   recipes: [],
   loading: false,
   error: null,
-  surprise: null,
+  surprise: false,
   search: false
 }
 
@@ -38,6 +38,8 @@ export const searchReducer = (state=initialState, action) => {
     return Object.assign({}, state, { loading: true })
 
     case SEARCH_RECIPES_SUCCESS :
+    const allRecipes = state.recipes;
+    console.log('allRecipes', allRecipes);
     return Object.assign({}, state, { 
       loading: false, 
       recipes: action.recipes, 
