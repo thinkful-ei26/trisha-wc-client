@@ -6,6 +6,7 @@ import { homeClick } from '../actions/controls';
 import './search-form.css';
 
 import { toggleExpand } from '../actions/controls';
+import fetchRecipes from '../actions';
 
 export class SearchForm extends React.Component {
 
@@ -150,7 +151,8 @@ export class SearchForm extends React.Component {
           </form>
           <button 
             className="home-btn"
-            onClick={ () => this.props.dispatch(homeClick())}
+            // onClick={ () => this.props.dispatch(homeClick())}
+            onClick={ () => this.props.dispatch(fetchRecipes())}
           >
             Home
           </button>

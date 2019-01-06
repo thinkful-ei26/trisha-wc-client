@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './WhatsCooking.css';
 // import SearchSection from './SearchSection';
 import SearchForm from './SearchForm';
-// import RecipeList from './RecipeList';
+import RecipeList from './RecipeList';
 import TopNav from './TopNav';
 
 export class WhatsCooking extends Component {
@@ -13,7 +13,7 @@ export class WhatsCooking extends Component {
         <TopNav />
         {/* <SearchSection /> */}
         <SearchForm />
-        {/* <RecipeList /> */}
+        <RecipeList />
       </main>
     );
   }

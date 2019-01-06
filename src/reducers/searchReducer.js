@@ -10,7 +10,7 @@ import {
   SURPRISE_CLICK, 
   // VIEW_ALL_RECIPES,
   SEARCH_CLICK,
-  HOME_CLICK,
+  // HOME_CLICK,
   TOGGLE_EXPAND  
 } from '../actions/controls';
 
@@ -28,10 +28,11 @@ export const searchReducer = (state=initialState, action) => {
     case SEARCH_CLICK : 
     return Object.assign({}, state, { search: true })
 
-    case HOME_CLICK :
-    return Object.assign({}, state, { 
-      search: false 
-    })
+    // case HOME_CLICK :
+    // console.log('state',state);
+    // return Object.assign({}, state, { 
+    //   search: false,
+    // })
 
     case SURPRISE_CLICK : 
     const randomRecipePicker = (recipes) => {

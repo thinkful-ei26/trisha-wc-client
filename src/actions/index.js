@@ -29,6 +29,7 @@ export default function fetchRecipes() {
         return res.json()
       })
       .then( recipes => { 
+        console.log(recipes);
         dispatch(fetchRecipesSuccess(recipes))
       })
       .catch( error => { dispatch(fetchRecipesError(error))
