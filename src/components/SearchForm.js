@@ -146,7 +146,7 @@ export class SearchForm extends React.Component {
                 placeholder="recipe search"
                 ref={input => this.input = input}
             />
-            <button>Search</button>
+            <button className="search-btn">Search</button>
           </form>
           <button 
             className="home-btn"

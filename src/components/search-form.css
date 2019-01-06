@@ -52,3 +52,21 @@
   background-color: #e8e8e9;
   color: #1b1a26;
 }
+
+.home-btn {
+  margin: 10px;
+  color: #b0aebb;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  background-color: inherit;
+}
+
+.home-btn:hover {
+  font-weight: 700;
+  padding: 0.5rem;
+  /* background-color: #28a745; */
+  background-color: #474658;
+  color: white;
+  cursor: pointer;
+}
