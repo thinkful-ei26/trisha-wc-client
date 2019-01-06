@@ -89,10 +89,35 @@ export const searchReducer = (state=initialState, action) => {
     console.log('setExpandedTrue', setExpandedTrue);
 
     // // console.log('action',action);
-    return Object.assign({}, state, {
-      recipes: [setExpandedTrue]
-    })
+    // return Object.assign({}, state, {
+    //   recipes: [...state.recipes, setExpandedTrue]
+    // })
+
+    // const updatedRecipes = [...state.recipes, setExpandedTrue]
     
+    // const updatedRecipes = Object.assign(state.recipes.id[action.id], setExpandedTrue)
+    // console.log('updatedRecipes',updatedRecipes);
+    // return Object.assign({}, state, {
+    //   recipes: [setExpandedTrue]
+    // })
+
+    // console.log(state.recipes[0].id)
+
+    //this will add an expanded li at the end of the current state 
+    // return Object.assign({}, state, {
+    //   recipes: [...state.recipes,setExpandedTrue]
+    // })
+
+    //this returns an array that replaces the clicked <li> with expanded true prop
+    console.log(Object.assign([], state.recipes, [setExpandedTrue]
+    ))
+
+    const updated = Object.assign([], state.recipes, [setExpandedTrue]
+    )
+
+    return Object.assign({}, state, {recipes: updated}
+    )
+
     default: return state
   }
 }
