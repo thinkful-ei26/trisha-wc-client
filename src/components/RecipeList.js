@@ -6,6 +6,8 @@ import { surpriseClick } from '../actions/controls';
 import fetchRecipes from '../actions';
 import './controls.css';
 
+import SearchSection from './SearchSection';
+
 export class RecipeList extends React.Component {
 
   render () {
@@ -13,6 +15,7 @@ export class RecipeList extends React.Component {
     if (!this.props.search) {
       return (
         <div className="container">
+          <SearchSection />
           <section className="controls">
             <button 
               className="surprise-btn"
