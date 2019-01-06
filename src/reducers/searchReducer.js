@@ -64,58 +64,30 @@ export const searchReducer = (state=initialState, action) => {
 
     case TOGGLE_EXPAND :
 
-    console.log('state TOGGLE_EXPAND searchReducer',state);
-    console.log('action TOGGLE_EXPAND searchReducer',action);
+    // console.log('state TOGGLE_EXPAND searchReducer',state);
+    // console.log('action TOGGLE_EXPAND searchReducer',action);
 
+    //helper fn: find the clicked recipe by id and return the recipe obj
     const findById = (recipes, recipeId) => {
-      const recipe = recipes.filter( recipe => recipeId === recipe.id )
+      const recipe = recipes.filter( (recipe, index) => { 
+        return recipeId === recipe.id 
+      })
       return recipe;
     }
 
-    /* ==== CONDITIONALLY CHANGE EXPANDED TRUE || FALSE ON CLICK OF LI ====*/
-    let clickedRecipe = findById(state.recipes, action.id);
-
-    // // console.log('recipeReducer state',state);
+    // invoke findById taking in the recipe list & the id of clicked recipe
+    let [ clickedRecipe ] = findById(state.recipes, action.id);
     console.log('clickedRecipe',clickedRecipe);
-    // const expandedRecipe = Object.assign([], clickedRecipe[0], [...state.recipes,clickedRecipe[0].expanded = !state.expanded ])
-    // console.log('expandedRecipe',expandedRecipe);
+ 
+    const indexClicked = state.recipes.indexOf(clickedRecipe);
+    console.log('indexClicked', indexClicked);
 
-    // change the clickedRecipe to expanded true
-    console.log('state.recipes',state.recipes)
-    console.log('clickedRecipe[0]',clickedRecipe[0])
-    // const setExpandedTrue = Object.assign({}, clickedRecipe, clickedRecipe[0].expanded = true)
-
-    const setExpandedTrue = Object.assign({}, clickedRecipe[0], {expanded: true})
+    //updates the expanded prop of clicked recipe to true
+    const setExpandedTrue = Object.assign({}, clickedRecipe, {expanded: true})
     console.log('setExpandedTrue', setExpandedTrue);
 
-    // // console.log('action',action);
-    // return Object.assign({}, state, {
-    //   recipes: [...state.recipes, setExpandedTrue]
-    // })
-
-    // const updatedRecipes = [...state.recipes, setExpandedTrue]
-    
-    // const updatedRecipes = Object.assign(state.recipes.id[action.id], setExpandedTrue)
-    // console.log('updatedRecipes',updatedRecipes);
-    // return Object.assign({}, state, {
-    //   recipes: [setExpandedTrue]
-    // })
-
-    // console.log(state.recipes[0].id)
-
-    //this will add an expanded li at the end of the current state 
-    // return Object.assign({}, state, {
-    //   recipes: [...state.recipes,setExpandedTrue]
-    // })
-
-    //this returns an array that replaces the clicked <li> with expanded true prop
-    console.log(Object.assign([], state.recipes, [setExpandedTrue]
-    ))
-
-    const updated = Object.assign([], state.recipes, [setExpandedTrue]
-    )
-
-    return Object.assign({}, state, {recipes: updated}
+    //returns a new array of recipes with the expanded clicked recipe
+    return Object.assign({}, state, {recipes: [setExpandedTrue]}
     )
 
     default: return state
