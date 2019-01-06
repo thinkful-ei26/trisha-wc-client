@@ -5,7 +5,7 @@ import {searchRecipes} from '../actions/search';
 import { homeClick } from '../actions/controls';
 import './search-form.css';
 
-import { toggleExpandSearch } from '../actions/recipe';
+import { toggleExpand } from '../actions/controls';
 
 export class SearchForm extends React.Component {
 
@@ -25,8 +25,12 @@ export class SearchForm extends React.Component {
       return <strong>{error}</strong>
     }
 
-    console.log('recipes on SearchForm',this.props.recipes);
-    console.log('this.props on SearchForm',this.props);
+    console.log('this.props.recipes is an array of objects, will log only when you make a successful SearchTerm submit on SearchForm',this.props.recipes);
+    console.log('this.props on SearchForm is an object with prop like dispatch & recipes',this.props);
+
+
+    //create an async action, that when you click on the <li> you change recipe (with correct id) and it's expanded to true
+
 
     const ingredient = (ingredients) => {
       return ingredients.map((ingredient, index) => {
@@ -62,8 +66,8 @@ export class SearchForm extends React.Component {
         className="recipe float"
         tabIndex="0"
         onClick={ () => {
-          console.log(recipe.id)
-          this.props.dispatch(toggleExpandSearch(recipe.id))
+          console.log('the id of the clicked recipe <li> on SearchForm',recipe.id)
+          this.props.dispatch(toggleExpand(recipe.id))
         }}
       >
         <div

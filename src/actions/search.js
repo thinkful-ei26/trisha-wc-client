@@ -32,7 +32,7 @@ export const searchRecipes = searchTerm => dispatch => {
     dispatch(searchRecipesRequest());
     search(searchTerm)
         .then(recipes => {
-            console.log('filtered recipe on search actions', recipes)
+            console.log('filtered recipe on search actions coming from success API call to DB', recipes)
             dispatch(searchRecipesSuccess(recipes))
         })
         .catch(error => dispatch(searchRecipesError(error)));

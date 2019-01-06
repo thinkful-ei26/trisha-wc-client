@@ -62,21 +62,29 @@ export const searchReducer = (state=initialState, action) => {
       error: action.error
     })
 
-    // case TOGGLE_EXPAND :
+    case TOGGLE_EXPAND :
 
-    // const findById = (recipes, recipeId) => {
-    //   const recipe = recipes.filter( recipe => recipeId === recipe.id )
-    //   return recipe;
-    // }
+    console.log('state TOGGLE_EXPAND searchReducer',state);
+    console.log('action TOGGLE_EXPAND searchReducer',action);
 
-    // /* ==== CONDITIONALLY CHANGE EXPANDED TRUE || FALSE ON CLICK OF LI ====*/
-    // let clickedRecipe = findById(state.recipes, action.id);
+    const findById = (recipes, recipeId) => {
+      const recipe = recipes.filter( recipe => recipeId === recipe.id )
+      return recipe;
+    }
+
+    /* ==== CONDITIONALLY CHANGE EXPANDED TRUE || FALSE ON CLICK OF LI ====*/
+    let clickedRecipe = findById(state.recipes, action.id);
 
     // // console.log('recipeReducer state',state);
-    // // console.log('clickedRecipe',clickedRecipe);
-    // const expandedRecipe = Object.assign({}, clickedRecipe[0], [...state.recipes,clickedRecipe[0].expanded = !state.expanded ])
-    // // console.log('expandedRecipe',expandedRecipe);
+    console.log('clickedRecipe',clickedRecipe);
+    // const expandedRecipe = Object.assign([], clickedRecipe[0], [...state.recipes,clickedRecipe[0].expanded = !state.expanded ])
+    // console.log('expandedRecipe',expandedRecipe);
 
+    // change the clickedRecipe to expanded true
+    console.log('state.recipes',state.recipes)
+    console.log('clickedRecipe[0]',clickedRecipe[0])
+    const setExpandedTrue = Object.assign({}, clickedRecipe, clickedRecipe[0].expanded = true)
+    console.log('setExpandedTrue', setExpandedTrue);
 
     // // console.log('action',action);
     // return Object.assign({}, state, {

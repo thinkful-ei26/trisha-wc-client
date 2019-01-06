@@ -3,13 +3,15 @@ import { connect } from 'react-redux';
 // import Spinner from 'react-spinkit';
 // import {searchRecipes} from '../actions/search';
 import './search-form.css';
+
+//searchClick changes the expanded from false to true on click of an <li>
 import { searchClick } from '../actions/controls';
 import SearchForm from './SearchForm';
 
 export function SearchSection(props) {
 
   if(props.search) { 
-    console.log('props on SearchSection', props);
+    console.log('when SearchTerm submit is successful on SearchSection, props.search is:', props.search);
     return (
     <SearchForm />
     )
@@ -20,7 +22,7 @@ export function SearchSection(props) {
       <button
         className="search-btn" href="#info"
         onClick={ () => {
-          console.log('clicked', props.search)
+          console.log('on searchSection load, search is clicked:', props.search)
           props.dispatch(searchClick()) 
           }
         }
