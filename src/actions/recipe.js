@@ -5,7 +5,7 @@ export const toggleExpand = (id) => ({
 })
 
 export const TOGGLE_EXPAND_SEARCH = 'TOGGLE_EXPAND';
-export const toggleExpandSearch = (id) => ({
+export const toggleExpandSearch = (searchId) => ({
   type: TOGGLE_EXPAND,
-  id 
+  searchId 
 })

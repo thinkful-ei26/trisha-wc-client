@@ -12,6 +12,7 @@ export class SearchForm extends React.Component {
   componentDidMount() {
     this.props.dispatch(searchRecipes());
     console.log('look',this.props);
+    
   }
 
   renderResults() {
@@ -24,7 +25,10 @@ export class SearchForm extends React.Component {
       return <strong>{error}</strong>
     }
 
+    if (recipes.expanded) 
     console.log('recipes on SearchForm',recipes);
+
+    console.log('this.props on SearchForm',this.props);
 
     const ingredient = (ingredients) => {
       return ingredients.map((ingredient, index) => {
@@ -54,12 +58,13 @@ export class SearchForm extends React.Component {
       })
     }
 
-    const expandedRecipe = recipes.map( (recipe, index) => (
+    const expandedRecipeSearch = recipes.map( (recipe, index) => (
       <li 
         key={index} 
         className="recipe float"
         tabIndex="0"
         onClick={ () => {
+          console.log(recipe.id)
           this.props.dispatch(toggleExpandSearch(recipe.id))
         }}
       >
@@ -102,7 +107,7 @@ export class SearchForm extends React.Component {
 
     return (
       <ul className="recipe-search-results">
-        {expandedRecipe}
+        {expandedRecipeSearch}
       </ul>
     );
   }
@@ -159,7 +164,8 @@ export class SearchForm extends React.Component {
 const mapStateToProps = state => ({
   recipes: state.searchReducer.recipes,
   loading: state.loading,
-  error: state.error
+  error: state.error,
+  searchId: state.id
 });
 
 export default connect(mapStateToProps)(SearchForm);

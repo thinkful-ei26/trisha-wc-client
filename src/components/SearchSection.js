@@ -9,6 +9,7 @@ import SearchForm from './SearchForm';
 export function SearchSection(props) {
 
   if(props.search) { 
+    console.log('props on SearchSection', props);
     return (
     <SearchForm />
     )
