@@ -48,7 +48,7 @@ export const recipeReducer = (state=initialState, action) => {
         return recipe;
       }
 
-      /* ==== CONDITIONALLY CHANGE EXPANDED TRUE || FALSE ON CLICK OF LI ====*/
+      /* ==== CHANGE EXPANDED FALSE TO TRUE ON CLICK OF LI ====*/
       let clickedRecipe = findById(state.recipes, action.id);
 
       const expandedRecipe = Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = !state.expanded ])
