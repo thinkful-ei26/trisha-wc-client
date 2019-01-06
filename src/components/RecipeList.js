@@ -15,7 +15,7 @@ export class RecipeList extends React.Component {
     if (!this.props.search) {
       return (
         <div className="container">
-          <SearchSection />
+          {/* <SearchSection /> */}
           <section className="controls">
             <button 
               className="surprise-btn"
