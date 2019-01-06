@@ -17,3 +17,9 @@ export const HOME_CLICK = 'HOME_CLICK';
 export const homeClick = () => ({
   type: HOME_CLICK 
 })
+
+export const TOGGLE_EXPAND = 'TOGGLE_EXPAND';
+export const toggleExpand = (id) => ({
+  type: TOGGLE_EXPAND,
+  id 
+})

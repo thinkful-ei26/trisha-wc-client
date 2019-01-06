@@ -9,14 +9,14 @@ import { toggleExpandSearch } from '../actions/recipe';
 
 export class SearchForm extends React.Component {
 
-  componentDidMount() {
-    this.props.dispatch(searchRecipes());
-    console.log('look',this.props);
+  // componentDidMount() {
+  //   this.props.dispatch(searchRecipes());
+  //   console.log('look',this.props);
     
-  }
+  // }
 
   renderResults() {
-    const { loading, error, recipes } = this.props;
+    const { loading, error } = this.props;
     if (loading) {
       return <Spinner spinnerName="circle" noFadeIn />
     }
@@ -25,9 +25,7 @@ export class SearchForm extends React.Component {
       return <strong>{error}</strong>
     }
 
-    if (recipes.expanded) 
-    console.log('recipes on SearchForm',recipes);
-
+    console.log('recipes on SearchForm',this.props.recipes);
     console.log('this.props on SearchForm',this.props);
 
     const ingredient = (ingredients) => {
@@ -58,7 +56,7 @@ export class SearchForm extends React.Component {
       })
     }
 
-    const expandedRecipeSearch = recipes.map( (recipe, index) => (
+    const expandedRecipeSearch = this.props.recipes.map( (recipe, index) => (
       <li 
         key={index} 
         className="recipe float"
@@ -104,7 +102,7 @@ export class SearchForm extends React.Component {
         </div>
       </li>
     ));
-
+    
     return (
       <ul className="recipe-search-results">
         {expandedRecipeSearch}
