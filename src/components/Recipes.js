@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import fetchRecipes from '../actions';
+import fetchRecipes, { surprise } from '../actions';
 import { toggleExpand } from '../actions/recipe';
 
 export class Recipes extends Component {
 
   componentDidMount() {
     this.props.dispatch(fetchRecipes());
+    // this.props.dispatch(surprise());
   }
 
   render() { 

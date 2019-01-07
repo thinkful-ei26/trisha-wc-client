@@ -4,6 +4,7 @@ import './recipe-list.css';
 import Recipes from './Recipes';
 import { surpriseClick } from '../actions/controls';
 import fetchRecipes from '../actions';
+// import surprise from '../actions';
 import './controls.css';
 
 export class RecipeList extends React.Component {
@@ -16,6 +17,7 @@ export class RecipeList extends React.Component {
             className="surprise-btn"
             onClick={ () => {
               this.props.dispatch(surpriseClick())
+              // this.props.dispatch(surprise())
             }}>
             Surprise Me
           </button>
