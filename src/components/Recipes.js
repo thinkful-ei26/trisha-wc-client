@@ -6,6 +6,7 @@ import { toggleExpand } from '../actions/recipe';
 export class Recipes extends Component {
 
   componentDidMount() {
+    console.log('the page is loading', this.props);
     this.props.dispatch(fetchRecipes());
     // this.props.dispatch(surprise());
   }
@@ -13,33 +14,34 @@ export class Recipes extends Component {
   render() { 
     const { recipes } = this.props;
 
-    const ingredient = (ingredients) => {
-      return ingredients.map((ingredient, index) => {
-        return (
-        <li
-          key={index}
-          className="ing-list"
-        >
-          {ingredient}
-        </li>); 
-      })
-    }
+    console.log('props on Recipes.js',this.props);
+    // const ingredient = (ingredients) => {
+    //   return ingredients.map((ingredient, index) => {
+    //     return (
+    //     <li
+    //       key={index}
+    //       className="ing-list"
+    //     >
+    //       {ingredient}
+    //     </li>); 
+    //   })
+    // }
 
-    const stepsArray = (directions) => {
-      return directions.split('\n')
-    };
+    // const stepsArray = (directions) => {
+    //   return directions.split('\n')
+    // };
 
-    const steps = (dirArray) => {
-      return dirArray.map((step, index) => {
-        return (
-        <li
-          key={index}
-          className="directions"
-        >
-          {step}
-        </li>); 
-      })
-    }
+    // const steps = (dirArray) => {
+    //   return dirArray.map((step, index) => {
+    //     return (
+    //     <li
+    //       key={index}
+    //       className="directions"
+    //     >
+    //       {step}
+    //     </li>); 
+    //   })
+    // }
 
     const expandedRecipe = recipes.map( (recipe, index) => (
       <li 
