@@ -49,6 +49,11 @@ export default function fetchRecipes() {
   }
 } 
 
+// export const SEARCH_SUBMIT = 'SEARCH_SUBMIT';
+// export const searchSubmit = () => {
+
+// }
+
 export const searchRecipes = searchTerm => dispatch => {
   // console.log('searchTerm from index action',this.searchTerm);
   dispatch(fetchRecipesRequest());

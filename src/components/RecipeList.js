@@ -9,6 +9,21 @@ import searchRecipes from '../actions';
 
 export class RecipeList extends React.Component {
 
+  renderResults() {
+    const { error, loading } = this.props;
+    console.log('renderReslts props:',this.props);
+
+    if (error) {
+      return <strong>{error}</strong>
+    }
+
+    return (
+      <ul className="recipe-search-results">
+       <li>renderResults</li>
+    </ul>
+    )
+  }
+
   render () {
     return (
       <div className="container">
@@ -47,8 +62,12 @@ export class RecipeList extends React.Component {
                   id="search"
                   name="search"
                   placeholder="recipe search"
+                  ref={input => this.input = input}
               />
             </form>
+            <ul className="search-results">
+              {this.renderResults()}
+            </ul>
         </div>
         </section>
         <ul 
@@ -66,6 +85,9 @@ export class RecipeList extends React.Component {
 const mapStateToProps = state => {
   return {
     recipes: state.recipeReducer.recipes,
+    loading: state.recipeReducer.loading,
+    error: state.recipeReducer.error,
+    searchTerm: state.recipeReducer.searchTerm
   }
 }
 
