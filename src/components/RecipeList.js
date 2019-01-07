@@ -4,9 +4,8 @@ import './recipe-list.css';
 import Recipes from './Recipes';
 import { surpriseClick } from '../actions/controls';
 import fetchRecipes from '../actions';
-// import surprise from '../actions';
 import './controls.css';
-import {searchRecipes} from '../actions';
+import searchRecipes from '../actions';
 
 export class RecipeList extends React.Component {
 
@@ -18,7 +17,6 @@ export class RecipeList extends React.Component {
             className="surprise-btn"
             onClick={ () => {
               this.props.dispatch(surpriseClick())
-              // this.props.dispatch(surprise())
             }}>
             Surprise Me
           </button>
@@ -38,7 +36,7 @@ export class RecipeList extends React.Component {
                 console.log('input', input);
                 let searchTerm = input[0].value;
                 console.log('searchTerm', searchTerm);
-                // this.props.dispatch(searchRecipes(searchTerm))
+                this.props.dispatch(searchRecipes(searchTerm))
                 }
               }
             >

@@ -6,15 +6,13 @@ import { toggleExpand } from '../actions';
 export class Recipes extends Component {
 
   componentDidMount() {
-    console.log('the page is loading', this.props);
+    console.log('Recipes component loaded');
     this.props.dispatch(fetchRecipes());
-    // this.props.dispatch(surprise());
   }
 
   render() { 
     const { recipes } = this.props;
 
-    console.log('props on Recipes.js',this.props);
     const ingredient = (ingredients) => {
       return ingredients.map((ingredient, index) => {
         return (
