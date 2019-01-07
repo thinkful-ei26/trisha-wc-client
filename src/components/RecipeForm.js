@@ -128,7 +128,6 @@ export class ReportForm extends Component {
         {successMessage}
         {errorMessage}
         <form
-          name="ReportForm"
           className="new-recipe-form float"
           onSubmit={handleSubmit(values => this.onSubmit(values) )}
         >
@@ -256,7 +255,9 @@ export class ReportForm extends Component {
             className="clear-values-btn"
             type="button" 
             disabled={pristine || submitting} 
-            onClick={reset}>Clear Values
+            onClick={reset}
+          >
+            Clear Values
           </button>
 
           <button 
@@ -273,7 +274,7 @@ export class ReportForm extends Component {
 }
 
 export default reduxForm({
-  form: 'addRecipe',
+  form: 'ReportForm',
   // validIngredient,
   onSubmitFail: (errors, dispatch) =>
   dispatch(focus('contact', Object.keys(errors)[0])),
