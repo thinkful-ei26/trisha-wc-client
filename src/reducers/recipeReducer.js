@@ -13,18 +13,18 @@ const initialState = {
 export const recipeReducer = (state=initialState, action) => {
   switch (action.type) {
 
-    // case SURPRISE_CLICK : 
-    // const randomRecipePicker = (recipes) => {
-    //   var recipe = recipes[Math.floor(Math.random()*recipes.length)];
-    //   return recipe;
-    // }
+    case SURPRISE_CLICK : 
+    const randomRecipePicker = (recipes) => {
+      var recipe = recipes[Math.floor(Math.random()*recipes.length)];
+      return recipe;
+    }
 
-    // const randomRecipe = randomRecipePicker(state.recipes);
+    const randomRecipe = randomRecipePicker(state.recipes);
     
-    // return Object.assign({}, state, { 
-    //   recipes: [randomRecipe],
-    //   surprise: true
-    // })
+    return Object.assign({}, state, { 
+      recipes: [randomRecipe],
+      surprise: true
+    })
 
     case FETCH_RECIPES_REQUEST : 
     return Object.assign({}, state, { loading: true })
@@ -42,21 +42,21 @@ export const recipeReducer = (state=initialState, action) => {
       error: action.error
     })
 
-    // case TOGGLE_EXPAND :
-    //   const findById = (recipes, recipeId) => {
-    //     const recipe = recipes.filter( recipe => recipeId === recipe.id )
-    //     return recipe;
-    //   }
+    case TOGGLE_EXPAND :
+      const findById = (recipes, recipeId) => {
+        const recipe = recipes.filter( recipe => recipeId === recipe.id )
+        return recipe;
+      }
 
-    //   /* ==== CHANGE EXPANDED FALSE TO TRUE ON CLICK OF LI ====*/
-    //   let clickedRecipe = findById(state.recipes, action.id);
+      /* ==== CHANGE EXPANDED FALSE TO TRUE ON CLICK OF LI ====*/
+      let clickedRecipe = findById(state.recipes, action.id);
 
-    //   const expandedRecipe = Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = !state.expanded ])
-    //   console.log('expandedRecipe',expandedRecipe);
+      const expandedRecipe = Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = !state.expanded ])
+      console.log('expandedRecipe',expandedRecipe);
 
-    //   return Object.assign({}, state, {
-    //     recipes: [...state.recipes] 
-    //   })
+      return Object.assign({}, state, {
+        recipes: [...state.recipes] 
+      })
     
     default: return state
   }
