@@ -1,6 +1,6 @@
 import { FETCH_RECIPES_REQUEST, FETCH_RECIPES_SUCCESS, FETCH_RECIPES_ERROR } from '../actions';
-import { TOGGLE_EXPAND } from '../actions';
 
+import { TOGGLE_EXPAND } from '../actions';
 import { SURPRISE_CLICK } from '../actions/controls';
 
 const initialState = {
