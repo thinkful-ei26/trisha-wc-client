@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import fetchRecipes, { surprise } from '../actions';
+import fetchRecipes from '../actions';
 import { toggleExpand } from '../actions/recipe';
 
 export class Recipes extends Component {

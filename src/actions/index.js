@@ -36,22 +36,3 @@ export default function fetchRecipes() {
       })
   }
 } 
-
-export function surprise() {
-  return dispatch => {
-    dispatch(fetchRecipesRequest());
-
-    fetch(`${API_BASE_URL}/api/recipes`)
-      .then(res => {
-        if(!res.ok) {
-          return Promise.reject(res.statusText);
-        }
-        return res.json()
-      })
-      .then( recipes => { 
-        dispatch(fetchRecipesSuccess(recipes))
-      })
-      .catch( error => { dispatch(fetchRecipesError(error))
-      })
-  }
-}
