@@ -36,7 +36,7 @@ import {searchRecipes} from '../actions/search';
 import { homeClick } from '../actions/controls';
 import './search-form.css';
 
-import { toggleExpand } from '../actions/controls';
+import { toggleExpandSearch } from '../actions/controls';
 
 export class SearchForm extends React.Component {
 
@@ -98,7 +98,7 @@ export class SearchForm extends React.Component {
         tabIndex="0"
         onClick={ () => {
           console.log('the id of the clicked recipe <li> on SearchForm',recipe.id)
-          this.props.dispatch(toggleExpand(recipe.id))
+          this.props.dispatch(toggleExpandSearch(recipe.id))
         }}
       >
         <div

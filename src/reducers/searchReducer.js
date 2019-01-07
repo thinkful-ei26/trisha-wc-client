@@ -2,7 +2,7 @@ import { SEARCH_RECIPES_REQUEST, SEARCH_RECIPES_SUCCESS, SEARCH_RECIPES_ERROR } 
 
 // import { TOGGLE_EXPAND } from '../actions/recipe';
 
-import { SURPRISE_CLICK, SEARCH_CLICK, TOGGLE_EXPAND, HOME_CLICK } from '../actions/controls';
+import { SURPRISE_CLICK, SEARCH_CLICK, TOGGLE_EXPAND_SEARCH, HOME_CLICK } from '../actions/controls';
 
 const initialState = {
   recipes: [],
@@ -52,7 +52,7 @@ export const searchReducer = (state=initialState, action) => {
       error: action.error
     })
 
-    case TOGGLE_EXPAND :
+    case TOGGLE_EXPAND_SEARCH :
       const findById = (recipes, recipeId) => {
         const recipe = recipes.filter( recipe => recipeId === recipe.id )
         return recipe;
