@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './WhatsCooking.css';
-import SearchForm from './SearchForm';
+// import SearchForm from './SearchForm';
 import RecipeList from './RecipeList';
 import TopNav from './TopNav';
 
@@ -10,7 +10,7 @@ export class WhatsCooking extends Component {
     return (
       <main className="whats-cooking">
         <TopNav />
-        <SearchForm />
+        {/* <SearchForm /> */}
         <RecipeList />
       </main>
     );

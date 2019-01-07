@@ -1,5 +1,5 @@
 import React from 'react';
-import {searchRecipes} from '../actions/search';
+import {searchRecipes} from '../actions';
 
 export default function Controls(props) {
 
@@ -9,13 +9,14 @@ export default function Controls(props) {
           id="search-form"
           onSubmit={e => {
             e.preventDefault();
-            let inputs = document.getElementById("search-form").elements;
-            console.log('inputs', inputs);
-            let searchTerm = inputs[0].value;
+            let input = document.getElementById("search-form").elements;
+            console.log('input', input);
+            let searchTerm = input[0].value;
             console.log('searchTerm', searchTerm);
-            // this.props.dispatch(searchRecipes(searchTerm))
+            this.props.dispatch(searchRecipes(searchTerm))
+            }
           }
-        }>
+        >
           <label htmlFor="search">Search</label>&emsp;
           <input
               aria-controls="recipe-count"

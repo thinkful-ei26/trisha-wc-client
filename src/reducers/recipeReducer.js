@@ -14,6 +14,7 @@ export const recipeReducer = (state=initialState, action) => {
   switch (action.type) {
 
     case SURPRISE_CLICK : 
+    console.log('surprise state:', state);
     const randomRecipePicker = (recipes) => {
       var recipe = recipes[Math.floor(Math.random()*recipes.length)];
       return recipe;
