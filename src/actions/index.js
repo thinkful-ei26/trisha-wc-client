@@ -50,6 +50,7 @@ export default function fetchRecipes() {
 } 
 
 export const searchRecipes = searchTerm => dispatch => {
+  // console.log('searchTerm from index action',this.searchTerm);
   dispatch(fetchRecipesRequest());
   fetch(`${API_BASE_URL}/api/recipes/?search=${searchTerm}`)
     .then(res => {
