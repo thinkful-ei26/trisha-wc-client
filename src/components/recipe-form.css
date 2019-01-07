@@ -74,3 +74,8 @@ input {
 .form-input {
   margin-bottom: 10px;
 }
+
+.message {
+  margin: 10px;
+  padding: 10px;
+}

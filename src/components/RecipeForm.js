@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Field, FieldArray, reduxForm, SubmissionError, focus } from 'redux-form';
+import { Field, FieldArray, reduxForm, SubmissionError, focus, reset } from 'redux-form';
 import Input from './Input';
 import { cancel } from '../actions/nav';
-import { required, nonEmpty, validInput, validURL, validIngredient } from '../validators';
+import { required, nonEmpty, validInput, validURL, /* validIngredient */ } from '../validators';
 import './recipe-form.css';
 
 import { API_BASE_URL } from '../config';
@@ -125,14 +125,15 @@ export class ReportForm extends Component {
     
     return (
       <div className="add-recipe-overlay">
+        {successMessage}
+        {errorMessage}
         <form
+          name="ReportForm"
           className="new-recipe-form float"
           onSubmit={handleSubmit(values => this.onSubmit(values) )}
         >
         <fieldset>
           <legend>Create a new recipe</legend>
-        {successMessage}
-        {errorMessage}
           <Field 
             element="input"
             name="title" 
@@ -156,7 +157,7 @@ export class ReportForm extends Component {
           <FieldArray 
           name="ing"
           component={renderIng}
-          validate={[validIngredient]}
+          // validate={[validIngredient]}
           />
           
           <Field 
@@ -239,6 +240,9 @@ export class ReportForm extends Component {
             validate={[required, nonEmpty, validInput]}
           />
 
+          {successMessage}
+          {errorMessage}
+
           {/* disable button if user hasn't touched form */ }
           <button 
             className="save-recipe-btn"
@@ -270,7 +274,8 @@ export class ReportForm extends Component {
 
 export default reduxForm({
   form: 'addRecipe',
-  validIngredient,
+  // validIngredient,
   onSubmitFail: (errors, dispatch) =>
-  dispatch(focus('contact', Object.keys(errors)[0]))
+  dispatch(focus('contact', Object.keys(errors)[0])),
+  onSubmitSuccess: (result, dispatch) => dispatch(reset('ReportForm'))
 })(ReportForm);
