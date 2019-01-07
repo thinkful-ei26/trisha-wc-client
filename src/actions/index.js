@@ -22,7 +22,13 @@ export default function fetchRecipes() {
   return dispatch => {
     dispatch(fetchRecipesRequest());
 
-    fetch(`${API_BASE_URL}/api/recipes`)
+    fetch(`${API_BASE_URL}/api/recipes`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    })
       .then(res => {
         if(!res.ok) {
           return Promise.reject(res.statusText);
