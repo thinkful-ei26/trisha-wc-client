@@ -1,5 +1,6 @@
 .info-content {
   margin-top: 15%;
+  padding: .375rem .625rem;
 }
 
 .info-overlay {
@@ -13,7 +14,6 @@
   bottom: 0;
   background-color: rgb(27, 26, 38, 0.9);
   z-index: 2;
-  cursor: pointer;
 }
 
 .info-btn {
