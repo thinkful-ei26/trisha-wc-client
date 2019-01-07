@@ -2,7 +2,7 @@
   margin-top: 5%;
 }
 
-.add-recipe-overlay {
+/* .add-recipe-overlay {
   position: fixed;
   display: block;
   width: 100%;
@@ -14,7 +14,7 @@
   background-color: rgb(27, 26, 38, 1);
   z-index: 2;
   cursor: pointer;
-}
+} */
 
 .cancel-add-recipe-btn, .clear-values-btn, .save-recipe-btn, .add-btn {
   color: #b0aebb;
@@ -42,8 +42,11 @@
   margin: 10px;
 }
 
-.ing-input {
-  width: 90%;
+/* .ing-input {
+} */
+
+textarea {
+  height: 12vh;
 }
 
 .ingredient {
