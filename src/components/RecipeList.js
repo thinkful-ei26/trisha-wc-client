@@ -12,7 +12,7 @@ export class RecipeList extends React.Component {
   render () {
     return (
       <div className="container">
-        <section className="controls">
+        <section /* className="controls" */>
           <button 
             className="surprise-btn"
             onClick={ () => {
