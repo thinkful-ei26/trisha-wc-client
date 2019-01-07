@@ -43,7 +43,7 @@ export class Recipes extends Component {
       })
     }
 
-    const expandedRecipe = recipes.map( (recipe, index) => (
+    const recipe = recipes.map( (recipe, index) => (
       <li 
         key={index} 
         className="recipe float"
@@ -89,11 +89,11 @@ export class Recipes extends Component {
       </li>
     ));
 
-    return (expandedRecipe);
+    return (recipe);
   }
 }
 
-const mapStateToProps = state => {
+export const mapStateToProps = state => {
   return {
     recipes: state.recipeReducer.recipes
   }
