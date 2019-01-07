@@ -1,6 +1,6 @@
 import { SEARCH_RECIPES_REQUEST, SEARCH_RECIPES_SUCCESS, SEARCH_RECIPES_ERROR } from '../actions/search';
 
-import { TOGGLE_EXPAND } from '../actions/recipe';
+import { TOGGLE_EXPAND } from '../actions';
 import { SURPRISE_CLICK } from '../actions/controls';
 
 const initialState = {

@@ -18,6 +18,12 @@ export const fetchRecipesError = (error) => ({
   error
 })
 
+export const TOGGLE_EXPAND = 'TOGGLE_EXPAND';
+export const toggleExpand = (id) => ({
+  type: TOGGLE_EXPAND,
+  id 
+})
+
 export default function fetchRecipes() {
   return dispatch => {
     dispatch(fetchRecipesRequest());
