@@ -256,6 +256,7 @@ export class ReportForm extends Component {
           </button>
 
           <button 
+            type='button'
             className="cancel-add-recipe-btn"
             onClick={ () => this.props.dispatch(cancel()) }
             >Cancel</button>
