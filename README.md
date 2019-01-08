@@ -1,9 +1,12 @@
 # What's Cooking App
-### Not sure what to cook for your next meal? 
-[What's Cooking](https://protected-depths-66567.herokuapp.com/) is a full-stack app that can help you narrow down your choices. On page load, a user can:
-    - Browse through the recipe list for meal ideas and click on a recipe for instructions to make the dish.
-    - Not sure what to cook? Click the "Surprise Me" button to generate a random recipe.
-    - Add a new recipe to the "What's Cooking?" app by clicking on the "+ Add Recipe" button
+### [What's Cooking](https://protected-depths-66567.herokuapp.com/) is a full-stack app that can help you narrow down your choices. 
+
+On page load, a user can:
+
+- Browse through the recipe list for meal ideas and click on a recipe for instructions to make the dish.
+- Not sure what to cook? Click the "Surprise Me" button to generate a random recipe.
+- Add a new recipe to the "What's Cooking?" app by clicking on the "+ Add Recipe" button
+
 A user does not need to login in order to use my app.
 
 ## Requirements :construction: In progress  :construction:
