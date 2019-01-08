@@ -71,16 +71,27 @@ export class RecipeList extends React.Component {
                 }
               }
             >
-              <label htmlFor="search"></label>&emsp;
-              <input
-                  aria-controls="recipe-count"
-                  type="search"
-                  id="search"
-                  name="search"
-                  className="search-input"
-                  placeholder="Recipe Search..."
-                  ref={input => this.input = input}
-              />
+              <div className="input-wrapper">
+                <input
+                    aria-controls="recipe-count"
+                    type="search"
+                    id="search"
+                    name="search"
+                    className="search-input"
+                    placeholder="Recipe Search..."
+                    ref={input => this.input = input}
+                />
+                 <label htmlFor="search">
+                  <button
+                    className="search-btn" 
+                  >
+                    <svg className="search-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" data-t="search-svg">
+                      <path d="M2,10.666V5.333L5.333,2h5.333L14,5.333v5.333L10.667,14H5.333ZM4.364,0,0,4.363v7.273L4.364,16h7.273l1.757-1.757L18,20h2V18l-5.757-4.606L16,11.637V4.363L11.637,0Z" />
+                    </svg>
+                  </button>
+                  </label>
+              </div>
+              
             </form>
         </div>
         </section>
