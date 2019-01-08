@@ -1,5 +1,5 @@
 import { API_BASE_URL } from '../config';
-console.log('SEARCH ACTION: API_BASE_URL on client-side:', API_BASE_URL);
+// console.log('SEARCH ACTION: API_BASE_URL on client-side:', API_BASE_URL);
 
 export const SEARCH_RECIPES_REQUEST = 'SEARCH_RECIPES_REQUEST';
 export const searchRecipesRequest = () => ({

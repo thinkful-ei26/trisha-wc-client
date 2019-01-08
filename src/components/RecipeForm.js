@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { Field, FieldArray, reduxForm, SubmissionError, focus, reset } from 'redux-form';
 import Input from './Input';
 import { cancel } from '../actions/nav';
-import { required, nonEmpty, validInput, validURL, /* validIngredient */ } from '../validators';
+import { required, nonEmpty, validInput, validURL } from '../validators';
 import './recipe-form.css';
-
 import { API_BASE_URL } from '../config';
 
 export class ReportForm extends Component {
@@ -105,7 +104,7 @@ export class ReportForm extends Component {
               title={`Remove Ingredient ${index +1}`}
               onClick={() => fields.remove(index)}
             >
-              X
+              x
             </button>
           </li>
         ))}
@@ -116,10 +115,10 @@ export class ReportForm extends Component {
           >
             Add Ingredient
           </button>
-        {
+        {/* {
           error && 
           <li className="error">{error}</li>
-          }
+          } */}
       </ul>
     );
     
@@ -264,7 +263,9 @@ export class ReportForm extends Component {
             type='button'
             className="cancel-add-recipe-btn"
             onClick={ () => this.props.dispatch(cancel()) }
-            >Cancel</button>
+          >
+            Cancel
+          </button>
 
           </fieldset>
         </form>

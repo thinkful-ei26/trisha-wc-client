@@ -18,7 +18,6 @@ export function InfoModal(props) {
             <li>Browse through the recipe list for meal ideas and click on a recipe for instructions to make the dish.</li>
             <li>Not sure what to cook? Click the "Surprise Me" button to generate a random recipe.</li>
             <li>Add a new recipe to the "What's Cooking?" app by clicking on the "+ Add Recipe" button</li>
-            {/* <li>A user does not need to login in order to use my app.</li> */}
           </ul>
           <p>A user does not need to login in order to use my app.</p>          
             <button 
