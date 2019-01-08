@@ -10,6 +10,11 @@ import Spinner from 'react-spinkit';
 
 export class RecipeList extends React.Component {
 
+  componentDidMount() {
+  console.log('Recipes component loaded');
+  this.props.dispatch(fetchRecipes());
+  }
+
   renderResults() {
     const { error, loading } = this.props;
     console.log('renderReslts props:',this.props);
@@ -26,7 +31,7 @@ export class RecipeList extends React.Component {
     return (
       <ul className="recipe-search-results">
        <Recipes />
-    </ul>
+      </ul>
     )
   }
 
@@ -77,12 +82,12 @@ export class RecipeList extends React.Component {
             </ul>
         </div>
         </section>
-        <ul 
+        {/* <ul 
           className="recipe-list" 
           aria-live="polite"
         >
           <Recipes />
-        </ul>
+        </ul> */}
       </div>
       
     )

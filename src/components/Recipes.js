@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import fetchRecipes from '../actions';
+// import fetchRecipes from '../actions';
 import { toggleExpand } from '../actions';
 
 export class Recipes extends Component {
 
-  componentDidMount() {
-    console.log('Recipes component loaded');
-    this.props.dispatch(fetchRecipes());
-  }
+  // componentDidMount() {
+  //   console.log('Recipes component loaded');
+  //   this.props.dispatch(fetchRecipes());
+  // }
 
   render() { 
     const { recipes } = this.props;
