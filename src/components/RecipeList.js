@@ -30,11 +30,7 @@ export class RecipeList extends React.Component {
     }
 
     //on success, render the Recipe component
-    return (
-      <ul className="recipe-search-results">
-       <Recipes />
-      </ul>
-    )
+    return ( <Recipes /> )
   }
 
   //grab the search value and dispatch the searchRecipe async fn
@@ -49,13 +45,14 @@ export class RecipeList extends React.Component {
   render () {
     return (
       <div className="container">
-{/* ========= CONTROLS ========== */}
+      {/* ========= CONTROLS ========== */}
         <section className="controls">
           <button 
             className="surprise-btn"
             onClick={ () => {
               this.props.dispatch(surpriseClick())
-            }}>
+            }}
+          >
             Surprise Me
           </button>
           <button 
@@ -87,7 +84,7 @@ export class RecipeList extends React.Component {
         </div>
         </section>
 {/* ========= RECIPE-LIST ========== */}
-        <ul className="search-results">
+        <ul className="recipe-list">
           {this.renderResults()}
         </ul>
       </div>
