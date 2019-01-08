@@ -10,6 +10,7 @@ export class Recipes extends Component {
   }
 
   render() { 
+    console.log('here',this.props)
     const { recipes } = this.props;
    
     const ingredient = (ingredients) => {

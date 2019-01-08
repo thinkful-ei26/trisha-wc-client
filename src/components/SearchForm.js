@@ -11,13 +11,13 @@ import fetchRecipes from '../actions';
 export class SearchForm extends React.Component {
 
   // componentDidMount() {
-  //   this.props.dispatch(searchRecipes());
+  //   this.props.dispatch(fetchRecipes());
   //   console.log('look',this.props);
     
   // }
 
   renderResults() {
-    const { loading, error } = this.props;
+    const { loading, error, recipes } = this.props;
     if (loading) {
       return <Spinner spinnerName="circle" noFadeIn />
     }
@@ -26,8 +26,11 @@ export class SearchForm extends React.Component {
       return <strong>{error}</strong>
     }
 
-    console.log('this.props.recipes is an array of objects, will log only when you make a successful SearchTerm submit on SearchForm',this.props.recipes);
-    console.log('this.props on SearchForm is an object with prop like dispatch & recipes',this.props);
+    // if (recipes) {
+    //   console.log('here', recipes );
+    // }
+    console.log('this.props.recipes is an array of objects, logs on successful SearchTerm submit',this.props.recipes);
+    // console.log('this.props on SearchForm is an object with prop like dispatch & recipes',this.props);
 
 
     //create an async action, that when you click on the <li> you change recipe (with correct id) and it's expanded to true
@@ -61,7 +64,7 @@ export class SearchForm extends React.Component {
       })
     }
 
-    const expandedRecipeSearch = this.props.recipes.map( (recipe, index) => (
+    const recipe = this.props.recipes.map( (recipe, index) => (
       <li 
         key={index} 
         className="recipe float"
@@ -110,7 +113,7 @@ export class SearchForm extends React.Component {
     
     return (
       <ul className="recipe-search-results">
-        {expandedRecipeSearch}
+        {recipe}
       </ul>
     );
   }
