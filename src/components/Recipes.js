@@ -93,7 +93,9 @@ export class Recipes extends Component {
 
 export const mapStateToProps = state => {
   return {
-    recipes: state.recipeReducer.recipes
+    recipes: state.recipeReducer.recipes,
+    loading: state.recipeReducer.loading,
+    error: state.recipeReducer.error
   }
 }
 

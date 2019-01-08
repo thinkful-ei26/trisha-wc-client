@@ -6,12 +6,17 @@ import { surpriseClick } from '../actions/controls';
 import fetchRecipes, { searchSubmit } from '../actions';
 import './controls.css';
 // import searchRecipes from '../actions';
+import Spinner from 'react-spinkit';
 
 export class RecipeList extends React.Component {
 
   renderResults() {
-    const { error } = this.props;
+    const { error, loading } = this.props;
     console.log('renderReslts props:',this.props);
+
+    if (loading) {
+      return <Spinner spinnerName="circle" fadeIn="none" />;
+  }
 
     if (error) {
       console.log(`There was an error: ${error}`);
@@ -67,9 +72,9 @@ export class RecipeList extends React.Component {
                   ref={input => this.input = input}
               />
             </form>
-            {/* <ul className="search-results">
+            <ul className="search-results">
               {this.renderResults()}
-            </ul> */}
+            </ul>
         </div>
         </section>
         <ul 
