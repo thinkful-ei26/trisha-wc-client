@@ -237,10 +237,6 @@ export class ReportForm extends Component {
             label="Directions: "
             validate={[required, nonEmpty, validInput]}
           />
-
-          {successMessage}
-          {errorMessage}
-
           {/* disable button if user hasn't touched form */ }
           <button 
             className="save-recipe-btn"
@@ -254,7 +250,7 @@ export class ReportForm extends Component {
             className="clear-values-btn"
             type="button" 
             disabled={pristine || submitting} 
-            onClick={reset}
+            // onClick={reset}
           >
             Clear Values
           </button>
@@ -276,8 +272,7 @@ export class ReportForm extends Component {
 
 export default reduxForm({
   form: 'ReportForm',
-  // validIngredient,
   onSubmitFail: (errors, dispatch) =>
   dispatch(focus('contact', Object.keys(errors)[0])),
-  onSubmitSuccess: (result, dispatch) => dispatch(reset('ReportForm'))
+  // onSubmitSuccess: (result, dispatch) => dispatch(reset('ReportForm'))
 })(ReportForm);

@@ -6,6 +6,9 @@ import TopNav from './TopNav';
 
 export class WhatsCooking extends Component {
   
+  componentWillUpdate(nextProps, nextState){
+    localStorage.setItem('recipes', 'stuff')
+  }
   render() {
     return (
       <main className="whats-cooking">

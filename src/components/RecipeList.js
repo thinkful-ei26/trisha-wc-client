@@ -21,7 +21,7 @@ export class RecipeList extends React.Component {
     const { error, loading } = this.props;
 
     if (loading) {
-      return <Spinner spinnerName="circle" fadeIn="none" />;
+      return <Spinner name="circle" fadeIn="none" />;
     }
 
     if (error) {
