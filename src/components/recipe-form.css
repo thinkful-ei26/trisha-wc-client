@@ -32,10 +32,6 @@
 
 .ingredient, .ing-container {
   list-style-type: none;
-  /* display: flex; */
-  /* align-self: auto; 
-  align-items: center;  */
-  /* margin: 10px; */
 }
 
 textarea {
@@ -47,21 +43,11 @@ textarea {
 }
 
 .message-error {
-  color: red;
+  color: #f45845;
 }
 
 .message-success {
-  color: green;
-}
-
-textarea {
-  width: 293px;
-  min-width: 80%;
-  max-width: 80%;
-}
-
-input {
-  width: 80%;
+  color: #45f458;
 }
 
 .ingredients-container {
@@ -78,4 +64,42 @@ input {
 .message {
   margin: 10px;
   padding: 10px;
+}
+
+fieldset {
+  flex-direction: column;
+  height: 100%;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  background: #302e42;
+  border: none;
+}
+
+legend {
+  font-weight: 900;
+  font-size: 2rem;
+  color: #b0aebb;
+  background-color: rgb(48,46,66);
+}
+
+input {
+  background-color: #302e42;
+  border: .125rem solid #b0aebb;
+  height: 2.375rem;
+  line-height: 3.625rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #b0aebb;
+  width: 80%;
+}
+
+textarea {
+  width: 293px;
+  min-width: 80%;
+  max-width: 80%;
+  background-color: #302e42;
+  border: .125rem solid #b0aebb;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #b0aebb;
 }
