@@ -68,7 +68,6 @@ textarea {
 }
 
 fieldset {
-  flex-direction: column;
   height: 100%;
   padding: 1.25rem;
   box-sizing: border-box;
