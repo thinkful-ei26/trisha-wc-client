@@ -77,11 +77,11 @@ export class RecipeList extends React.Component {
                   ref={input => this.input = input}
               />
             </form>
-            <ul className="search-results">
-              {this.renderResults()}
-            </ul>
         </div>
         </section>
+        <ul className="search-results">
+          {this.renderResults()}
+        </ul>
         {/* <ul 
           className="recipe-list" 
           aria-live="polite"
