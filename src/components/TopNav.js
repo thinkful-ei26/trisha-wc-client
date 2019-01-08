@@ -1,5 +1,5 @@
 import React from 'react';
-import { infoClick, addRecipe } from '../actions/nav.js';
+import { infoClick, addRecipe } from '../actions/nav';
 import { connect } from 'react-redux';
 import InfoModal from './InfoModal';
 import RecipeForm from './RecipeForm';

@@ -3,9 +3,8 @@ import { connect } from 'react-redux';
 import Spinner from 'react-spinkit';
 import Recipes from './Recipes';
 
-import { surpriseClick } from '../actions/nav';
-import fetchRecipes from '../actions';
-import {searchRecipes} from '../actions/search';
+import fetchRecipes, { surpriseClick }  from '../actions';
+import { searchRecipes } from '../actions/search';
 
 import './recipe-list.css';
 import './controls.css';

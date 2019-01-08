@@ -2,7 +2,8 @@ import {
   FETCH_RECIPES_REQUEST, 
   FETCH_RECIPES_SUCCESS, 
   FETCH_RECIPES_ERROR, 
-  TOGGLE_EXPAND
+  TOGGLE_EXPAND, 
+  SURPRISE_CLICK
 } from '../actions';
 
 import {
@@ -11,14 +12,11 @@ import {
   SEARCH_RECIPES_ERROR 
 } from '../actions/search';
 
-import { SURPRISE_CLICK } from '../actions/controls';
-
 const initialState = {
   recipes: [],
   loading: false,
   error: null,
   surprise: null,
-  // searchTerm: null
 }
 
 export const recipeReducer = (state=initialState, action) => {
@@ -76,7 +74,7 @@ export const recipeReducer = (state=initialState, action) => {
         return recipe;
       }
 
-      /* ==== CHANGE EXPANDED FALSE TO TRUE ON CLICK OF LI ====*/
+      /* ==== CHANGE EXPANDED FALSE TO TRUE ON CLICK OF RECIPE LI ====*/
       let clickedRecipe = findById(state.recipes, action.id);
 
       const expandedRecipe = Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = !state.expanded ])
