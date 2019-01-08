@@ -87,20 +87,6 @@
   border-color: rgb(244, 117, 33);
 }
 
-@media screen and (min-height: 43.75rem) and (min-width: 50em) {
-  .search-input {
-  font-size: 3.375rem;
-  font-family: markpro,Helvetica Neue,helvetica,sans-serif;
-  font-weight: 200;
-  line-height: 1.11;
-  text-rendering: optimizeLegibility;
-  color: #f9f9fa;
-  padding: .25rem 6.25rem .25rem 0;
-  transition: all .3s ease;
-  height: 4.25rem;
-  }
-}
-
 @media screen and (min-width: 430px) {
   .search-input {
     font-size: 1.875rem;

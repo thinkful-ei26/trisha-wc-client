@@ -168,7 +168,6 @@ export class ReportForm extends Component {
             validate={[validURL]}
           />
 
-
           <Field 
             element="select"
             name="serving"

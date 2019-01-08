@@ -16,7 +16,6 @@
 } 
 
 .remove-btn {
-  /* background-color: rgb(212, 82, 82); */
   background-color: inherit;
   border: inherit;
   border-radius: 2px;
@@ -110,4 +109,34 @@ textarea {
   padding-bottom: 1rem;
   margin-top: 2rem;
   width: 100%;
+}
+
+select {
+  background-color: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #b0aebb;
+}
+
+.new-recipe-form {
+  flex-direction: column;
+}
+
+@media screen and (min-width: 430px) {
+  .form-input {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 85%;
+  }
+} 
+
+@media screen and (min-width: 600px) {
+  .form-input {
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
 }
