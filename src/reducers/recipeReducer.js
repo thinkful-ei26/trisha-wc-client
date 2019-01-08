@@ -1,4 +1,4 @@
-import { FETCH_RECIPES_REQUEST, FETCH_RECIPES_SUCCESS, FETCH_RECIPES_ERROR } from '../actions';
+import { FETCH_RECIPES_REQUEST, FETCH_RECIPES_SUCCESS, FETCH_RECIPES_ERROR, SEARCH_SUBMIT } from '../actions';
 
 import { TOGGLE_EXPAND } from '../actions';
 import { SURPRISE_CLICK } from '../actions/controls';
@@ -7,11 +7,33 @@ const initialState = {
   recipes: [],
   loading: false,
   error: null,
-  surprise: null
+  surprise: null,
+  searchTerm: null
 }
 
 export const recipeReducer = (state=initialState, action) => {
   switch (action.type) {
+
+    case SEARCH_SUBMIT :
+    const { searchTerm } = action;
+    console.log('seach submit state', state);
+    console.log('action',action);
+    console.log('action',action.searchTerm);
+
+    console.log('state.recipes',state.recipes)
+   
+    console.log(state.recipes.filter( (recipe, index) => recipe.title === searchTerm))
+
+    const filteredRecipe = state.recipes.filter( (recipe, index) => recipe.title === searchTerm);
+    // console.log(state.recipes.filter( (recipe, index) => recipe.title.includes(searchTerm))
+    // if (action.searchTerm) {
+    //   return state.recipes.filter( recipe => {console.log('recipe',recipe)} )
+    // } 
+    return Object.assign({}, state, { 
+      loading: false, 
+      recipes: filteredRecipe,
+      error: null
+    }) 
 
     case SURPRISE_CLICK : 
     console.log('surprise state:', state);

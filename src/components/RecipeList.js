@@ -3,23 +3,24 @@ import { connect } from 'react-redux';
 import './recipe-list.css';
 import Recipes from './Recipes';
 import { surpriseClick } from '../actions/controls';
-import fetchRecipes from '../actions';
+import fetchRecipes, { searchSubmit } from '../actions';
 import './controls.css';
-import searchRecipes from '../actions';
+// import searchRecipes from '../actions';
 
 export class RecipeList extends React.Component {
 
   renderResults() {
-    const { error, loading } = this.props;
+    const { error } = this.props;
     console.log('renderReslts props:',this.props);
 
     if (error) {
+      console.log(`There was an error: ${error}`);
       return <strong>{error}</strong>
     }
 
     return (
       <ul className="recipe-search-results">
-       <li>renderResults</li>
+       <Recipes />
     </ul>
     )
   }
@@ -51,7 +52,8 @@ export class RecipeList extends React.Component {
                 console.log('input', input);
                 let searchTerm = input[0].value;
                 console.log('searchTerm', searchTerm);
-                this.props.dispatch(searchRecipes(searchTerm))
+                // this.props.dispatch(searchRecipes(searchTerm))
+                this.props.dispatch(searchSubmit(searchTerm))
                 }
               }
             >
@@ -65,9 +67,9 @@ export class RecipeList extends React.Component {
                   ref={input => this.input = input}
               />
             </form>
-            <ul className="search-results">
+            {/* <ul className="search-results">
               {this.renderResults()}
-            </ul>
+            </ul> */}
         </div>
         </section>
         <ul 
