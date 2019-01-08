@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'; 
 import Spinner from 'react-spinkit';
 import {searchRecipes} from '../actions/search';
-// import { homeClick } from '../actions/controls';
+import { homeClick } from '../actions/controls';
 import './search-form.css';
 
 import { toggleExpand } from '../actions/controls';
@@ -154,8 +154,8 @@ export class SearchForm extends React.Component {
           </form>
           <button 
             className="home-btn"
-            // onClick={ () => this.props.dispatch(homeClick())}
-            onClick={ () => this.props.dispatch(fetchRecipes())}
+            onClick={ () => this.props.dispatch(homeClick())}
+            // onClick={ () => this.props.dispatch(fetchRecipes())}
           >
             Home
           </button>
