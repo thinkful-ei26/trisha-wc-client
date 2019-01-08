@@ -1,15 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './recipe-list.css';
-import Recipes from './Recipes';
-import { surpriseClick } from '../actions/controls';
-import fetchRecipes from '../actions';
-import './controls.css';
 import Spinner from 'react-spinkit';
-import {searchRecipes} from '../actions';
+import Recipes from './Recipes';
+
+import { surpriseClick } from '../actions/nav';
+import fetchRecipes from '../actions';
+import {searchRecipes} from '../actions/search';
+
+import './recipe-list.css';
+import './controls.css';
 
 export class RecipeList extends React.Component {
 
+  //on page load, fetch all recipes from db
   componentDidMount() {
   console.log('Recipes component loaded');
   this.props.dispatch(fetchRecipes());
@@ -20,13 +23,14 @@ export class RecipeList extends React.Component {
 
     if (loading) {
       return <Spinner spinnerName="circle" fadeIn="none" />;
-  }
+    }
 
     if (error) {
       console.log(`There was an error: ${error}`);
       return <strong>{error}</strong>
     }
 
+    //on success, render the Recipe component
     return (
       <ul className="recipe-search-results">
        <Recipes />
@@ -34,6 +38,7 @@ export class RecipeList extends React.Component {
     )
   }
 
+  //grab the search value and dispatch the searchRecipe async fn
   search(e) {
     e.preventDefault();
     if (this.input.value.trim() === '') {
@@ -45,6 +50,7 @@ export class RecipeList extends React.Component {
   render () {
     return (
       <div className="container">
+{/* ========= CONTROLS ========== */}
         <section className="controls">
           <button 
             className="surprise-btn"
@@ -63,7 +69,8 @@ export class RecipeList extends React.Component {
           <div className="search-section">
             <form 
               id="search-form"
-              onSubmit={e => {
+              onChange={e => {
+              //invoke the search fn on search submit ∆
                   this.search(e);
                 }
               }
@@ -80,6 +87,7 @@ export class RecipeList extends React.Component {
             </form>
         </div>
         </section>
+{/* ========= RECIPE-LIST ========== */}
         <ul className="search-results">
           {this.renderResults()}
         </ul>

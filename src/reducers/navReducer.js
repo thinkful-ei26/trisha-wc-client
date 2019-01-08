@@ -1,4 +1,11 @@
-import { INFO_CLICK, GOT_IT, ADD_RECIPE, CANCEL_ADD_RECIPE } from '../actions/nav';
+import { 
+  INFO_CLICK, 
+  GOT_IT, 
+  ADD_RECIPE, 
+  CANCEL_ADD_RECIPE,
+  SURPRISE_CLICK,
+  VIEW_ALL_RECIPES
+} from '../actions/nav';
 
 const initialState = {
   info: false,

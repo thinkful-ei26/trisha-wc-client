@@ -19,3 +19,13 @@ export const CANCEL_ADD_RECIPE = ' CANCEL_ADD_RECIPE';
 export const cancel = () => ({
   type: CANCEL_ADD_RECIPE 
 })
+
+export const SURPRISE_CLICK = 'SURPRISE_CLICK';
+export const surpriseClick = () => ({
+  type: SURPRISE_CLICK
+})
+
+export const VIEW_ALL_RECIPES = 'VIEW_ALL_RECIPES';
+export const allRecipes = () => ({
+  type: VIEW_ALL_RECIPES
+})
