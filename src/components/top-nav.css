@@ -1,5 +1,6 @@
 .info-content {
-  padding: .375rem .625rem;
+  padding: 30px; 
+  width: 100%;
 }
 
 .info-overlay {

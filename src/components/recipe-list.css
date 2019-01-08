@@ -8,6 +8,7 @@
 .recipe:hover {
   background-color: #e8e8e9;
   color: #1b1a26;
+  cursor: pointer;
 }
 
 .recipe-condensed {

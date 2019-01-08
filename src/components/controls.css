@@ -101,7 +101,7 @@
   }
 }
 
-@media screen and (min-width: 35.5em) {
+@media screen and (min-width: 430px) {
   .search-input {
     font-size: 1.875rem;
     font-weight: 400;
@@ -133,12 +133,12 @@
   }
 
   .surprise-btn, .show-all-btn {
-    max-width: 37.5rem;
+    max-width: 30rem;
     align-self: center;
   }
 
   .search-section {
-    max-width: 37.5rem;
+    max-width: 30rem;
     display: flex;
   }
 }
