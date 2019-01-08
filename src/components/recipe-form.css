@@ -32,6 +32,7 @@
 
 .ingredient, .ing-container {
   list-style-type: none;
+
 }
 
 textarea {
@@ -71,7 +72,7 @@ fieldset {
   height: 100%;
   padding: 1.25rem;
   box-sizing: border-box;
-  background: #302e42;
+  background: #1b1a26;
   border: none;
 }
 
@@ -79,11 +80,12 @@ legend {
   font-weight: 900;
   font-size: 2rem;
   color: #b0aebb;
-  background-color: rgb(48,46,66);
+  width: 100%;
+  padding-top: 1.5rem;
 }
 
 input {
-  background-color: #302e42;
+  background-color: #1b1a26;
   border: .125rem solid #b0aebb;
   height: 2.375rem;
   line-height: 3.625rem;
@@ -97,9 +99,14 @@ textarea {
   width: 293px;
   min-width: 80%;
   max-width: 80%;
-  background-color: #302e42;
+  /* background-color: #302e42; */
+  background-color: #1b1a26;
   border: .125rem solid #b0aebb;
   font-size: 1rem;
   font-weight: 500;
   color: #b0aebb;
+}
+
+.new-recipe-form {
+  border-top: 2px solid rgb(244, 117, 33);
 }
