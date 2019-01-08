@@ -81,7 +81,10 @@ export class RecipeList extends React.Component {
                     placeholder="Recipe Search..."
                     ref={input => this.input = input}
                 />
-                 <label htmlFor="search">
+                 <label 
+                  htmlFor="search"
+                  className="search-label"
+                >
                   <button
                     className="search-btn" 
                   >

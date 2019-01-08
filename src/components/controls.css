@@ -79,10 +79,9 @@
 
 .search-btn {
   background-color: inherit;
+  border: none;
 }
 
 .search-input:focus {
   border-color: rgb(244, 117, 33);
 }
-
-/* .input-wrapper {} */
