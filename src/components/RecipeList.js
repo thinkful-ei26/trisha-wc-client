@@ -3,9 +3,8 @@ import { connect } from 'react-redux';
 import './recipe-list.css';
 import Recipes from './Recipes';
 import { surpriseClick } from '../actions/controls';
-import fetchRecipes /* , { searchSubmit } */ from '../actions';
+import fetchRecipes from '../actions';
 import './controls.css';
-// import searchRecipes from '../actions';
 import Spinner from 'react-spinkit';
 import {searchRecipes} from '../actions';
 
@@ -18,7 +17,6 @@ export class RecipeList extends React.Component {
 
   renderResults() {
     const { error, loading } = this.props;
-    console.log('renderReslts props:',this.props);
 
     if (loading) {
       return <Spinner spinnerName="circle" fadeIn="none" />;
@@ -66,14 +64,7 @@ export class RecipeList extends React.Component {
             <form 
               id="search-form"
               onSubmit={e => {
-                this.search(e);
-                /* e.preventDefault();
-                let input = document.getElementById("search-form").elements;
-                console.log('input', input);
-                let searchTerm = input[0].value;
-                console.log('searchTerm', searchTerm); */
-                // this.props.dispatch(searchRecipes(searchTerm))
-                /* this.props.dispatch(searchSubmit(searchTerm)) */
+                  this.search(e);
                 }
               }
             >
@@ -92,12 +83,6 @@ export class RecipeList extends React.Component {
         <ul className="search-results">
           {this.renderResults()}
         </ul>
-        {/* <ul 
-          className="recipe-list" 
-          aria-live="polite"
-        >
-          <Recipes />
-        </ul> */}
       </div>
       
     )
@@ -109,7 +94,6 @@ const mapStateToProps = state => {
     recipes: state.recipeReducer.recipes,
     loading: state.recipeReducer.loading,
     error: state.recipeReducer.error,
-    // searchTerm: state.recipeReducer.searchTerm
   }
 }
 
