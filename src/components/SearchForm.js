@@ -29,7 +29,7 @@ export class SearchForm extends React.Component {
     // if (recipes) {
     //   console.log('here', recipes );
     // }
-    console.log('this.props.recipes is an array of objects, logs on successful SearchTerm submit',this.props.recipes);
+    console.log('this.props.recipes is an array of objects, logs on successful SearchTerm submit',recipes);
     // console.log('this.props on SearchForm is an object with prop like dispatch & recipes',this.props);
 
 
