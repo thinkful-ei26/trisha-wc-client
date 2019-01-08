@@ -1,7 +1,6 @@
 # What's Cooking App
-- [Deployed App Link](https://protected-depths-66567.herokuapp.com/)
 ### Not sure what to cook for your next meal? 
-**What's Cooking** is a full-stack app that can help you narrow down your choices. On page load, a user can:
+What's Cooking](https://protected-depths-66567.herokuapp.com/) is a full-stack app that can help you narrow down your choices. On page load, a user can:
     - Browse through the recipe list for meal ideas and click on a recipe for instructions to make the dish.
     - Not sure what to cook? Click the "Surprise Me" button to generate a random recipe.
     - Add a new recipe to the "What's Cooking?" app by clicking on the "+ Add Recipe" button
@@ -11,11 +10,10 @@ A user does not need to login in order to use my app.
 - [Curriculum Link](https://courses.thinkful.com/dev-301v1/assignment/2.9.4)
 
 :white_check_mark: A description of your app
-
 :white_check_mark: A link to a deployed version
 - [Deployed App Link](https://protected-depths-66567.herokuapp.com/)
 
-- Screenshots of your app
+:x: Screenshots of your app
 
 :white_check_mark: A description of your tech stack
     - React for the frontend
@@ -23,7 +21,7 @@ A user does not need to login in order to use my app.
     - Node for the backend
     - MongoDB for the database
 
-- A brief description of where each of the key parts of the project live in your codebase
+:x: A brief description of where each of the key parts of the project live in your codebase
 
 :white_check_mark: If your app is meant to be re-used by other developers, instructions on how to get the app up and running (see instructions for developers)
 
