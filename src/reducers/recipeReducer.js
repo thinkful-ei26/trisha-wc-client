@@ -2,7 +2,6 @@ import {
   FETCH_RECIPES_REQUEST, 
   FETCH_RECIPES_SUCCESS, 
   FETCH_RECIPES_ERROR, 
-  // SEARCH_SUBMIT, 
   SEARCH_RECIPES_REQUEST,
   SEARCH_RECIPES_SUCCESS, 
   SEARCH_RECIPES_ERROR 
@@ -37,34 +36,6 @@ export const recipeReducer = (state=initialState, action) => {
       loading: true,
       error: action.error
     })
-
-//ignore this for now
-/*     case SEARCH_SUBMIT :
-    const { searchTerm } = action;
-    const filteredRecipe = state.recipes.filter( (recipe, index) => {
-      // console.log('recipe.title', recipe.title);
-      return recipe.title === searchTerm
-    });
-
-    // //return the state if searchTerm is empty
-    // if (searchTerm === '') {
-    //   console.log('empty searchterm');
-    //   return Object.assign({}, state, { 
-    //     recipes: state.recipes,
-    //   }) 
-    // }
-
-    // console.log('seach submit state', state);
-    // console.log('action',action);
-    // console.log('action',action.searchTerm);
-    // console.log('state.recipes',state.recipes)
-    // console.log(state.recipes.filter( (recipe, index) => recipe.title === searchTerm))
-
-    return Object.assign({}, state, { 
-      loading: false, 
-      recipes: filteredRecipe,
-      error: null
-    })  */
 
     case SURPRISE_CLICK : 
     console.log('surprise state:', state);

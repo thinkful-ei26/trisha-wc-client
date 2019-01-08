@@ -51,35 +51,6 @@ export default function fetchRecipes() {
   }
 } 
 
-//current handler of search submit
-/* export const SEARCH_SUBMIT = 'SEARCH_SUBMIT';
-export const searchSubmit = (searchTerm) => ({
-  type: SEARCH_SUBMIT,
-  searchTerm
-}) */
-
-// ==== ignore below:
-// export const searchRecipes = searchTerm => dispatch => {
-//   console.log('searchTerm from index action',this.searchTerm);
-//   dispatch(fetchRecipesRequest());
-//   fetch(`${API_BASE_URL}/api/recipes/?search=${searchTerm}`)
-//     .then(res => {
-//       if(!res.ok) {
-//         return Promise.reject(res.statusText);
-//       }
-//       console.log('res on recipe action index',res);
-//       return res.json()
-//     })
-//       .then(recipes => { 
-//         console.log('recipes on recipe action index',recipes);
-//         dispatch(fetchRecipesSuccess(recipes))
-//       })
-//       .catch(error => dispatch(fetchRecipesError(error)));
-// };
-// === ignore end
-
-// ==== lets make this an async call 
-
 export const SEARCH_RECIPES_REQUEST = 'SEARCH_RECIPES_REQUEST';
 export const searchRecipesRequest = () => ({
     type: SEARCH_RECIPES_REQUEST
