@@ -78,7 +78,7 @@ export class RecipeList extends React.Component {
                     id="search"
                     name="search"
                     className="search-input"
-                    placeholder="Recipe Search..."
+                    placeholder="Search..."
                     ref={input => this.input = input}
                 />
                  <label 
