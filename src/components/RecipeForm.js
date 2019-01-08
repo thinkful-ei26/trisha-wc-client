@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Field, FieldArray, reduxForm, SubmissionError, focus, reset } from 'redux-form';
+import { Field, FieldArray, reduxForm, SubmissionError, focus, /* reset */ } from 'redux-form';
 import Input from './Input';
 import { cancel } from '../actions/nav';
 import { required, nonEmpty, validInput, validURL } from '../validators';
@@ -53,7 +53,7 @@ export class ReportForm extends Component {
   });
 }
   render() {
-    const { handleSubmit, pristine, submitting, reset, submitSucceeded, error } = this.props;
+    const { handleSubmit, pristine, submitting, /* reset,  */submitSucceeded, error } = this.props;
 
     let successMessage;
     if (submitSucceeded) {

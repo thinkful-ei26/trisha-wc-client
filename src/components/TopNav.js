@@ -8,7 +8,7 @@ import './top-nav.css';
 export function TopNav(props) {
 
   if(props.info) { 
-    return < InfoModal />
+    return <InfoModal />
   }
 
   if(props.addRecipe) { 
