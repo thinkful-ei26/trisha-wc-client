@@ -69,27 +69,27 @@ export const searchReducer = (state=initialState, action) => {
     // console.log('action TOGGLE_EXPAND searchReducer',action);
 
     //helper fn: find the clicked recipe by id and return the recipe obj
-    const findById = (recipes, recipeId) => {
-      const recipe = recipes.filter( (recipe, index) => { 
-        return recipeId === recipe.id 
-      })
-      return recipe;
-    }
+    // const findById = (recipes, recipeId) => {
+    //   const recipe = recipes.filter( (recipe, index) => { 
+    //     return recipeId === recipe.id 
+    //   })
+    //   return recipe;
+    // }
 
-    // invoke findById taking in the recipe list & the id of clicked recipe
-    let [ clickedRecipe ] = findById(state.recipes, action.id);
-    console.log('clickedRecipe',clickedRecipe);
+    // // invoke findById taking in the recipe list & the id of clicked recipe
+    // let [ clickedRecipe ] = findById(state.recipes, action.id);
+    // console.log('clickedRecipe',clickedRecipe);
  
-    const indexClicked = state.recipes.indexOf(clickedRecipe);
-    console.log('indexClicked', indexClicked);
+    // const indexClicked = state.recipes.indexOf(clickedRecipe);
+    // console.log('indexClicked', indexClicked);
 
-    //updates the expanded prop of clicked recipe to true
-    const setExpandedTrue = Object.assign({}, clickedRecipe, {expanded: true})
-    console.log('setExpandedTrue', setExpandedTrue);
+    // //updates the expanded prop of clicked recipe to true
+    // const setExpandedTrue = Object.assign({}, clickedRecipe, {expanded: true})
+    // console.log('setExpandedTrue', setExpandedTrue);
 
-    //returns a new array of recipes with the expanded clicked recipe
-    return Object.assign({}, state, {recipes: [setExpandedTrue]}
-    )
+    // //returns a new array of recipes with the expanded clicked recipe
+    // return Object.assign({}, state, {recipes: [setExpandedTrue]}
+    // )
 
     default: return state
   }

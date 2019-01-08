@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './WhatsCooking.css';
-// import SearchSection from './SearchSection';
+import SearchSection from './SearchSection';
 import SearchForm from './SearchForm';
 import RecipeList from './RecipeList';
 import TopNav from './TopNav';
-// import Controls from './Controls';
+import Controls from './Controls';
 
 export class WhatsCooking extends Component {
 
@@ -12,10 +12,10 @@ export class WhatsCooking extends Component {
     return (
       <main className="whats-cooking">
         <TopNav />
-        {/* <SearchSection /> */}
-        {/* <Controls /> */}
-        <SearchForm />
-        {/* <RecipeList /> */}
+        <SearchSection />
+        <Controls />
+        {/* <SearchForm /> */}
+        <RecipeList />
       </main>
     );
   }
