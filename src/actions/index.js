@@ -39,9 +39,11 @@ export default function fetchRecipes() {
         if(!res.ok) {
           return Promise.reject(res.statusText);
         }
+        // console.log('res on recipe action index',res);
         return res.json()
       })
       .then( recipes => { 
+        // console.log('recipes on recipe action index',recipes);
         dispatch(fetchRecipesSuccess(recipes))
       })
       .catch( error => { dispatch(fetchRecipesError(error))
@@ -55,16 +57,20 @@ export const searchSubmit = (searchTerm) => ({
   searchTerm
 })
 
-export const searchRecipes = searchTerm => dispatch => {
-  // console.log('searchTerm from index action',this.searchTerm);
-  dispatch(fetchRecipesRequest());
-  fetch(`${API_BASE_URL}/api/recipes/?search=${searchTerm}`)
-    .then(res => {
-      if(!res.ok) {
-        return Promise.reject(res.statusText);
-      }
-      return res.json()
-    })
-      .then(recipes => dispatch(fetchRecipesSuccess(recipes)))
-      .catch(error => dispatch(fetchRecipesError(error)));
-};
+// export const searchRecipes = searchTerm => dispatch => {
+//   console.log('searchTerm from index action',this.searchTerm);
+//   dispatch(fetchRecipesRequest());
+//   fetch(`${API_BASE_URL}/api/recipes/?search=${searchTerm}`)
+//     .then(res => {
+//       if(!res.ok) {
+//         return Promise.reject(res.statusText);
+//       }
+//       console.log('res on recipe action index',res);
+//       return res.json()
+//     })
+//       .then(recipes => { 
+//         console.log('recipes on recipe action index',recipes);
+//         dispatch(fetchRecipesSuccess(recipes))
+//       })
+//       .catch(error => dispatch(fetchRecipesError(error)));
+// };

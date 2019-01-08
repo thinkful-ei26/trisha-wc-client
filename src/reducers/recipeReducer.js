@@ -15,20 +15,28 @@ export const recipeReducer = (state=initialState, action) => {
   switch (action.type) {
 
     case SEARCH_SUBMIT :
+
     const { searchTerm } = action;
-    console.log('seach submit state', state);
-    console.log('action',action);
-    console.log('action',action.searchTerm);
 
-    console.log('state.recipes',state.recipes)
-   
-    console.log(state.recipes.filter( (recipe, index) => recipe.title === searchTerm))
+    const filteredRecipe = state.recipes.filter( (recipe, index) => {
+      // console.log('recipe.title', recipe.title);
+      return recipe.title === searchTerm
+    });
 
-    const filteredRecipe = state.recipes.filter( (recipe, index) => recipe.title === searchTerm);
-    // console.log(state.recipes.filter( (recipe, index) => recipe.title.includes(searchTerm))
-    // if (action.searchTerm) {
-    //   return state.recipes.filter( recipe => {console.log('recipe',recipe)} )
-    // } 
+    // //return the state if searchTerm is empty
+    // if (searchTerm === '') {
+    //   console.log('empty searchterm');
+    //   return Object.assign({}, state, { 
+    //     recipes: state.recipes,
+    //   }) 
+    // }
+
+    // console.log('seach submit state', state);
+    // console.log('action',action);
+    // console.log('action',action.searchTerm);
+    // console.log('state.recipes',state.recipes)
+    // console.log(state.recipes.filter( (recipe, index) => recipe.title === searchTerm))
+
     return Object.assign({}, state, { 
       loading: false, 
       recipes: filteredRecipe,
