@@ -45,8 +45,9 @@ export class RecipeList extends React.Component {
   render () {
     return (
       <div className="container">
-      {/* ========= CONTROLS ========== */}
         <section className="controls">
+
+        {/* ========= SURPRISE BTN ========== */}
           <button 
             className="surprise-btn"
             onClick={ () => {
@@ -55,6 +56,8 @@ export class RecipeList extends React.Component {
           >
             Surprise Me
           </button>
+
+        {/* ========= SHOW ALL RECIPES ========== */}
           <button 
             className="show-all-btn"
             onClick={ () => {
@@ -62,6 +65,8 @@ export class RecipeList extends React.Component {
             }}>
             Show All Recipes
           </button>
+
+         {/* ========= SEARCH FORM ========== */}
           <div className="search-section">
             <form 
               id="search-form"
@@ -81,7 +86,7 @@ export class RecipeList extends React.Component {
                     placeholder="Search..."
                     ref={input => this.input = input}
                 />
-                 <label 
+                <label 
                   htmlFor="search"
                   className="search-label"
                 >
@@ -89,16 +94,17 @@ export class RecipeList extends React.Component {
                     className="search-btn" 
                   >
                     <svg className="search-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" data-t="search-svg">
-                      <path d="M2,10.666V5.333L5.333,2h5.333L14,5.333v5.333L10.667,14H5.333ZM4.364,0,0,4.363v7.273L4.364,16h7.273l1.757-1.757L18,20h2V18l-5.757-4.606L16,11.637V4.363L11.637,0Z" />
+                      <path d="M2,10.666V5.333L5.333,2h5.333L14,5.333v5.333L10.667,14H5.333ZM4.364,0,0,4.363v7.273L4.364,16h7.273l1.757-1.757L18,20h2V18l-5.757-4.606L16,11.637V4.363L11.637,0Z" 
+                      />
                     </svg>
                   </button>
-                  </label>
+                </label>
               </div>
-              
             </form>
-        </div>
+          </div>
         </section>
-{/* ========= RECIPE-LIST ========== */}
+        
+      {/* ========= RECIPE-LIST ========== */}
         <ul className="recipe-list">
           {this.renderResults()}
         </ul>

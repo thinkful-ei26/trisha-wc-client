@@ -63,7 +63,7 @@
   background-color: initial;
   padding: .25rem 2.5rem .25rem 0;
   display: inline-block;
-  width: 80%;
+  width: 87%;
   box-sizing: border-box;
   border: none;
   border-bottom: 0.25rem solid #5e5c70;
@@ -80,6 +80,7 @@
 .search-btn {
   background-color: inherit;
   border: none;
+  padding: 0;
 }
 
 .search-input:focus {
@@ -131,7 +132,13 @@
     height: 4rem;
   }
 
+  .surprise-btn, .show-all-btn {
+    max-width: 37.5rem;
+    align-self: center;
+  }
+
   .search-section {
     max-width: 37.5rem;
+    display: flex;
   }
 }
