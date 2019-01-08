@@ -16,11 +16,27 @@ const initialState = {
   loading: false,
   error: null,
   surprise: null,
-  searchTerm: null
+  // searchTerm: null
 }
 
 export const recipeReducer = (state=initialState, action) => {
   switch (action.type) {
+
+    case SEARCH_RECIPES_REQUEST : 
+    return Object.assign({}, state, { loading: true })
+
+    case SEARCH_RECIPES_SUCCESS :
+    return Object.assign({}, state, { 
+      loading: false, 
+      recipes: action.recipes, 
+      error: null
+    })
+
+    case SEARCH_RECIPES_ERROR :
+    return Object.assign({}, state, { 
+      loading: true,
+      error: action.error
+    })
 
 //ignore this for now
 /*     case SEARCH_SUBMIT :

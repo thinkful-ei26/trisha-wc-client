@@ -7,6 +7,7 @@ import fetchRecipes /* , { searchSubmit } */ from '../actions';
 import './controls.css';
 // import searchRecipes from '../actions';
 import Spinner from 'react-spinkit';
+import {searchRecipes} from '../actions';
 
 export class RecipeList extends React.Component {
 
@@ -35,6 +36,14 @@ export class RecipeList extends React.Component {
     )
   }
 
+  search(e) {
+    e.preventDefault();
+    if (this.input.value.trim() === '') {
+      return;
+    }
+    this.props.dispatch(searchRecipes(this.input.value));
+  }
+
   render () {
     return (
       <div className="container">
@@ -57,11 +66,12 @@ export class RecipeList extends React.Component {
             <form 
               id="search-form"
               onSubmit={e => {
-                e.preventDefault();
+                this.search(e);
+                /* e.preventDefault();
                 let input = document.getElementById("search-form").elements;
                 console.log('input', input);
                 let searchTerm = input[0].value;
-                console.log('searchTerm', searchTerm);
+                console.log('searchTerm', searchTerm); */
                 // this.props.dispatch(searchRecipes(searchTerm))
                 /* this.props.dispatch(searchSubmit(searchTerm)) */
                 }
@@ -99,7 +109,7 @@ const mapStateToProps = state => {
     recipes: state.recipeReducer.recipes,
     loading: state.recipeReducer.loading,
     error: state.recipeReducer.error,
-    searchTerm: state.recipeReducer.searchTerm
+    // searchTerm: state.recipeReducer.searchTerm
   }
 }
 
