@@ -98,7 +98,6 @@ textarea {
   width: 293px;
   min-width: 80%;
   max-width: 80%;
-  /* background-color: #302e42; */
   background-color: #1b1a26;
   border: .125rem solid #b0aebb;
   font-size: 1rem;
@@ -106,9 +105,10 @@ textarea {
   color: #b0aebb;
 }
 
-.new-recipe-form {
+.add-recipe-overlay {
   border-top: 2px solid rgb(244, 117, 33);
   border-bottom: 2px solid rgb(244, 117, 33);
   padding-bottom: 1rem;
-  padding-top: 1rem;
+  margin-top: 2rem;
+  width: 100%;
 }
