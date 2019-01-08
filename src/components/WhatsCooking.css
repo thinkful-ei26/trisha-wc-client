@@ -42,3 +42,15 @@ a {
 button {
   cursor: pointer;
 }
+
+.first-timer {
+  margin-top: 100px;
+  padding-bottom: 100px;
+  width: 100%;
+  border-bottom: 2px solid rgb(244, 117, 33);
+}
+
+.first-timer-content {
+  display: inline-block;
+  width: 80%;
+}

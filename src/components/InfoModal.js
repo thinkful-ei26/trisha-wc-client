@@ -31,7 +31,7 @@ export function InfoModal(props) {
             <a
                 className="github-repo" href="https://github.com/thinkful-ei26/trisha-wc-client"
             >
-                GitHub Repo
+              GitHub Repo
             </a>
         </div>
       </div>
