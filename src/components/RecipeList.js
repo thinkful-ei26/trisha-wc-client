@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import './recipe-list.css';
 import Recipes from './Recipes';
 import { surpriseClick } from '../actions/controls';
-import fetchRecipes, { searchSubmit } from '../actions';
+import fetchRecipes /* , { searchSubmit } */ from '../actions';
 import './controls.css';
 // import searchRecipes from '../actions';
 import Spinner from 'react-spinkit';
@@ -63,7 +63,7 @@ export class RecipeList extends React.Component {
                 let searchTerm = input[0].value;
                 console.log('searchTerm', searchTerm);
                 // this.props.dispatch(searchRecipes(searchTerm))
-                this.props.dispatch(searchSubmit(searchTerm))
+                /* this.props.dispatch(searchSubmit(searchTerm)) */
                 }
               }
             >

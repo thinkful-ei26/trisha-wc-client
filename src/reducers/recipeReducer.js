@@ -1,4 +1,12 @@
-import { FETCH_RECIPES_REQUEST, FETCH_RECIPES_SUCCESS, FETCH_RECIPES_ERROR, SEARCH_SUBMIT } from '../actions';
+import { 
+  FETCH_RECIPES_REQUEST, 
+  FETCH_RECIPES_SUCCESS, 
+  FETCH_RECIPES_ERROR, 
+  // SEARCH_SUBMIT, 
+  SEARCH_RECIPES_REQUEST,
+  SEARCH_RECIPES_SUCCESS, 
+  SEARCH_RECIPES_ERROR 
+} from '../actions';
 
 import { TOGGLE_EXPAND } from '../actions';
 import { SURPRISE_CLICK } from '../actions/controls';
@@ -14,10 +22,9 @@ const initialState = {
 export const recipeReducer = (state=initialState, action) => {
   switch (action.type) {
 
-    case SEARCH_SUBMIT :
-
+//ignore this for now
+/*     case SEARCH_SUBMIT :
     const { searchTerm } = action;
-
     const filteredRecipe = state.recipes.filter( (recipe, index) => {
       // console.log('recipe.title', recipe.title);
       return recipe.title === searchTerm
@@ -41,7 +48,7 @@ export const recipeReducer = (state=initialState, action) => {
       loading: false, 
       recipes: filteredRecipe,
       error: null
-    }) 
+    })  */
 
     case SURPRISE_CLICK : 
     console.log('surprise state:', state);
