@@ -81,7 +81,6 @@ legend {
   font-size: 2rem;
   color: #b0aebb;
   width: 100%;
-  padding-top: 1.5rem;
 }
 
 input {
@@ -109,4 +108,7 @@ textarea {
 
 .new-recipe-form {
   border-top: 2px solid rgb(244, 117, 33);
+  border-bottom: 2px solid rgb(244, 117, 33);
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
