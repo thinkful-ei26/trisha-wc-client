@@ -26,7 +26,7 @@ export function TopNav(props) {
             }
           }
         >
-          <span className="info-text">Info</span>
+          <span className="info-text">INFO</span>
         </button>
       </li>
       <li className="header-center">
@@ -43,7 +43,7 @@ export function TopNav(props) {
           }
         }
         >
-          <span className="add-recipe-text">+ Add Recipe</span>
+          <span className="add-recipe-text">+ ADD RECIPE</span>
         </button>
       </li>
       <div className="wc-header-bar"></div>
