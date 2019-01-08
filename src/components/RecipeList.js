@@ -71,13 +71,14 @@ export class RecipeList extends React.Component {
                 }
               }
             >
-              <label htmlFor="search">Search</label>&emsp;
+              <label htmlFor="search"></label>&emsp;
               <input
                   aria-controls="recipe-count"
                   type="search"
                   id="search"
                   name="search"
-                  placeholder="recipe search"
+                  className="search-input"
+                  placeholder="Recipe Search..."
                   ref={input => this.input = input}
               />
             </form>

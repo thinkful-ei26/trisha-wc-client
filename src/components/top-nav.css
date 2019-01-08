@@ -77,10 +77,6 @@
   list-style-type: none;
 }
 
-.search-section {
-  margin-top: 100px;
-}
-
 .logo-content {
   font-size: calc(1rem + 2vmin);
   font-weight: bolder;
