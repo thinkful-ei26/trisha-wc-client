@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './WhatsCooking.css';
 import RecipeList from './RecipeList';
-import InfoModal from './InfoModal';
 import TopNav from './TopNav';
-import { gotIt } from '../actions/nav';
 
 export class WhatsCooking extends Component {
   
@@ -18,7 +16,7 @@ export class WhatsCooking extends Component {
   componentWillMount(){
     //this will only log if the visited item on storage does not exists, first time 
     if(!localStorage.getItem('visited')) {
-      console.log('have you visited before?');
+      // console.log('have you visited before?');
       this.setState({
         visited: true
       })
@@ -45,7 +43,7 @@ export class WhatsCooking extends Component {
   }
 
   render() {
-    console.log('state',this.state);
+    // console.log('state',this.state);
     if(!this.state.visited) {
      return (
       <main className="whats-cooking">
