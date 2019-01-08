@@ -1,10 +1,10 @@
-# What's Cooking App
-### [What's Cooking](https://protected-depths-66567.herokuapp.com/) is a full-stack app that can help you narrow down your choices. 
+# [What's Cooking App](https://protected-depths-66567.herokuapp.com/)
+### Not sure what to cook for your next meal?
 
-On page load, a user can:
+[What's Cooking](https://protected-depths-66567.herokuapp.com/) is a full-stack app that can help you narrow down your choices. On page load, a user can:
 
 - Browse through the recipe list for meal ideas and click on a recipe for instructions to make the dish.
-- Not sure what to cook? Click the "Surprise Me" button to generate a random recipe.
+- Click the "Surprise Me" button to generate a random recipe.
 - Add a new recipe to the "What's Cooking?" app by clicking on the "+ Add Recipe" button
 
 A user does not need to login in order to use my app.
@@ -14,8 +14,7 @@ A user does not need to login in order to use my app.
 
 :white_check_mark: A description of your app
 
-:white_check_mark: A link to a deployed version
-- [Deployed App Link](https://protected-depths-66567.herokuapp.com/)
+:white_check_mark: A link to a [deployed version](https://protected-depths-66567.herokuapp.com/)
 
 :x: Screenshots of your app
 
