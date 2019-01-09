@@ -9,7 +9,7 @@
 
 A user does not need to login in order to use my app.
 
-## Requirements :construction: In progress  :construction:
+## :construction: Requirements (in progress) :construction:
 - [Curriculum Link](https://courses.thinkful.com/dev-301v1/assignment/2.9.4)
 
 :white_check_mark: A description of your app
@@ -36,8 +36,8 @@ In development, your local machine should have [Node.js](https://nodejs.org/en/)
 * [Client](https://github.com/thinkful-ei26/trisha-wc-client.git) or `git clone https://github.com/thinkful-ei26/trisha-wc-client.git`
 2. `npm install` the requirements on each of the repos
 3. Run `mongod` in a separate terminal shell. 
-4. Then `cd` into the server side and run `node server.js`
-5. Finally, `cd` into the client side and run `npm start`. A new browser window should open containing the app. 
+4. Open a new terminal shell and then `cd` into the server side and run `node server.js`
+5. Finally, `cd` into the client side and run `npm start` in a new terminal shell. A new browser window should open containing the app. 
 
 ## User Stories 
 What can my app do?
