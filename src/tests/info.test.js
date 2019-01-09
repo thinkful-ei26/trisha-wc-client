@@ -1,11 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import InfoModal from './InfoModal';
+import InfoModal from '../components/InfoModal';
 
 describe('<InfoModal />', () => {
   it('Renders without crashing', () => {
     shallow(<InfoModal info={true} />);
-    console.log(shallow(<InfoModal info={true} />))
   })
 
   it('Renders info-contents initially', () => {

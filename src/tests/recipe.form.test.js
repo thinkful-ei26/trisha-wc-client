@@ -1,11 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import RecipeForm from './RecipeForm';
+import RecipeForm from '../components/RecipeForm';
 
 describe('<RecipeForm />', () => {
   it('Renders without crashing', () => {
     shallow(<RecipeForm info={true} />);
-    console.log(shallow(<RecipeForm />))
   })
 
   it('Renders new-recipe-form contents initially', () => {
@@ -16,8 +15,6 @@ describe('<RecipeForm />', () => {
   });
 
   // it('Should fire async fetch on form submit', () => {})
-
-  // it('Should not fire async fetch if the input is empty on form submit', () => {})
-
+  // it('Async fetch should not fire if the input is empty on form submit', () => {})
   // it('Should render correct input validations', () => {})
 })
