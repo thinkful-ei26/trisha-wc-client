@@ -18,7 +18,6 @@ export const toggleExpand = (id) => ({
   id 
 })
 
-
 /* ========= FETCH RECIPE ASYNC ACTIONS ========== */
 export const FETCH_RECIPES_REQUEST = 'FETCH_RECIPES_REQUEST';
 export const fetchRecipesRequest = () => ({

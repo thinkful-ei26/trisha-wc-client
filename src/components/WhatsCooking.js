@@ -12,11 +12,10 @@ export class WhatsCooking extends Component {
     }
   }
   
-  //check if the item exist in local storage, if it does, set state
+  //lifecycle checks if the item exist in local storage, if it does, set state
   componentWillMount(){
-    //this will only log if the visited item on storage does not exists, first time 
+    //if item 'visited' on local storage does not exist, set the prop visited to true
     if(!localStorage.getItem('visited')) {
-      // console.log('have you visited before?');
       this.setState({
         visited: true
       })
@@ -27,14 +26,12 @@ export class WhatsCooking extends Component {
     }
   }
 
-  //happens after WillMount, if visited item on storage does not exist, then set state to false
+  //setState below happens after ComponentWillMount, if visited item on storage does not exist, then set state to false
   componentDidMount(){
     if(!localStorage.getItem('visited')) {
       this.setState({
         visited: false
       })
-    } else {
-      console.log('page was loaded...welcome first timers!')
     }
   }
 
@@ -43,7 +40,7 @@ export class WhatsCooking extends Component {
   }
 
   render() {
-    // console.log('state',this.state);
+    //if this is user's first time visiting (i.e. localStorage doesn't have visited item, then render the app with a div with class first-timer)
     if(!this.state.visited) {
      return (
       <main className="whats-cooking">
@@ -69,20 +66,19 @@ export class WhatsCooking extends Component {
               GitHub Repo
             </a>
           </div>      
-        </div>
+        </div> 
         <TopNav />
         <RecipeList />
       </main>
       )
-    }
-     if(this.state.visited) {
+    } else {
       return (
         <main className="whats-cooking">
           <TopNav />
           <RecipeList />
         </main>
       );
-    }  
+    }
   }
 }
 

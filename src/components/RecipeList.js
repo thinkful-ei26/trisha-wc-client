@@ -2,10 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Spinner from 'react-spinkit';
 import Recipes from './Recipes';
-
 import fetchRecipes, { surpriseClick }  from '../actions';
 import { searchRecipes } from '../actions/search';
-
 import './recipe-list.css';
 import './controls.css';
 
@@ -13,7 +11,6 @@ export class RecipeList extends React.Component {
 
   //on page load, fetch all recipes from db
   componentDidMount() {
-  console.log('Recipes component loaded');
   this.props.dispatch(fetchRecipes());
   }
 
@@ -21,7 +18,6 @@ export class RecipeList extends React.Component {
     const { error, loading } = this.props;
 
     if (loading) {
-      // return <Spinner name="circle" fadeIn="none" />;
       return (
       <div className="spinner">
         <Spinner name="three-bounce" color="purple"/>
