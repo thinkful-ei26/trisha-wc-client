@@ -21,7 +21,12 @@ export class RecipeList extends React.Component {
     const { error, loading } = this.props;
 
     if (loading) {
-      return <Spinner name="circle" fadeIn="none" />;
+      // return <Spinner name="circle" fadeIn="none" />;
+      return (
+      <div className="spinner">
+        <Spinner name="three-bounce" color="purple"/>
+      </div>
+      )
     }
 
     if (error) {
@@ -70,6 +75,7 @@ export class RecipeList extends React.Component {
           <div className="search-section">
             <form 
               id="search-form"
+              className="search-form"
               onChange={e => {
               //invoke the search fn on search submit ∆
                   this.search(e);

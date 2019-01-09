@@ -35,3 +35,18 @@
 .directions-list {
   padding-bottom: 20px;
 }
+
+.spinner {
+  width: 500px;
+}
+
+@media (min-width: 960px) {
+  .recipe-list {
+    column-count: 2;
+    justify-content: center;
+  }
+  .recipe {
+    break-inside: avoid;
+  }
+}
+

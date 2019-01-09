@@ -3,6 +3,10 @@
   width: 100%;
 }
 
+.info-content li {
+  list-style-type: disc;
+}
+
 .info-overlay {
   position: fixed;
   display: block;
@@ -134,4 +138,26 @@
   background-color: #474658;
   color: white;
   cursor: pointer;
+}
+
+@media screen and (min-width: 630px) {
+  .got-it-btn {
+    font-size: 1rem;
+  }
+  .info-content {
+    width: 600px;
+    margin: auto;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .got-it-btn {
+    font-size: 1.3rem;
+  }
+  .info-content {
+    width: 700px;
+    margin: auto;
+    font-size: 1.4rem;
+  }
 }

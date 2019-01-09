@@ -125,6 +125,8 @@
 
   .search-section {
     max-width: 30rem;
-    display: flex;
+  }
+  .controls {
+    column-count: 1;
   }
 }
