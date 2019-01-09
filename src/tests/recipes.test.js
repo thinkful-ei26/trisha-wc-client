@@ -32,19 +32,19 @@ describe('<Recipes />', () => {
     shallow(<Recipes error={null} loading={false} recipes={recipes} />)
   })
 
-  it('Renders recipe contents initially', () => {
-    const wrapper = shallow(<Recipes error={null} loading={false} recipes={recipes} />)
+  // it('Renders recipe contents initially', () => {
+  //   const wrapper = shallow(<Recipes error={null} loading={false} recipes={recipes} />)
   
-    expect(wrapper.hasClass('ing-list'));
-    expect(wrapper.hasClass('askdjha'))
-  //   expect(wrapper.contains(<a
-  //     className="github-repo" href="https://github.com/thinkful-ei26/trisha-wc-client"
-  // >
-  //   GitHub Repo
-  // </a>))
+  //   expect(wrapper.hasClass('ing-list'));
+  //   expect(wrapper.hasClass('askdjha'))
+  // //   expect(wrapper.contains(<a
+  // //     className="github-repo" href="https://github.com/thinkful-ei26/trisha-wc-client"
+  // // >
+  // //   GitHub Repo
+  // // </a>))
 
-  //end of it
-  });
+  // //end of it
+  // });
 
 //end of recipes test   
 })
