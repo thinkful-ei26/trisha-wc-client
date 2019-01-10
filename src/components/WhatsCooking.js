@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './WhatsCooking.css';
 import RecipeList from './RecipeList';
 import TopNav from './TopNav';
+// import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import { CLIENT_ORIGIN } from '../config';
 
 export class WhatsCooking extends Component {
   
@@ -64,6 +66,11 @@ export class WhatsCooking extends Component {
               className="github-repo" href="https://github.com/thinkful-ei26/trisha-wc-client"
             >
               GitHub Repo
+            </a>
+            <a
+              className="github-repo" href={`${CLIENT_ORIGIN}`}
+            >
+              Close
             </a>
           </div>      
         </div> 
