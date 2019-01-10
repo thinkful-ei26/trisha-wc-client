@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../styles/WhatsCooking.css';
 import RecipeList from './RecipeList';
 import TopNav from './TopNav';
-// import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 export class WhatsCooking extends Component {
   
@@ -14,12 +13,12 @@ export class WhatsCooking extends Component {
     }
   }
   
-  //componentWillMount checks if the item exist in local storage, if it does, set state
+  //componentWillMount checks if an item exist in local storage
   componentWillMount(){
-    //if item 'visited' on local storage does not exist, set the prop visited to true
+    //if item 'visited' on local storage does not exist, set the prop visited to false
     if(!localStorage.getItem('visited')) {
       this.setState({
-        visited: true
+        visited: false
       })
     } else {
       this.setState({

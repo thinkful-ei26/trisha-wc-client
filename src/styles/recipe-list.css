@@ -1,0 +1,55 @@
+.recipe {
+  padding: 1vh;
+  list-style: none;
+  border: 0.05px solid #e8e8e9;
+  margin-bottom: 10px;
+}
+
+.recipe:hover {
+  background-color: #e8e8e9;
+  color: #1b1a26;
+  cursor: pointer;
+}
+
+.recipe-condensed {
+  background-color: transparent;
+  border: none;
+}
+
+.ingredients-list {
+  text-align: left;
+}
+
+.directions-list {
+  text-align: left;
+}
+
+.recipe-list {
+  max-width: 65.63rem;
+  overflow: hidden;
+  padding: 0 1.25rem;
+  margin: 0 auto;
+  padding-top: 5vh;
+}
+
+.directions-list {
+  padding-bottom: 20px;
+}
+
+.spinner {
+  width: 500px;
+}
+
+@media (min-width: 960px) {
+  .recipe-list {
+    column-count: 2;
+    justify-content: center;
+  }
+  .recipe {
+    break-inside: avoid;
+  }
+}
+
+.search-btn {
+  cursor: default;
+}
