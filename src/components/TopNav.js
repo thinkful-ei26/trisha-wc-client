@@ -3,7 +3,7 @@ import { infoClick, addRecipe } from '../actions/nav';
 import { connect } from 'react-redux';
 import InfoModal from './InfoModal';
 import RecipeForm from './RecipeForm';
-import './top-nav.css';
+import '../styles/top-nav.css';
 
 export function TopNav(props) {
 

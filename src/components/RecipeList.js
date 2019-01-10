@@ -4,8 +4,8 @@ import Spinner from 'react-spinkit';
 import Recipes from './Recipes';
 import fetchRecipes, { surpriseClick }  from '../actions';
 import { searchRecipes } from '../actions/search';
-import './recipe-list.css';
-import './controls.css';
+import '../styles/recipe-list.css';
+import '../styles/controls.css';
 
 export class RecipeList extends React.Component {
 

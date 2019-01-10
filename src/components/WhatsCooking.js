@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './WhatsCooking.css';
+import '../styles/WhatsCooking.css';
 import RecipeList from './RecipeList';
 import TopNav from './TopNav';
 // import {BrowserRouter as Router, Route, Link} from 'react-router-dom';

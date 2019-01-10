@@ -3,7 +3,7 @@ import { Field, FieldArray, reduxForm, SubmissionError, focus, /* reset */ } fro
 import Input from './Input';
 import { cancel } from '../actions/nav';
 import { required, nonEmpty, validInput, validURL } from '../validators';
-import './recipe-form.css';
+import '../styles/recipe-form.css';
 import { API_BASE_URL } from '../config';
 
 export class ReportForm extends Component {
