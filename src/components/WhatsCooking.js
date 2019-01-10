@@ -3,7 +3,6 @@ import './WhatsCooking.css';
 import RecipeList from './RecipeList';
 import TopNav from './TopNav';
 // import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import { CLIENT_ORIGIN } from '../config';
 
 export class WhatsCooking extends Component {
   
@@ -15,7 +14,7 @@ export class WhatsCooking extends Component {
     }
   }
   
-  //lifecycle checks if the item exist in local storage, if it does, set state
+  //componentWillMount checks if the item exist in local storage, if it does, set state
   componentWillMount(){
     //if item 'visited' on local storage does not exist, set the prop visited to true
     if(!localStorage.getItem('visited')) {
@@ -29,7 +28,7 @@ export class WhatsCooking extends Component {
     }
   }
 
-  //setState below happens after ComponentWillMount, if visited item on storage does not exist, then set state to false
+  //setState below happens after ComponentWillMount fires, if 'visited' item on storage does not exist, then set state to false
   componentDidMount(){
     if(!localStorage.getItem('visited')) {
       this.setState({
@@ -49,7 +48,7 @@ export class WhatsCooking extends Component {
   }
 
   render() {
-    //if this is user's first time visiting (i.e. localStorage doesn't have visited item, then render the app with a div with class first-timer)
+    //if this is user's first time visiting (i.e. localStorage doesn't have visited item, then render the app with info div 'first-timer')
     if(!this.state.visited && !this.state.close) {
      return (
       <main className="whats-cooking">
@@ -76,7 +75,6 @@ export class WhatsCooking extends Component {
             </a>
             <button
               className="got-it-btn" 
-              // href={`${CLIENT_ORIGIN}`}
               onClick={() => {
                 console.log('close-clicked');
                 this.closeClick()
