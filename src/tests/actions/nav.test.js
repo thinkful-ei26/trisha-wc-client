@@ -7,7 +7,7 @@ import {
   addRecipe,
   CANCEL_ADD_RECIPE,
   cancel
-} from './nav';
+} from '../../actions/nav';
 
 describe('addRecipe', () => {
   it('Should return action', () => {

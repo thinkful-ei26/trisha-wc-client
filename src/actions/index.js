@@ -40,7 +40,7 @@ export default function fetchRecipes() {
   return dispatch => {
     dispatch(fetchRecipesRequest());
 
-    fetch(`${API_BASE_URL}/api/recipes`, {
+    return fetch(`${API_BASE_URL}/api/recipes`, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',

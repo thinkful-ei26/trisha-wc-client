@@ -5,7 +5,7 @@ import {
   searchRecipesSuccess,
   SEARCH_RECIPES_ERROR,
   searchRecipesError,
-} from './search';
+} from '../../actions/search';
 
 describe('fetchRecipesSuccess', () => {
   it('Should return the action', () => {
