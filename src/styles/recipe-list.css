@@ -41,7 +41,7 @@
 }
 
 .search-btn {
-  cursor: default;
+  cursor: pointer;
 }
 
 @media (min-width: 600px) {

@@ -31,7 +31,7 @@ export class RecipeList extends React.Component {
     }
 
     if (surprise) {
-      console.log('surprise is true', surprise)
+      // console.log('surprise is true', surprise)
       return (
         <div className="surprise-overlay">
           <Recipes />
@@ -80,7 +80,7 @@ export class RecipeList extends React.Component {
             <form 
               id="search-form"
               className="search-form"
-              onChange={e => {
+              onSubmit={e => {
               //invoke the search fn on search submit ∆
                   this.search(e);
                 }
