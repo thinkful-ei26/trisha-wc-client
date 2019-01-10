@@ -7,7 +7,6 @@ describe('<RecipeForm />', () => {
     shallow(<RecipeForm info={true} />);
   })
 
-  
   // it('Renders new-recipe-form contents initially', () => {
   //   const dispatch = jest.fn()
   //   const wrapper = shallow(<RecipeForm info={true} dispatch={dispatch} />);
