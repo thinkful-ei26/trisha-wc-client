@@ -16,7 +16,7 @@ A user does not need to login in order to use my app.
 
 :white_check_mark: A link to a [deployed version](https://protected-depths-66567.herokuapp.com/)
 
-:x: Screenshots of your app
+:white_check_mark: [Screenshots of your app](https://gist.github.com/kronicle114/de740e8cebe42e6fa200b6303ab3f291)
 
 :white_check_mark: A description of your tech stack
     - React for the frontend

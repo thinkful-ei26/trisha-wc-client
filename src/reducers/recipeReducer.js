@@ -16,7 +16,7 @@ const initialState = {
   recipes: [],
   loading: false,
   error: null,
-  surprise: null,
+  surprise: false,
 }
 
 export const recipeReducer = (state=initialState, action) => {

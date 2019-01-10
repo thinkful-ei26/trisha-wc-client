@@ -11,11 +11,11 @@ export class RecipeList extends React.Component {
 
   //on page load, fetch all recipes from db
   componentDidMount() {
-  this.props.dispatch(fetchRecipes());
+    this.props.dispatch(fetchRecipes());
   }
 
   renderResults() {
-    const { error, loading } = this.props;
+    const { error, loading, surprise } = this.props;
 
     if (loading) {
       return (
@@ -30,6 +30,14 @@ export class RecipeList extends React.Component {
       return <strong>{error}</strong>
     }
 
+    if (surprise) {
+      console.log('surprise is true', surprise)
+      return (
+        <div className="surprise-overlay">
+          <Recipes />
+        </div>
+      )
+    }
     //on success, render the Recipe component
     return ( <Recipes /> )
   }
@@ -121,6 +129,7 @@ const mapStateToProps = state => {
     recipes: state.recipeReducer.recipes,
     loading: state.recipeReducer.loading,
     error: state.recipeReducer.error,
+    surprise: state.recipeReducer.surprise
   }
 }
 
