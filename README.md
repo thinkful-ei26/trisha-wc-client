@@ -19,10 +19,10 @@ A user does not need to login in order to use my app.
 :white_check_mark: [Screenshots of your app](https://gist.github.com/kronicle114/de740e8cebe42e6fa200b6303ab3f291)
 
 :white_check_mark: A description of your tech stack
-    - React for the frontend
-    - Redux for state management
-    - Node for the backend
-    - MongoDB for the database
+- React for the frontend
+- Redux for state management
+- Node for the backend
+- MongoDB for the database
 
 :x: A brief description of where each of the key parts of the project live in your codebase
 
@@ -40,16 +40,16 @@ In development, your local machine should have [Node.js](https://nodejs.org/en/)
 5. Finally, `cd` into the client side and run `npm start` in a new terminal shell. A new browser window should open containing the app. 
 
 ## User Stories 
-What can my app do?
 
 ### MVP
 :white_check_mark: **1. User can see a list of recipes when they first open the app.** 
+
 All recipes in the list default to a "condensed" view showing only:
 * recipe title
 * image
 * description
 
-:white_check_mark: **2. My app will find and import enough recipes for it to be useful**
+:white_check_mark: **2. My app will find and import enough recipes for it to be useful.**
 - Choice 1: Use an open source recipe API. I included three possible API links below ( just incase something bad happens), but my go to is [Spoonacular's recipe API](https://spoonacular.com/api/docs/recipes-api).
    - A. [Spoonacular's recipe API](https://spoonacular.com/api/docs/recipes-api)
    - B. [RapidAPI's Recipe API](https://rapidapi.com/webknox/api/recipe/details)
@@ -60,6 +60,7 @@ All recipes in the list default to a "condensed" view showing only:
 :white_check_mark: **3. User can click on “Surprise Me!” button and a random recipe will be generated.**
 
 :white_check_mark: **4. When a user clicks on a recipe they are taken to a display with "detailed" view.**
+
 Detailed view expands to additionally display:**
 * Ingredients
 * Directions
@@ -67,7 +68,8 @@ Detailed view expands to additionally display:**
 * Prep time
 * Cooking time 
 
-:white_check_mark: **5. User can add a new recipe to the recipe list** 
+:white_check_mark: **5. User can add a new recipe to the recipe list.** 
+
 When a user clicks on "+ New Recipe", they are taken to this create new recipe form.
 * Recipe title
 * Description
@@ -80,6 +82,7 @@ When a user clicks on "+ New Recipe", they are taken to this create new recipe f
 :white_check_mark: **6. User will receive the appropriate error feedback when they cannot submit a new recipe.**
 
 ### Post MVP
+- :white_check_mark: **Landing page:** On first visit, instructions containing how to use the app will render. Subsequent visits/load will not render the first-time div, but you can click on "INFO" button to see the instructions again.**
 - :white_check_mark: **User can click on "INFO" for instructions on how to use the app**
 - :white_check_mark: **- User can search a recipe using the search box**
 - **User can filter the recipe list by the example categories below:**
