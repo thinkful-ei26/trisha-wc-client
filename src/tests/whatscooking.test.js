@@ -18,6 +18,4 @@ describe('<WhatsCooking />', () => {
     expect(wrapper.find('.NOT-VALID-SELECTOR').exists()).toEqual(false)
   })
 
-  /* !state.visited and !state.close */
-  //it('First-time visit is rendering contents correctly', () => {})
 })

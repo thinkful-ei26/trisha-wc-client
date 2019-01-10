@@ -49,6 +49,8 @@ All recipes in the list default to a "condensed" view showing only:
 * image
 * description
 
+<img src="https://sweettootsco.files.wordpress.com/2019/01/on-load.png" alt="condensed recipe view" width="400px" />
+
 :white_check_mark: **2. My app will find and import enough recipes for it to be useful.**
 - Choice 1: Use an open source recipe API. I included three possible API links below ( just incase something bad happens), but my go to is [Spoonacular's recipe API](https://spoonacular.com/api/docs/recipes-api).
    - A. [Spoonacular's recipe API](https://spoonacular.com/api/docs/recipes-api)
@@ -57,7 +59,13 @@ All recipes in the list default to a "condensed" view showing only:
 - Choice 2: Manually write my recipe list (at least 10)
 - Choice 3: Do both choice 1 & 2
 
+**Using mLab and Mongo for production database**
+
+<img src="https://sweettootsco.files.wordpress.com/2019/01/screen-shot-2019-01-10-at-5.31.45-pm.png" alt="mlab database" width="400px" />
+
 :white_check_mark: **3. User can click on “Surprise Me!” button and a random recipe will be generated.**
+
+<img src="https://sweettootsco.files.wordpress.com/2019/01/surprise.png" alt="surprise btn" width="400px" />
 
 :white_check_mark: **4. When a user clicks on a recipe they are taken to a display with "detailed" view.**
 
@@ -68,9 +76,11 @@ Detailed view expands to additionally display:**
 * Prep time
 * Cooking time 
 
+<img src="https://sweettootsco.files.wordpress.com/2019/01/screen-shot-2019-01-10-at-5.34.50-pm.png" alt="detailed recipe view" width="400px" />
+
 :white_check_mark: **5. User can add a new recipe to the recipe list.** 
 
-When a user clicks on "+ New Recipe", they are taken to this create new recipe form.
+When a user clicks on "+ Add Recipe", they are taken to this create new recipe form.
 * Recipe title
 * Description
 * Ingredients
@@ -79,12 +89,16 @@ When a user clicks on "+ New Recipe", they are taken to this create new recipe f
 * Prep time 
 * Cook time
 
+<img src="https://sweettootsco.files.wordpress.com/2019/01/form.png" alt="add recipe form" width="400px" />
+
 :white_check_mark: **6. User will receive the appropriate error feedback when they cannot submit a new recipe.**
 
+<img src="https://sweettootsco.files.wordpress.com/2019/01/screen-shot-2019-01-10-at-5.36.36-pm.png" alt="validation on add recipe form" width="400px" />
+
 ### Post MVP
-- :white_check_mark: **Landing page:** On first visit, instructions containing how to use the app will render. Subsequent visits/load will not render the first-time div, but you can click on "INFO" button to see the instructions again.**
+- :white_check_mark: **Landing page:** On first visit, instructions containing how to use the app will render. Subsequent visits/reload will not render the first-time div, but you can click on "INFO" button to see the instructions again.**
 - :white_check_mark: **User can click on "INFO" for instructions on how to use the app**
-- :white_check_mark: **- User can search a recipe using the search box**
+- :white_check_mark: **User can search a recipe using the search box**
 - **User can filter the recipe list by the example categories below:**
     * Filter by:
     * Dairy-free
