@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import Recipes from '../components/Recipes';
+import {shallow, mount } from 'enzyme';
+import { Recipes } from '../components/Recipes';
 
 describe('<Recipes />', () => {
   const recipes = [ 
@@ -32,19 +32,19 @@ describe('<Recipes />', () => {
     shallow(<Recipes error={null} loading={false} recipes={recipes} />)
   })
 
-  // it('Renders recipe contents initially', () => {
-  //   const wrapper = shallow(<Recipes error={null} loading={false} recipes={recipes} />)
-  
-  //   expect(wrapper.hasClass('ing-list'));
-  //   expect(wrapper.hasClass('askdjha'))
-  // //   expect(wrapper.contains(<a
-  // //     className="github-repo" href="https://github.com/thinkful-ei26/trisha-wc-client"
-  // // >
-  // //   GitHub Repo
-  // // </a>))
+  it('Renders contents initially', () => {
+    const dispatch = jest.fn()
+    const wrapper = mount(<Recipes error={null} loading={false} recipes={recipes} dispatch={dispatch} />)
 
-  // //end of it
-  // });
+    // console.log(wrapper.find('.recipe').debug())
+    expect(wrapper.find('.recipe').exists()).toEqual(true)
+    expect(wrapper.find('.float').exists()).toEqual(true)
+    expect(wrapper.find('.recipe-condensed').exists()).toEqual(true)
+    expect(wrapper.find('.recipe-img').exists()).toEqual(true)
+    expect(wrapper.find('.detailed').exists()).toEqual(true)
+    expect(wrapper.find('.ingredients-list').exists()).toEqual(true)
+    expect(wrapper.find('.directions-list').exists()).toEqual(true)
+  });
 
 //end of recipes test   
 })

@@ -15,5 +15,4 @@ describe('<TopNav />', () => {
     expect(wrapper.find('.header-center').exists()).toEqual(true)
     expect(wrapper.find('.header-right').exists()).toEqual(true)
   });
-  
 })
