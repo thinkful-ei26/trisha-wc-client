@@ -10,7 +10,8 @@ export class WhatsCooking extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      visited: false
+      visited: false, 
+      close: false
     }
   }
   
@@ -41,9 +42,15 @@ export class WhatsCooking extends Component {
     localStorage.setItem('visited', 'user has visited before')
   }
 
+  closeClick() {
+    this.setState({
+      close: true
+    })
+  }
+
   render() {
     //if this is user's first time visiting (i.e. localStorage doesn't have visited item, then render the app with a div with class first-timer)
-    if(!this.state.visited) {
+    if(!this.state.visited && !this.state.close) {
      return (
       <main className="whats-cooking">
         <div 
@@ -67,11 +74,16 @@ export class WhatsCooking extends Component {
             >
               GitHub Repo
             </a>
-            <a
-              className="github-repo" href={`${CLIENT_ORIGIN}`}
+            <button
+              className="github-repo" 
+              // href={`${CLIENT_ORIGIN}`}
+              onClick={() => {
+                console.log('close-clicked');
+                this.closeClick()
+              }}
             >
               Close
-            </a>
+            </button>
           </div>      
         </div> 
         <TopNav />
