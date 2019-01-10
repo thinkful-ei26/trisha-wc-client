@@ -7,8 +7,17 @@ describe('<WhatsCooking />', () => {
     shallow(<WhatsCooking />);
   })
 
-  // it('Renders contents initially', () => {
-  //   const wrapper = shallow(<WhatsCooking />);
-  //   expect(wrapper.hasClass('info-content'))
-  // });
+  it('Renders contents initially', () => {
+    const wrapper = shallow(<WhatsCooking />);
+    expect(wrapper.find('.whats-cooking').exists()).toEqual(true)
+    console.log(wrapper.find('.whats-cooking').debug())
+  });
+
+  it('Renders without mutation', () => {
+    const wrapper = shallow(<WhatsCooking />);
+    expect(wrapper.find('.NOT-VALID-SELECTOR').exists()).toEqual(false)
+  })
+
+  /* !state.visited and !state.close */
+  //it('First-time visit is rendering contents correctly', () => {})
 })

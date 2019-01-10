@@ -75,10 +75,7 @@ export class WhatsCooking extends Component {
             </a>
             <button
               className="got-it-btn" 
-              onClick={() => {
-                console.log('close-clicked');
-                this.closeClick()
-              }}
+              onClick={() => { this.closeClick() }}
             >
               Close
             </button>

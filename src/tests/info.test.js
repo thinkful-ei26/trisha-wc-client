@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import InfoModal from '../components/InfoModal';
 
-import store from '../store';
+// import store from '../store';
 
 describe('<InfoModal />', () => {
   it('Renders without crashing', () => {
