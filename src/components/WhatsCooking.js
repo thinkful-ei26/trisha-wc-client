@@ -54,6 +54,7 @@ export class WhatsCooking extends Component {
         <div 
           className="first-timer"
           aria-live="polite"
+          ref={(ref) => this._div = ref} 
         > 
           <div className="first-timer-content">
             <h3>How to use this app</h3> 

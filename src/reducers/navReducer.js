@@ -21,6 +21,7 @@ const navReducer = (state=initialState, action) => {
     })
 
     case ADD_RECIPE :
+    window.scrollTo(0, 0);
     return Object.assign({}, state, { 
       addRecipe: true, 
       info: false
