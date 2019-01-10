@@ -75,7 +75,7 @@ export class WhatsCooking extends Component {
               GitHub Repo
             </a>
             <button
-              className="github-repo" 
+              className="got-it-btn" 
               // href={`${CLIENT_ORIGIN}`}
               onClick={() => {
                 console.log('close-clicked');
