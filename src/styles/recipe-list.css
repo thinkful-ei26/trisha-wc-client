@@ -40,6 +40,17 @@
   width: 500px;
 }
 
+.search-btn {
+  cursor: default;
+}
+
+@media (min-width: 600px) {
+  .recipe {
+    break-inside: avoid;
+    width: 430px;
+  }
+}
+
 @media (min-width: 960px) {
   .recipe-list {
     column-count: 2;
@@ -47,9 +58,6 @@
   }
   .recipe {
     break-inside: avoid;
+    width: 500px;
   }
-}
-
-.search-btn {
-  cursor: default;
 }
