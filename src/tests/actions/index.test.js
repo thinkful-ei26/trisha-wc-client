@@ -64,54 +64,80 @@ describe('fetchRecipesError', () => {
 })
 
 /* === ASYNC ACTIONS TESTS === */
+
+const recipes = [ 
+  { ing: [ 'ing 1','ing 2','ing 3'],
+    expanded: false,
+    title: 'Recipe Title 1',
+    desc: 'Bacon ipsum.',
+    serving: '2',
+    imgUrl:'https://sweettootsco.files.wordpress.com/2018/12/calzone.jpg',
+    prep: '10 min',
+    cook: '20 min',
+    directions:'Bacon ipsum',
+    id: '00001' 
+  },
+  { ing: [ 'ing 1','ing 2','ing 3'],
+    expanded: false,
+    title: 'Recipe Title 2',
+    desc: 'Bacon ipsum.',
+    serving: '2',
+    imgUrl:'https://sweettootsco.files.wordpress.com/2018/12/calzone.jpg',
+    prep: '10 min',
+    cook: '20 min',
+    directions:'Bacon ipsum',
+    id: '00002' 
+  },
+];
+
 describe('fetchRecipes', () => {
   it('Should dispatch fetchRecipesRequest', () => {
-    const recipes = [ 
-      { ing: [ 'ing 1','ing 2','ing 3'],
-        expanded: false,
-        title: 'Recipe Title 1',
-        desc: 'Bacon ipsum.',
-        serving: '2',
-        imgUrl:'https://sweettootsco.files.wordpress.com/2018/12/calzone.jpg',
-        prep: '10 min',
-        cook: '20 min',
-        directions:'Bacon ipsum',
-        id: '00001' 
-      },
-      { ing: [ 'ing 1','ing 2','ing 3'],
-        expanded: false,
-        title: 'Recipe Title 2',
-        desc: 'Bacon ipsum.',
-        serving: '2',
-        imgUrl:'https://sweettootsco.files.wordpress.com/2018/12/calzone.jpg',
-        prep: '10 min',
-        cook: '20 min',
-        directions:'Bacon ipsum',
-        id: '00002' 
-      },
-    ];
+    global.fetch = jest.fn().mockImplementation(() =>
+      Promise.resolve({
+        ok: true,
+        json() {
+          return recipes;
+        }
+      })
+    );
 
-      global.fetch = jest.fn().mockImplementation(() =>
-          Promise.resolve({
-              ok: true,
-              json() {
-                return recipes;
-              }
-          })
-      );
-
-      const dispatch = jest.fn();
-      console.log(fetchRecipes);
-      return fetchRecipes()(dispatch)
-        .then(() => {
-          expect(fetch).toHaveBeenCalledWith(`${API_BASE_URL}/api/recipes`, {
-            method: 'GET',
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-          }
-        })
-        expect(dispatch).toHaveBeenCalledWith(fetchRecipesSuccess(recipes));
-      });
+    const dispatch = jest.fn();
+    console.log(fetchRecipes);
+    return fetchRecipes()(dispatch)
+      .then(() => {
+        expect(fetch).toHaveBeenCalledWith(`${API_BASE_URL}/api/recipes`, {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+      })
+      expect(dispatch).toHaveBeenCalledWith(fetchRecipesSuccess(recipes));
+    });
   });
+
+  it('Should dispatch fetchRecipeError on error', () => {
+    global.fetch = jest.fn().mockImplementation(() =>
+      Promise.reject({
+        "error": "error message"
+      })
+    );
+
+    const dispatch = jest.fn();
+    console.log(fetchRecipes);
+    return fetchRecipes()(dispatch)
+      .then(() => {
+        expect(fetch).toHaveBeenCalledWith(`${API_BASE_URL}/api/recipes`, {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+      })
+      expect(dispatch).toHaveBeenCalledWith(fetchRecipesError({
+        "error": "error message"
+      }));
+    });
+  });
+
 });
