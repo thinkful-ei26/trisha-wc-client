@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Spinner from 'react-spinkit';
 import Recipes from './Recipes';
-import fetchRecipes, { surpriseClick }  from '../actions';
+import fetchRecipes, { surpriseRecipes }  from '../actions';
 import { searchRecipes } from '../actions/search';
 import '../styles/recipe-list.css';
 import '../styles/controls.css';
@@ -31,7 +31,6 @@ export class RecipeList extends React.Component {
     }
 
     if (surprise) {
-      // console.log('surprise is true', surprise)
       return (
         <div className="surprise-overlay">
           <Recipes />
@@ -60,7 +59,7 @@ export class RecipeList extends React.Component {
           <button 
             className="surprise-btn"
             onClick={ () => {
-              this.props.dispatch(surpriseClick())
+              this.props.dispatch(surpriseRecipes())
             }}
           >
             Surprise Me

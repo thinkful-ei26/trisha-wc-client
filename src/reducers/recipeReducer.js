@@ -17,6 +17,7 @@ const initialState = {
   loading: false,
   error: null,
   surprise: false,
+  surpriseRecipes: []
 }
 
 export const recipeReducer = (state=initialState, action) => {
@@ -39,7 +40,7 @@ export const recipeReducer = (state=initialState, action) => {
     })
 
     case SURPRISE_CLICK : 
-    console.log('surprise state:', state);
+    // console.log('surprise state:', state);
     const randomRecipePicker = (recipes) => {
       var recipe = recipes[Math.floor(Math.random()*recipes.length)];
       return recipe;
@@ -49,7 +50,10 @@ export const recipeReducer = (state=initialState, action) => {
     
     return Object.assign({}, state, { 
       recipes: [randomRecipe],
-      surprise: true
+      surprise: true,
+      surpriseRecipes: Object.assign({}, state, {
+        recipes: [...state.recipes]
+      })
     })
 
     case FETCH_RECIPES_REQUEST : 

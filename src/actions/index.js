@@ -3,8 +3,9 @@ console.log('API_BASE_URL on client-side:', API_BASE_URL);
 
 /* ========= CONTROLS ========== */
 export const SURPRISE_CLICK = 'SURPRISE_CLICK';
-export const surpriseClick = () => ({
-  type: SURPRISE_CLICK
+export const surpriseClick = (recipes) => ({
+  type: SURPRISE_CLICK,
+  recipes
 })
 
 export const VIEW_ALL_RECIPES = 'VIEW_ALL_RECIPES';
@@ -55,6 +56,34 @@ export default function fetchRecipes() {
       })
       .then( recipes => { 
         dispatch(fetchRecipesSuccess(recipes))
+      })
+      .catch( error => { dispatch(fetchRecipesError(error))
+      })
+  }
+} 
+
+export function surpriseRecipes() {
+  return dispatch => {
+    dispatch(fetchRecipesRequest());
+
+    return fetch(`${API_BASE_URL}/api/recipes`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    })
+      .then(res => {
+        if(!res.ok) {
+          return Promise.reject(res.statusText);
+        }
+        return res.json()
+      })
+      .then( recipes => { 
+        dispatch(fetchRecipesSuccess(recipes))
+      })
+      .then( recipes => {
+        dispatch(surpriseClick(recipes))
       })
       .catch( error => { dispatch(fetchRecipesError(error))
       })
