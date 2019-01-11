@@ -11,7 +11,7 @@
 
 **Notes:**
 - A user does not need to login in order to use my app.
--  My app only needs to do a POST for it's MVP, but extension features will include multiple users with the ability to save recipes, create, edit, and delete recipes on their dashboard.
+-  My app only needs to do a GET/FETCH & POST for it's MVP, but extension features will include multiple users with the ability to save recipes, create, edit, and delete recipes on their dashboard.
 
 ## QuickLinks
 - [Curriculum Link](https://courses.thinkful.com/dev-301v1/assignment/2.9.4)
