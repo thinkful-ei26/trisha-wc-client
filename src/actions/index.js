@@ -1,5 +1,4 @@
 import { API_BASE_URL } from '../config';
-console.log('API_BASE_URL on client-side:', API_BASE_URL);
 
 /* ========= CONTROLS ========== */
 export const SURPRISE_CLICK = 'SURPRISE_CLICK';
@@ -19,7 +18,7 @@ export const toggleExpand = (id) => ({
   id 
 })
 
-/* ========= FETCH RECIPE ASYNC ACTIONS ========== */
+/* ========= ASYNC ACTIONS ========== */
 export const FETCH_RECIPES_REQUEST = 'FETCH_RECIPES_REQUEST';
 export const fetchRecipesRequest = () => ({
   type: FETCH_RECIPES_REQUEST,

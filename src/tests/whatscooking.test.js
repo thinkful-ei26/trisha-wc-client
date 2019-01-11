@@ -10,7 +10,7 @@ describe('<WhatsCooking />', () => {
   it('Renders contents initially', () => {
     const wrapper = shallow(<WhatsCooking />);
     expect(wrapper.find('.whats-cooking').exists()).toEqual(true)
-    console.log(wrapper.find('.whats-cooking').debug())
+    // console.log(wrapper.find('.whats-cooking').debug())
   });
 
   it('Renders without mutation', () => {
