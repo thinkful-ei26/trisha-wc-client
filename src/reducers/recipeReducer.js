@@ -51,9 +51,6 @@ export const recipeReducer = (state=initialState, action) => {
     return Object.assign({}, state, { 
       recipes: [randomRecipe],
       surprise: true,
-      surpriseRecipes: Object.assign({}, state, {
-        recipes: [...state.recipes]
-      })
     })
 
     case FETCH_RECIPES_REQUEST : 
@@ -81,8 +78,8 @@ export const recipeReducer = (state=initialState, action) => {
       /* ==== CHANGE EXPANDED FALSE TO TRUE ON CLICK OF RECIPE LI ====*/
       let clickedRecipe = findById(state.recipes, action.id);
 
+     /* eslint-disable no-unused-vars */
       const expandedRecipe = Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = !state.expanded ])
-      console.log('expandedRecipe',expandedRecipe);
 
       return Object.assign({}, state, {
         recipes: [...state.recipes] 

@@ -50,23 +50,5 @@ describe('<RecipeList />', () => {
     const dispatch = jest.fn();
     shallow(<RecipeList error={null} loading={false} recipes={recipes} dispatch={dispatch} />)
   })
-
-  // it('Dispatches fetchBoard on mount', () => {
-  //   const dispatch = jest.fn();
-  //   shallow(<RecipeList error={null} loading={false} recipes={recipes} dispatch={dispatch} />);
-  //   expect(dispatch).toHaveBeenCalledWith(mockFetchRecipeAction);
-  // });
-
-  // it('Renders contents initially', () => {
-  //   const dispatch = jest.fn();
-  //   const wrapper = mount(<RecipeList error={null} loading={false} recipes={recipes} dispatch={dispatch}/>)
-
-  //   expect(wrapper.find('.controls')).exists().toEqual(true)
-  // });
-
-  // it('Should dispatch fetchRecipesSuccess', () => {
-   
-  // });
-
-//end of recipes test   
+ 
 });

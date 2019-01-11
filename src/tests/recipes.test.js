@@ -36,7 +36,6 @@ describe('<Recipes />', () => {
     const dispatch = jest.fn()
     const wrapper = mount(<Recipes error={null} loading={false} recipes={recipes} dispatch={dispatch} />)
 
-    // console.log(wrapper.find('.recipe').debug())
     expect(wrapper.find('.recipe').exists()).toEqual(true)
     expect(wrapper.find('.float').exists()).toEqual(true)
     expect(wrapper.find('.recipe-condensed').exists()).toEqual(true)
@@ -46,5 +45,4 @@ describe('<Recipes />', () => {
     expect(wrapper.find('.directions-list').exists()).toEqual(true)
   });
 
-//end of recipes test   
 })
