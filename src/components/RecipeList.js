@@ -87,13 +87,12 @@ export class RecipeList extends React.Component {
             >
               <div className="input-wrapper">
                 <input
-                    aria-controls="recipe-count"
-                    type="search"
-                    id="search"
-                    name="search"
-                    className="search-input"
-                    placeholder="Search..."
-                    ref={input => this.input = input}
+                  type="search"
+                  id="search"
+                  name="search"
+                  className="search-input"
+                  placeholder="Search..."
+                  ref={input => this.input = input}
                 />
                 <label 
                   htmlFor="search"

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { 
   FETCH_RECIPES_REQUEST, 
   FETCH_RECIPES_SUCCESS, 
@@ -40,7 +41,6 @@ export const recipeReducer = (state=initialState, action) => {
     })
 
     case SURPRISE_CLICK : 
-    // console.log('surprise state:', state);
     const randomRecipePicker = (recipes) => {
       var recipe = recipes[Math.floor(Math.random()*recipes.length)];
       return recipe;
@@ -77,8 +77,6 @@ export const recipeReducer = (state=initialState, action) => {
 
       /* ==== CHANGE EXPANDED FALSE TO TRUE ON CLICK OF RECIPE LI ====*/
       let clickedRecipe = findById(state.recipes, action.id);
-
-     /* eslint-disable no-unused-vars */
       const expandedRecipe = Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = !state.expanded ])
 
       return Object.assign({}, state, {
