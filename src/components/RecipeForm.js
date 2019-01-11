@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Field, FieldArray, reduxForm, SubmissionError, focus, /* reset */ } from 'redux-form';
+import { Field, FieldArray, reduxForm, SubmissionError, focus, reset } from 'redux-form';
 import Input from './Input';
 import { cancel } from '../actions/nav';
 import { required, nonEmpty, validInput, validURL } from '../validators';
@@ -53,7 +53,7 @@ export class ReportForm extends Component {
   });
 }
   render() {
-    const { handleSubmit, pristine, submitting, /* reset,  */submitSucceeded, error } = this.props;
+    const { handleSubmit, pristine, submitting, reset, submitSucceeded, error } = this.props;
 
     let successMessage;
     if (submitSucceeded) {
@@ -115,10 +115,6 @@ export class ReportForm extends Component {
           >
             Add Ingredient
           </button>
-        {/* {
-          error && 
-          <li className="error">{error}</li>
-          } */}
       </ul>
     );
     
@@ -155,7 +151,6 @@ export class ReportForm extends Component {
           <FieldArray 
           name="ing"
           component={renderIng}
-          // validate={[validIngredient]}
           />
           
           <Field 
@@ -236,6 +231,10 @@ export class ReportForm extends Component {
             label="Directions: "
             validate={[required, nonEmpty, validInput]}
           />
+
+          {successMessage}
+          {errorMessage}
+
           {/* disable button if user hasn't touched form */ }
           <button 
             className="save-recipe-btn"
@@ -249,7 +248,7 @@ export class ReportForm extends Component {
             className="clear-values-btn"
             type="button" 
             disabled={pristine || submitting} 
-            // onClick={reset}
+            onClick={reset}
           >
             Clear Values
           </button>
