@@ -7,16 +7,25 @@
 - Click the "Surprise Me" button to generate a random recipe.
 - Add a new recipe to the "What's Cooking?" app by clicking on the "+ Add Recipe" button
 
-A user does not need to login in order to use my app.
+**Notes:**
+- A user does not need to login in order to use my app.
+-  My app only needs to do a POST for it's MVP, but extension features will include multiple users with the ability to save recipes, create, edit, and delete recipes on their dashboard.
+
+## QuickLinks
+- [Curriculum Link](https://courses.thinkful.com/dev-301v1/assignment/2.9.4)
+- [Deployed App](https://protected-depths-66567.herokuapp.com/)
+- [Server Repo](https://github.com/thinkful-ei26/trisha-wc-server.git)
+- [Client Repo](https://github.com/thinkful-ei26/trisha-wc-client.git)
 
 ## :construction: Requirements (in progress) :construction:
-- [Curriculum Link](https://courses.thinkful.com/dev-301v1/assignment/2.9.4)
 
-:white_check_mark: A description of your app
+:white_check_mark: A [description](#not-sure-what-to-cook) of your app
 
 :white_check_mark: A link to a [deployed version](https://protected-depths-66567.herokuapp.com/)
 
 :white_check_mark: [Screenshots of your app](https://gist.github.com/kronicle114/de740e8cebe42e6fa200b6303ab3f291)
+
+- Please see [User Stories](#user-stories) for screenshots or this [gist](https://gist.github.com/kronicle114/de740e8cebe42e6fa200b6303ab3f291) 
 
 :white_check_mark: A description of your tech stack
 - React for the frontend
@@ -24,12 +33,27 @@ A user does not need to login in order to use my app.
 - Node for the backend
 - MongoDB for the database
 
-:x: A brief description of where each of the key parts of the project live in your codebase
+:white_check_mark: A brief description of where each of the key parts of the project live in your codebase
 
-:white_check_mark: If your app is meant to be re-used by other developers, instructions on how to get the app up and running (see instructions for developers)
+**CLIENT**
+- **public:** contains `index.html`
+- **src:** contains most of the dynamic UI files such as components, actions, reducers, and client side tests
+<img src="https://sweettootsco.files.wordpress.com/2019/01/client.png" alt="condensed recipe view" width="200px" />
+
+**SERVER**
+- **db:** contains the recipe data used for test, development, & production
+- **models:** contains recipe schema
+- **public:** `index.html` for server side (for developement)
+- **routes:** recipe routes & endpoints (basic CRUD)
+- **test:** server tests
+- **utils:** used to seed the database
+
+<img src="https://sweettootsco.files.wordpress.com/2019/01/server.png" alt="condensed recipe view" width="200px" />
+
+:white_check_mark: If your app is meant to be re-used by other developers, instructions on how to get the app up and running (see below)
 
 ## Instructions for Developers
-In development, your local machine should have [Node.js](https://nodejs.org/en/) and [Mongo](https://www.mongodb.com/)
+In development, your local machine should have [Node.js](https://nodejs.org/en/) and [Mongo](https://www.mongodb.com/)set up
 
 1. Clone both the server and client side of this app:
 * [Server](https://github.com/thinkful-ei26/trisha-wc-server.git) or `git clone https://github.com/thinkful-ei26/trisha-wc-server.git`
