@@ -75,13 +75,11 @@ export const recipeReducer = (state=initialState, action) => {
         return recipe;
       }
 
-      /* ==== CHANGE EXPANDED FALSE TO TRUE ON CLICK OF RECIPE LI ====*/
+      // /* ==== CHANGE EXPANDED FALSE TO TRUE ON CLICK OF RECIPE LI ====*/
       let clickedRecipe = findById(state.recipes, action.id);
-      const expandedRecipe = Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = !state.expanded ])
-
-      return Object.assign({}, state, {
-        recipes: [...state.recipes] 
-      })
+      Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = true ])
+    
+      return Object.assign({}, state , {recipes: [...state.recipes]} )
     
     default: return state
   }
