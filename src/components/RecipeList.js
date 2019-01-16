@@ -113,7 +113,10 @@ export class RecipeList extends React.Component {
         </section>
         
       {/* ========= RECIPE-LIST ========== */}
-        <ul className="recipe-list">
+        <ul 
+          className="recipe-list"
+          aria-live="polite"
+        >
           {this.renderResults()}
         </ul>
       </div>

@@ -25,19 +25,6 @@
   margin: 10px;
 }
 
-.ingredient, .ing-container {
-  list-style-type: none;
-
-}
-
-textarea {
-  height: 12vh;
-}
-
-.ingredient {
-  border: 1px solid #b0aebb;
-}
-
 .message-error {
   color: #f45845;
 }
@@ -46,11 +33,9 @@ textarea {
   color: #45f458;
 }
 
-.ingredients-container {
-  width: 90%;
-  margin: 0;
-  padding: 5px;
-  display: inline-block;
+.ingredient, .ing-container {
+  list-style-type: none;
+
 }
 
 .form-input {
@@ -62,31 +47,12 @@ textarea {
   padding: 10px;
 }
 
-input {
-  background-color: #1b1a26;
-  border: .125rem solid #b0aebb;
-  height: 2.375rem;
-  line-height: 3.625rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #b0aebb;
-  width: 80%;
-}
-
-
 .add-recipe-overlay {
   border-top: 2px solid rgb(244, 117, 33);
   border-bottom: 2px solid rgb(244, 117, 33);
   padding-bottom: 1rem;
   margin-top: 2rem;
   width: 100%;
-}
-
-select {
-  background-color: inherit;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #b0aebb;
 }
 
 .new-recipe-form {
@@ -101,12 +67,6 @@ fieldset {
   border: none;
 }
 
-legend {
-  font-weight: 900;
-  font-size: 2rem;
-  color: #b0aebb;
-  width: 100%;
-}
 /* 
 @media screen and (min-width: 430px) {
   .form-input {
@@ -138,14 +98,59 @@ legend {
   color: #b0aebb;
 } */
 
-/* @media screen and (max-width: 1920px) {
+@media screen and (min-width: 320px) {
+  legend {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #b0aebb;
+    width: 100%;
+  }
 
-}
+  textarea {
+    width: 100%;
+    background-color: #1b1a26;
+    border: .125rem solid #b0aebb;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #b0aebb;
+    height: 12vh;
+  }
+
+  select {
+    width: 100%;
+    background-color: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #b0aebb;
+  }
+
+  input {
+    background-color: #1b1a26;
+    border: .125rem solid #b0aebb;
+    height: 2.375rem;
+    line-height: 3.625rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #b0aebb;
+    width: 100%;
+  }  
+  .ingredient {
+    border: 1px solid #b0aebb;
+  }
+
+  .ingredients-container {
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    display: inline-block;
+  }
+}  
 
 @media screen and (max-width: 768px) {
 
 }
 
-@media screen and (min-width: 320px) {
 
-}  */
+@media screen and (max-width: 1920px) {
+
+}

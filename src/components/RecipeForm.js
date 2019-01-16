@@ -86,7 +86,10 @@ export class ReportForm extends Component {
     );
     
     const renderIng = ({ fields, meta: { error } }) => (
-      <ul className="ingredients-container float">
+      <ul 
+        aria-live="polite"
+        className="ingredients-container float"
+      >
         {fields.map((ing, index) => (
           <li   
             key={index}

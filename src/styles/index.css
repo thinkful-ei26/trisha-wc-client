@@ -1,6 +1,7 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
+  background-color: #1b1a26;
   font-family: markpro,Helvetica Neue,helvetica,sans-serif;
   margin: 0;
 	padding: 0;
