@@ -60,11 +60,3 @@ button {
     width: 700px;
   }
 }
-
-.form-error {
-  color: red
-}
-
-.form-warning {
-  color: orangered
-}

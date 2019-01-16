@@ -66,6 +66,21 @@ fieldset {
   border: none;
 }
 
+.form-error {
+  color: red;
+  margin: 10px 0 0 0;
+}
+
+.form-warning {
+  color: orangered;
+  margin: 10px 0 0 0;
+}
+
+.ing-input {
+  border-left: none;
+  border-right: none;
+}
+
 /* 
 @media screen and (min-width: 430px) {
   .form-input {
@@ -96,6 +111,10 @@ fieldset {
   font-weight: 500;
   color: #b0aebb;
 } */
+
+textarea, select, input {
+  margin: 10px 0;
+}
 
 @media screen and (min-width: 320px) {
   legend {
