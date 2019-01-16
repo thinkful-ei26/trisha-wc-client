@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Field, FieldArray, reduxForm, SubmissionError, focus, reset } from 'redux-form';
+import { Field, FieldArray, reduxForm, SubmissionError, focus } from 'redux-form';
 import Input from './Input';
 import { cancel } from '../actions/nav';
 import { required, nonEmpty, validInput, validURL } from '../validators';
@@ -88,7 +88,7 @@ export class ReportForm extends Component {
     const renderIng = ({ fields, meta: { error } }) => (
       <ul 
         aria-live="polite"
-        className="ingredients-container float"
+        className="ingredients-container"
       >
         {fields.map((ing, index) => (
           <li   
@@ -275,5 +275,4 @@ export default reduxForm({
   form: 'ReportForm',
   onSubmitFail: (errors, dispatch) =>
   dispatch(focus('contact', Object.keys(errors)[0])),
-  // onSubmitSuccess: (result, dispatch) => dispatch(reset('ReportForm'))
 })(ReportForm);
