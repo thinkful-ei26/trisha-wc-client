@@ -7,7 +7,7 @@ import '../styles/top-nav.css';
 import {BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 export function TopNav(props) {
-
+  
   if(props.info) { 
     return (
     <Router>

@@ -6,7 +6,6 @@ import { required, nonEmpty, validInput, validURL } from '../validators';
 import '../styles/recipe-form.css';
 import { API_BASE_URL } from '../config';
 import { Link } from 'react-router-dom';
-import { TopNav } from './TopNav';
 
 export class ReportForm extends Component {
   onSubmit(values) {

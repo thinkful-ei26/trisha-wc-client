@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import '../styles/WhatsCooking.css';
 import RecipeList from './RecipeList';
 import TopNav from './TopNav';
-import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
-import InfoModal from './InfoModal';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 export class WhatsCooking extends Component {
   
@@ -92,17 +91,11 @@ export class WhatsCooking extends Component {
     } else {
       return (
         <Router>
-            <main className="whats-cooking">
-            <TopNav />
-            {/* <Switch>
-              <Redirect exact from="/" to="/main" />
-              <Route exact path="/info" component={InfoModal} /> */}
-              {/* <Route exact path="/recipes" component={RecipeList} /> */}
-              <RecipeList /> 
-            {/* </Switch> */}
-          </main>
+          <main className="whats-cooking">
+          <TopNav />
+          <RecipeList /> 
+        </main> 
         </Router>
-        
       );
     }
   }

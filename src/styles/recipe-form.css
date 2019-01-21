@@ -192,7 +192,7 @@ textarea:hover, select:hover, input:hover {
     font-weight: normal;
   }
 
-  .add-btn, .remove-btn, .save-recipe-btn, .clear-values-btn, .cancel-add-recipe-btn {
+  .add-btn, .save-recipe-btn, .clear-values-btn, .cancel-add-recipe-btn {
     font-size: 1rem;
     font-weight: normal;
   }
@@ -201,6 +201,10 @@ textarea:hover, select:hover, input:hover {
     padding-right: 15px;
   }
 }  
+
+.remove-btn {
+  font-size: 1rem;
+}
 
 @media screen and (min-width: 768px) {
   .float {
@@ -286,7 +290,7 @@ textarea:hover, select:hover, input:hover {
     font-weight: normal;
   }
 
-  .add-btn, .remove-btn, .save-recipe-btn, .clear-values-btn, .cancel-add-recipe-btn {
+  .add-btn, .save-recipe-btn, .clear-values-btn, .cancel-add-recipe-btn {
     font-size: 1.5rem;
     font-weight: normal;
   }
