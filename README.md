@@ -21,6 +21,8 @@
 
 ## Revision Requirements (resolved)
 
+This is the second time I'm submitting the project. I discussed my revision changes with my mentor (who approved them all). What did I do differently? I tried to see my app with fresh new eyes, being more sensitive to user flow and a11y changes. I hope this satisfies the revision requirements!
+
 :white_check_mark: **Valid markup**: Used Axe Chrome Exension to make sure that the App is a11y compatible & HTML is semantic (changed h3s to h2 tags)
 
 :grey_exclamation: **headers** After talking to my mentor, Jarod Reid, and being wary of the feedback, I've decided to leave off the header when adding a new recipe. I didn't make any changes because the add new recipe form is supposed to look like a new generated page while allowing access to the recipe list if the user scrolls down the page. This way, users can refer to other recipes while they make add a new recipe to the list.  
