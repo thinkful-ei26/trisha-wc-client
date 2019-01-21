@@ -13,7 +13,7 @@
 
 .remove-btn {
   background-color: inherit;
-  border: inherit;
+  border: 1px solid #b0aebb;
   border-radius: 2px;
   margin: 5px;
   font-weight: 700;
@@ -76,44 +76,30 @@ fieldset {
   margin: 10px 0 0 0;
 }
 
-.ing-input {
+.ing-input:focus {
   border-left: none;
   border-right: none;
+  border-color: rgb(244, 117, 33);
 }
-
-/* 
-@media screen and (min-width: 430px) {
-  .form-input {
-    margin-bottom: 10px;
-    display: inline-block;
-    width: 85%;
-  }
-} 
-
-@media screen and (min-width: 600px) {
-  .form-input {
-    margin-bottom: 10px;
-    display: inline-flex;
-    align-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-  }
-}  */
-
-/* textarea {
-  width: 293px;
-  min-width: 60%;
-  max-width: 80%%;
-  background-color: #1b1a26;
-  border: .125rem solid #b0aebb;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #b0aebb;
-} */
 
 textarea, select, input {
   margin: 10px 0;
+}
+
+button {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+button:hover {
+  border: 1px solid #ff8a00;
+  color: white;
+  box-shadow: inset 0 0 0 0.125rem rgb(244, 117, 33);
+  background-image: linear-gradient(to top left,#ff8a00,#da1b60);
+}
+
+textarea:hover, select:hover, input:hover {
+  border-color: rgb(244, 117, 33);
 }
 
 @media screen and (min-width: 320px) {
@@ -152,10 +138,7 @@ textarea, select, input {
     color: #b0aebb;
     width: 100%;
   }  
-  .ingredient {
-    border: 1px solid #b0aebb;
-  }
-
+ 
   .ingredients-container {
     width: 100%;
     margin: 0;
