@@ -8,10 +8,9 @@ import '../styles/recipe-list.css';
 import '../styles/controls.css';
 
 export class RecipeList extends React.Component {
-
   //on page load, fetch all recipes from db
   componentDidMount() {
-    this.props.dispatch(fetchRecipes());
+    this.props.dispatch(fetchRecipes()); 
   }
 
   renderResults() {
@@ -125,12 +124,11 @@ export class RecipeList extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     recipes: state.recipeReducer.recipes,
     loading: state.recipeReducer.loading,
     error: state.recipeReducer.error,
-    surprise: state.recipeReducer.surprise
   }
 }
 

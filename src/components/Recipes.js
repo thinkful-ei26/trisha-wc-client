@@ -41,7 +41,7 @@ export class Recipes extends Component {
         className="recipe float"
         tabIndex="0"
         onClick={ () => {
-          this.props.dispatch(toggleExpand(recipe.id))
+          this.props.dispatch(toggleExpand(recipe.id, recipe.expanded))
         }}
       >
         <div

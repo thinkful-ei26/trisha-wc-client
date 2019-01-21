@@ -13,9 +13,10 @@ export const allRecipes = () => ({
 })
 
 export const TOGGLE_EXPAND = 'TOGGLE_EXPAND';
-export const toggleExpand = (id) => ({
+export const toggleExpand = (id, expanded) => ({
   type: TOGGLE_EXPAND,
-  id 
+  id, 
+  expanded 
 })
 
 /* ========= ASYNC ACTIONS ========== */

@@ -70,19 +70,27 @@ export const recipeReducer = (state=initialState, action) => {
     })
 
     case TOGGLE_EXPAND :
-      //set all recipes.expand = false 
 
+    //find the recipe by id by passing id & expanded props from RecipeList component
       const findById = (recipes, recipeId) => {
         const recipe = recipes.filter( recipe => recipeId === recipe.id )
         return recipe;
       }
 
-      // /* ==== CHANGE EXPANDED FALSE TO TRUE ON CLICK OF RECIPE LI ====*/
+     //toggle recipe conditionally based on expanded state 
       let clickedRecipe = findById(state.recipes, action.id);
-      Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = true ])
+
+      if(clickedRecipe[0].expanded){
+        Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = false ])
+        return Object.assign({}, state , {recipes: [...state.recipes]} )
+      } else if (!clickedRecipe[0].expanded) {
+        Object.assign({}, clickedRecipe[0], [clickedRecipe[0].expanded = true ])
     
-      return Object.assign({}, state , {recipes: [...state.recipes]} )
-    
+        return Object.assign({}, state , {recipes: [...state.recipes]} )
+      } else {
+        return Object.assign({}, state , {recipes: [...state.recipes]} )
+      }
+      
     default: return state
   }
 }

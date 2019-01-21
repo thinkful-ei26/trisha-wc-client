@@ -12,7 +12,9 @@ export function TopNav(props) {
   }
 
   if(props.addRecipe) { 
-    return <RecipeForm />
+    return (
+      <RecipeForm />
+    )
   }
 
   return (
