@@ -19,7 +19,7 @@
 - [Client Repo](https://github.com/thinkful-ei26/trisha-wc-client.git)
 - [Curriculum Link](https://courses.thinkful.com/dev-301v1/assignment/2.9.4)
 
-## Resubmit Requirements (completed)
+## Revision Requirements (resolved)
 
 :white_check_mark: **Valid markup**: Used Axe Chrome Exension to make sure that the App is a11y compatible & HTML is semantic (changed h3s to h2 tags)
 
