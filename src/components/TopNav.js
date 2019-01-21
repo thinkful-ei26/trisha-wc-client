@@ -21,6 +21,7 @@ export function TopNav(props) {
   }
 
   return (
+    <Router>
     <ul className="header-content">
       <li className="header-left">
         <button
@@ -58,6 +59,7 @@ export function TopNav(props) {
       </li>
       <div className="wc-header-bar"></div>
     </ul>
+    </Router>
   );
 }
 
