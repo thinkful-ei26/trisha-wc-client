@@ -19,7 +19,23 @@
 - [Client Repo](https://github.com/thinkful-ei26/trisha-wc-client.git)
 - [Curriculum Link](https://courses.thinkful.com/dev-301v1/assignment/2.9.4)
 
-## :construction: Requirements (in progress) :construction:
+## Resubmit Requirements (completed)
+
+:white_check_mark: **Valid markup**: Used Axe Chrome Exension to make sure that the App is a11y compatible & HTML is semantic (changed h3s to h2 tags)
+
+:grey_exclamation: **headers** After talking to my mentor, Jarod Reid, and being wary of the feedback, I've decided to leave off the header when adding a new recipe. I didn't make any changes because the add new recipe form is supposed to look like a new generated page while allowing access to the recipe list if the user scrolls down the page. This way, they can refer to other recipes while they make add a new recipe to the list.  
+
+:white_check_mark: Included **ARIA LIVE** tags on RecipeList & InfoModal components
+
+:white_check_mark: **Mobile first-design:** Fixed UI issues on 320px screen. Polished user feedback on new recipe form, I've added margins and padding for buttons. I also made the fonts responsive. 
+
+:white_check_mark: **Toggle Recipe** fixed. Users can click condense and detailed view for real.
+
+:grey_exclamation: **`ref`** on RecipeForm is needed so that the search form is able to access the input text. If I leave it out, my component dies. 
+
+:star: :star: :star: **React Router** When I submitted my first deployed version of the app, I was waiting to use React `Router` until I had enough time to code some of the POST MVP features like multi-user login and registration form. I ran this by my mentor, we agreed that since MVP features of my app is similar to a one-page application, we thought it didn't make sense to use React `Router` at that point. But, I added it in for you on the InfoModal, RecipeForm, and Surprise views so that the userflow is better and the endpoint makes sense whenever a user clicks on a different view. Hope this is okay. I realize this app is a work in progress. :sweat:
+
+## MVP Requirements (completed)
 
 :white_check_mark: A [description](#not-sure-what-to-cook) of your app
 
@@ -121,7 +137,7 @@ When a user clicks on "+ Add Recipe", they are taken to this create new recipe f
 
 <img src="https://sweettootsco.files.wordpress.com/2019/01/screen-shot-2019-01-10-at-5.36.36-pm.png" alt="validation on add recipe form" width="300px" />
 
-### Post MVP
+### :construction:  Post MVP :construction: 
 - :white_check_mark: **Landing page:** On first visit, instructions containing how to use the app will render. Subsequent visits/reload will not render the first-time div, but you can click on "INFO" button to see the instructions again.**
 - :white_check_mark: **User can click on "INFO" for instructions on how to use the app**
 - :white_check_mark: **User can search a recipe using the search box**
