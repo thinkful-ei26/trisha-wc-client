@@ -79,8 +79,9 @@ fieldset {
 }
 
 .form-error {
-  color: red;
+  color:inherit;
   margin: 10px 0 0 0;
+  background-color: #f45845;
 }
 
 .form-warning {
@@ -128,6 +129,15 @@ textarea:hover, select:hover, input:hover {
 
   .recipe {
     width: 100%;
+  }
+
+  .recipe-description {
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: bolder;
   }
 
   legend {
@@ -192,7 +202,7 @@ textarea:hover, select:hover, input:hover {
   }
 }  
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .float {
     padding: 0;
     margin: 0 auto;
@@ -206,6 +216,18 @@ textarea:hover, select:hover, input:hover {
 
   .recipe {
     width: 100%;
+  }
+
+  .controls {
+    margin-top: 1vh;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .recipe-description {
+    font-size: 1.5rem;
   }
 
   label {
@@ -293,7 +315,8 @@ textarea:hover, select:hover, input:hover {
 
 }
 
-
-@media screen and (max-width: 1920px) {
-
+@media screen and (min-width: 690px) {
+  .new-recipe-form {
+    max-width: 80%;
+  }
 }

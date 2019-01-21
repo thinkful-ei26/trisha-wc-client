@@ -130,3 +130,16 @@
     column-count: 1;
   }
 }
+
+@media screen and (min-width: 1200px) {
+   .controls {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5vh;
+    column-count: 1;
+  }
+  .surprise-btn, .show-all-btn {
+    margin: 2vh;
+    padding: 2vh;
+  }
+}

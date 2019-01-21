@@ -6,6 +6,7 @@ import fetchRecipes, { surpriseRecipes }  from '../actions';
 import { searchRecipes } from '../actions/search';
 import '../styles/recipe-list.css';
 import '../styles/controls.css';
+import {Link} from 'react-router-dom';
 
 export class RecipeList extends React.Component {
   //on page load, fetch all recipes from db
@@ -50,6 +51,7 @@ export class RecipeList extends React.Component {
   }
 
   render () {
+    console.log(this.props)
     return (
       <div className="container">
         <section className="controls">
@@ -61,7 +63,7 @@ export class RecipeList extends React.Component {
               this.props.dispatch(surpriseRecipes())
             }}
           >
-            Surprise Me
+            <Link to={`/recipes/surprise`}>Surprise Me</Link>
           </button>
 
         {/* ========= SHOW ALL RECIPES ========== */}
@@ -70,7 +72,7 @@ export class RecipeList extends React.Component {
             onClick={ () => {
               this.props.dispatch(fetchRecipes());
             }}>
-            Show All Recipes
+            <Link to="/recipes">Show All Recipes</Link>
           </button>
 
          {/* ========= SEARCH FORM ========== */}

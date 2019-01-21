@@ -51,7 +51,7 @@ export class Recipes extends Component {
             <img src={recipe.imgUrl} alt={`recipe img for ${recipe.title}`} width="100%"/>
           </div>
           <h2>{recipe.title}</h2>
-          <p>{recipe.desc}</p>
+          <p className="recipe-description">{recipe.desc}</p>
         </div>
         <div 
           className="detailed"
