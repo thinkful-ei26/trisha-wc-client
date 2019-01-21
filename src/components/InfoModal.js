@@ -2,10 +2,7 @@ import React from 'react';
 import { gotIt } from '../actions/nav';
 import { connect } from 'react-redux';
 
-export function InfoModal(props) {
-
-  console.log('dsfdsf');
-  
+export function InfoModal(props) {  
   return (
     <div className="info-overlay float" id="modal"> 
       <div 
