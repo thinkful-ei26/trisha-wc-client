@@ -4,17 +4,24 @@ import { connect } from 'react-redux';
 import InfoModal from './InfoModal';
 import RecipeForm from './RecipeForm';
 import '../styles/top-nav.css';
+import {BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 
 export function TopNav(props) {
 
+  console.log(props);
   if(props.info) { 
-    return <InfoModal />
-  }
+    return (
+    <Router>
+      <div>
+        <Redirect from="/" to ="/info" />
+        <Route exact path="/info" component={InfoModal} />
+      </div>  
+    </Router>
+    )
+  } 
 
   if(props.addRecipe) { 
-    return (
-      <RecipeForm />
-    )
+    return <RecipeForm />
   }
 
   return (
@@ -28,7 +35,7 @@ export function TopNav(props) {
             }
           }
         >
-          <span className="info-text">INFO</span>
+          <Link to="/info"><span className="info-text">INFO</span></Link>
         </button>
       </li>
       <li className="header-center">
@@ -53,9 +60,11 @@ export function TopNav(props) {
   );
 }
 
-export const mapStateToProps = state => ({
-  info: state.navReducer.info,
-  addRecipe: state.navReducer.addRecipe
-});
+export const mapStateToProps = (state) => {
+  return {
+    info: state.navReducer.info,
+    addRecipe: state.navReducer.addRecipe
+  }
+};
 
 export default connect(mapStateToProps)(TopNav);

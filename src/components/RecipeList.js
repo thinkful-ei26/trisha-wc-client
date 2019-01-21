@@ -111,7 +111,7 @@ export class RecipeList extends React.Component {
           </div>
         </section>
         
-      {/* ========= RECIPE-LIST ========== */}
+      {/* ========= ARIA-LIVE RECIPE-LIST ========== */}
         <ul 
           className="recipe-list"
           aria-live="polite"

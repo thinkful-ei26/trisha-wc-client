@@ -1,6 +1,7 @@
 import React from 'react';
 import { gotIt } from '../actions/nav';
 import { connect } from 'react-redux';
+import {Link} from 'react-router-dom';
 
 export function InfoModal(props) {  
   return (
@@ -23,7 +24,7 @@ export function InfoModal(props) {
           className="got-it-btn"
           onClick={ () => props.dispatch(gotIt()) }
           >
-            Back to Recipes
+            <Link to="/">Back to Recipes</Link>
           </button>
           <br/>
           <br/>

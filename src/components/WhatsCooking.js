@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../styles/WhatsCooking.css';
 import RecipeList from './RecipeList';
 import TopNav from './TopNav';
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
+import InfoModal from './InfoModal';
 
 export class WhatsCooking extends Component {
   
@@ -50,6 +52,7 @@ export class WhatsCooking extends Component {
     //if this is user's first time visiting (i.e. localStorage doesn't have visited item, then render the app with info div 'first-timer')
     if(!this.state.visited && !this.state.close) {
      return (
+      <Router>
       <main className="whats-cooking">
         <div 
           className="first-timer"
@@ -84,13 +87,22 @@ export class WhatsCooking extends Component {
         <TopNav />
         <RecipeList />
       </main>
+      </Router>
       )
     } else {
       return (
-        <main className="whats-cooking">
-          <TopNav />
-          <RecipeList />
-        </main>
+        <Router>
+            <main className="whats-cooking">
+            <TopNav />
+            {/* <Switch>
+              <Redirect exact from="/" to="/main" />
+              <Route exact path="/info" component={InfoModal} /> */}
+              {/* <Route exact path="/recipes" component={RecipeList} /> */}
+              <RecipeList /> 
+            {/* </Switch> */}
+          </main>
+        </Router>
+        
       );
     }
   }
