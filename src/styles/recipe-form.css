@@ -26,11 +26,23 @@
 }
 
 .message-error {
-  color: #f45845;
+  display: inline-block;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 10px;
+  background-color: #f45845;
+  width: 100%;
 }
 
 .message-success {
-  color: #45f458;
+  display: inline-block;
+  color: #1b1a26;
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 10px;
+  background-color: #45f458;
+  width: 100%;
 }
 
 .ingredient, .ing-container {
@@ -42,7 +54,7 @@
 }
 
 .message {
-  margin: 10px;
+  margin-bottom: 15px;;
   padding: 10px;
 }
 
@@ -103,6 +115,21 @@ textarea:hover, select:hover, input:hover {
 }
 
 @media screen and (min-width: 320px) {
+
+  .float {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .recipe-list {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .recipe {
+    width: 100%;
+  }
+
   legend {
     font-weight: 900;
     font-size: 1.5rem;
@@ -145,9 +172,124 @@ textarea:hover, select:hover, input:hover {
     padding: 0;
     display: inline-block;
   }
+
+  .save-recipe-btn, .clear-values-btn, .cancel-add-recipe-btn {
+    width: 120px;
+  }
+
+  button {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  .add-btn, .remove-btn, .save-recipe-btn, .clear-values-btn, .cancel-add-recipe-btn {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  .ingredients-list, .directions-list {
+    padding-right: 15px;
+  }
 }  
 
 @media screen and (max-width: 768px) {
+  .float {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .recipe-list {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 85%;
+  }
+
+  .recipe {
+    width: 100%;
+  }
+
+  label {
+    font-size: 1.5rem;
+  }
+
+  legend {
+    font-weight: 900;
+    font-size: 2rem;
+    color: #b0aebb;
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+    background-color: #1b1a26;
+    border: .125rem solid #b0aebb;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #b0aebb;
+    height: 15vh;
+  }
+
+  select {
+    width: 100%;
+    background-color: inherit;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #b0aebb;
+  }
+
+  input {
+    background-color: #1b1a26;
+    border: .125rem solid #b0aebb;
+    height: 2.375rem;
+    line-height: 3.625rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #b0aebb;
+    width: 100%;
+  }  
+ 
+  .ingredients-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+
+  .save-recipe-btn, .clear-values-btn, .cancel-add-recipe-btn {
+    width: 50%;
+  }
+
+  button {
+    font-size: 2rem;
+    font-weight: normal;
+  }
+
+  .add-btn, .remove-btn, .save-recipe-btn, .clear-values-btn, .cancel-add-recipe-btn {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+
+  .ingredients-list, .directions-list {
+    padding-right: 15px;
+  }
+
+  .detailed {
+    font-size: 1.5rem;
+  }
+
+  .recipe-condensed {
+    font-size: 1.3rem;
+  }
+
+  .surprise-btn, .show-all-btn {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .add-recipe-btn {
+    font-size: 1rem;
+  }
 
 }
 

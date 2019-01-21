@@ -5,6 +5,7 @@ import { cancel } from '../actions/nav';
 import { required, nonEmpty, validInput, validURL } from '../validators';
 import '../styles/recipe-form.css';
 import { API_BASE_URL } from '../config';
+import { Link } from 'react-router-dom';
 
 export class ReportForm extends Component {
   onSubmit(values) {
@@ -58,8 +59,10 @@ export class ReportForm extends Component {
     let successMessage;
     if (submitSucceeded) {
       successMessage = (
-        <div className="message message-success">
-          Recipe saved successfully
+        <div className="message">
+          <Link to="/success">
+            <span className="message-success">Recipe saved successfully</span>
+          </Link>
         </div>
       );
     }
@@ -67,7 +70,11 @@ export class ReportForm extends Component {
     let errorMessage;
     if (error) {
         errorMessage = (
-          <div className="message message-error">{this.props.error}</div>
+          <div className="message message-error">
+            <Link to="/error">
+              {this.props.error}
+            </Link>
+          </div>
         );
     }
     const renderField = ({ input, label, type, meta: { touched, error } }) => (
@@ -124,13 +131,13 @@ export class ReportForm extends Component {
     
     return (
       <div className="add-recipe-overlay">
-        {successMessage}
-        {errorMessage}
         <form
           className="new-recipe-form float"
           onSubmit={handleSubmit(values => this.onSubmit(values) )}
         >
         <fieldset>
+          {successMessage}
+          {errorMessage}
           <legend>Create a new recipe</legend>
           <Field 
             element="input"
@@ -156,7 +163,7 @@ export class ReportForm extends Component {
           name="ing"
           component={renderIng}
           />
-          
+      
           <Field 
             element="input"
             name="imgUrl" 
@@ -236,18 +243,20 @@ export class ReportForm extends Component {
             validate={[required, nonEmpty, validInput]}
           />
 
+        {/* ===== FORM SUBMIT USER FEEDBACK ===== */}
           {successMessage}
           {errorMessage}
 
+        {/* ===== FORM BUTTON CONTROLS ===== */}
           {/* disable button if user hasn't touched form */ }
-          <button 
+           <button 
             className="save-recipe-btn"
             type="submit"
             disabled={pristine || submitting}
           >
             Save Recipe
           </button>
-
+          <br />
           <button 
             className="clear-values-btn"
             type="button" 
@@ -256,7 +265,7 @@ export class ReportForm extends Component {
           >
             Clear Values
           </button>
-
+          <br />
           <button 
             type='button'
             className="cancel-add-recipe-btn"
@@ -264,7 +273,6 @@ export class ReportForm extends Component {
           >
             Cancel
           </button>
-
           </fieldset>
         </form>
       </div>

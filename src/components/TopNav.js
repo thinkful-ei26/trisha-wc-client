@@ -4,18 +4,14 @@ import { connect } from 'react-redux';
 import InfoModal from './InfoModal';
 import RecipeForm from './RecipeForm';
 import '../styles/top-nav.css';
-import {BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 export function TopNav(props) {
 
-  console.log(props);
   if(props.info) { 
     return (
     <Router>
-      <div>
-        <Redirect from="/" to ="/info" />
-        <Route exact path="/info" component={InfoModal} />
-      </div>  
+      <Route path="/info" component={InfoModal} />
     </Router>
     )
   } 
@@ -35,7 +31,9 @@ export function TopNav(props) {
             }
           }
         >
-          <Link to="/info"><span className="info-text">INFO</span></Link>
+          <Link to="/info">
+            <span className="info-text">INFO</span>
+          </Link>
         </button>
       </li>
       <li className="header-center">
@@ -52,7 +50,10 @@ export function TopNav(props) {
           }
         }
         >
-          <span className="add-recipe-text">+ ADD RECIPE</span>
+          <Link to="/add-recipe">
+            <span className="add-recipe-text">+ ADD RECIPE</span>
+          </Link>
+          
         </button>
       </li>
       <div className="wc-header-bar"></div>
