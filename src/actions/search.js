@@ -1,5 +1,6 @@
 import { API_BASE_URL } from '../config';
 
+/* ========= ASYNC ACTIONS ========== */
 export const SEARCH_RECIPES_REQUEST = 'SEARCH_RECIPES_REQUEST';
 export const searchRecipesRequest = () => ({
   type: SEARCH_RECIPES_REQUEST

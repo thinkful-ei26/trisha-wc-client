@@ -121,25 +121,15 @@
   .surprise-btn, .show-all-btn {
     max-width: 30rem;
     align-self: center;
+    margin-bottom: 10px;
+    margin: 1.25rem 0 0;
   }
 
   .search-section {
     max-width: 30rem;
   }
   .controls {
-    column-count: 1;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-   .controls {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 5vh;
-    column-count: 1;
-  }
-  .surprise-btn, .show-all-btn {
-    margin: 2vh;
-    padding: 2vh;
+    margin: 10px;
+    padding: 10px;
   }
 }

@@ -303,8 +303,8 @@ textarea:hover, select:hover, input:hover {
 
   .surprise-btn, .show-all-btn {
     font-size: 1.5rem;
-    margin: 0;
-    padding: 0;
+    margin: inherit;
+    padding: 1vh;
   }
 
   .add-recipe-btn {

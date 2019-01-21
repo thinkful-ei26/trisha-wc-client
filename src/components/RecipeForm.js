@@ -8,6 +8,7 @@ import { API_BASE_URL } from '../config';
 import { Link } from 'react-router-dom';
 
 export class ReportForm extends Component {
+  /* ========= FORM SUBMIT TO THE DATABASE ========== */
   onSubmit(values) {
     return fetch(`${API_BASE_URL}/api/recipes/`, {
       method: 'POST',
@@ -16,6 +17,7 @@ export class ReportForm extends Component {
         'Content-Type': 'application/json'
       }
     })
+    /* ========= RESPONSE HANDLING ========== */
     .then(res => {
       if (!res.ok) {
         if (
@@ -35,6 +37,7 @@ export class ReportForm extends Component {
       }
       return;
   })
+  /* ========= USER FEEDBACK ON UI FORM ========== */
   .then(() => console.log('Submitted with values', values))
   .catch(err => {
     const {reason, message, location} = err;
@@ -56,6 +59,7 @@ export class ReportForm extends Component {
   render() {
     const { handleSubmit, pristine, submitting, reset, submitSucceeded, error } = this.props;
 
+    /* ========= RENDER UI RESPONSES ========== */
     let successMessage;
     if (submitSucceeded) {
       successMessage = (
