@@ -23,7 +23,7 @@
 
 :white_check_mark: **Valid markup**: Used Axe Chrome Exension to make sure that the App is a11y compatible & HTML is semantic (changed h3s to h2 tags)
 
-:grey_exclamation: **headers** After talking to my mentor, Jarod Reid, and being wary of the feedback, I've decided to leave off the header when adding a new recipe. I didn't make any changes because the add new recipe form is supposed to look like a new generated page while allowing access to the recipe list if the user scrolls down the page. This way, they can refer to other recipes while they make add a new recipe to the list.  
+:grey_exclamation: **headers** After talking to my mentor, Jarod Reid, and being wary of the feedback, I've decided to leave off the header when adding a new recipe. I didn't make any changes because the add new recipe form is supposed to look like a new generated page while allowing access to the recipe list if the user scrolls down the page. This way, users can refer to other recipes while they make add a new recipe to the list.  
 
 :white_check_mark: Included **ARIA LIVE** tags on RecipeList & InfoModal components
 
@@ -33,7 +33,7 @@
 
 :grey_exclamation: **`ref`** on RecipeForm is needed so that the search form is able to access the input text. If I leave it out, my component dies. 
 
-:star: :star: :star: **React Router** When I submitted my first deployed version of the app, I was waiting to use React `Router` until I had enough time to code some of the POST MVP features like multi-user login and registration form. I ran this by my mentor, we agreed that since MVP features of my app is similar to a one-page application, we thought it didn't make sense to use React `Router` at that point. But, I added it in for you on the InfoModal, RecipeForm, and Surprise views so that the userflow is better and the endpoint makes sense whenever a user clicks on a different view. Hope this is okay. I realize this app is a work in progress. :sweat:
+:star: :star: :star: **React Router** When I submitted my first deployed version of the app, I was waiting to use React `Router` until I had enough time to code some of the POST MVP features like multi-user login and registration form. I ran this by my mentor, we agreed that since MVP features of my app is similar to a one-page application, we thought it didn't make sense to use React `Router` at that point. But, I added it in for you on the InfoModal, RecipeForm, and Surprise views so that the userflow is better and the endpoint makes sense whenever a user clicks on a different view. Hope this is okay. I realize this app is a work in progress. :smiley:
 
 ## MVP Requirements (completed)
 

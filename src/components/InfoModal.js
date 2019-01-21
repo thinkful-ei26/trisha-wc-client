@@ -1,10 +1,11 @@
 import React from 'react';
 import { gotIt } from '../actions/nav';
 import { connect } from 'react-redux';
-import {Link} from 'react-router-dom';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 
 export function InfoModal(props) {  
   return (
+    <Router>
     <div className="info-overlay float" id="modal"> 
       <div 
         className="info-content"
@@ -35,6 +36,7 @@ export function InfoModal(props) {
           </a>
       </div>
     </div>
+    </Router>
   );
 }
 
