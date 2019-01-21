@@ -87,6 +87,7 @@ export class ReportForm extends Component {
               type={type} 
               placeholder={label} 
               className="ing-input"
+              aria-label={label}
             />
               {touched && error && <span>{error}</span>}
           </div>
@@ -108,17 +109,20 @@ export class ReportForm extends Component {
               type="text"
               component={renderField}
               label={`Ingredient #${index + 1}`}
+              aria-label={`Ingredient #${index + 1}`}
             />
              <button
               className="remove-btn"
               type="button"
               title={`Remove Ingredient ${index +1}`}
+              aria-label={`Remove Ingredient ${index +1}`}
               onClick={() => fields.remove(index)}
             >
               x
             </button>
           </li>
         ))}
+        <li className="add-ingredient-list">
           <button
             className="add-btn"
             type="button" 
@@ -126,19 +130,22 @@ export class ReportForm extends Component {
           >
             Add Ingredient
           </button>
+        </li>
       </ul>
     );
     
     return (
       <div className="add-recipe-overlay">
+      <br/>
+      <br/>
         <form
           className="new-recipe-form float"
           onSubmit={handleSubmit(values => this.onSubmit(values) )}
         >
         <fieldset>
+        <legend>Create a new recipe</legend>
           {successMessage}
           {errorMessage}
-          <legend>Create a new recipe</legend>
           <Field 
             element="input"
             name="title" 

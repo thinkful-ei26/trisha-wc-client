@@ -9,15 +9,15 @@
 - Click the "Surprise Me" button to generate a random recipe.
 - Add a new recipe to the "What's Cooking?" app by clicking on the "+ Add Recipe" button
 
-**Notes:**
+**Note:**
 - A user does not need to login in order to use my app.
 -  My app only needs to do a GET/FETCH & POST for it's MVP, but extension features will include multiple users with the ability to save recipes, create, edit, and delete recipes on their dashboard.
 
 ## QuickLinks
-- [Curriculum Link](https://courses.thinkful.com/dev-301v1/assignment/2.9.4)
 - [Deployed App](https://protected-depths-66567.herokuapp.com/)
 - [Server Repo](https://github.com/thinkful-ei26/trisha-wc-server.git)
 - [Client Repo](https://github.com/thinkful-ei26/trisha-wc-client.git)
+- [Curriculum Link](https://courses.thinkful.com/dev-301v1/assignment/2.9.4)
 
 ## :construction: Requirements (in progress) :construction:
 
