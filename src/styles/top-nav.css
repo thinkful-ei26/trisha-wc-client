@@ -40,7 +40,7 @@
   font-size: 2vh;
 }
 
-.add-recipe-text:hover, .info-text:hover {
+.add-recipe-text:hover, .info-text:hover, .add-recipe-text:focus, .info-text:focus {
   text-shadow: 1px 1px grey;
 }
 
@@ -87,7 +87,8 @@
   font-weight: bolder;
 }
 
-.logo-content:hover {
+.logo-content:hover, 
+.logo-content:focus  {
   font-size: calc(1rem + 2vmin);
   font-weight: bolder;
   background: -webkit-linear-gradient(#ff8a00, #da1b60);
@@ -110,9 +111,10 @@
   font-weight: 700;
   border: 1px solid #b0aebb;
   padding: 0.5rem;
+  border-radius: 8px;
 }
 
-.github-repo:hover {
+.github-repo:hover, .github-repo:focus {
   font-weight: 700;
   padding: 0.5rem;
   background-color: #474658;
@@ -127,7 +129,7 @@
   background-color: inherit;
 }
 
-.got-it-btn:hover {
+.got-it-btn:hover, .got-it-btn:focus {
   font-weight: 700;
   padding: 0.5rem;
   background-color: #474658;

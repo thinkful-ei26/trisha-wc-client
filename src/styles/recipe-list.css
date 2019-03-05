@@ -1,11 +1,12 @@
 .recipe {
+  max-width: 400px;
   padding: 1vh;
   list-style: none;
   border: 0.05px solid #e8e8e9;
   margin-bottom: 10px;
 }
 
-.recipe:hover {
+.recipe:hover, .recipe:focus  {
   background-color: #e8e8e9;
   color: #1b1a26;
   cursor: pointer;
@@ -25,7 +26,7 @@
 }
 
 .recipe-list {
-  max-width: 65.63rem;
+  max-width: 500px;
   overflow: hidden;
   padding: 0 1.25rem;
   margin: 0 auto;

@@ -35,6 +35,11 @@ a {
 
 button {
   cursor: pointer;
+  border-radius: 8px;
+}
+
+input, textarea {
+  border-radius: 8px;
 }
 
 .first-timer {

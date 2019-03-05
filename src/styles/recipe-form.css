@@ -99,14 +99,14 @@ button {
   margin-top: 10px;
 }
 
-.add-btn:hover, .remove-btn:hover, .save-recipe-btn:hover, .clear-values-btn:hover, .cancel-add-recipe-btn:hover  {
+.add-btn:hover, .remove-btn:hover, .save-recipe-btn:hover, .clear-values-btn:hover, .cancel-add-recipe-btn:hover, .add-btn:focus, .remove-btn:focus, .save-recipe-btn:focus, .clear-values-btn:focus, .cancel-add-recipe-btn:focus  {
   border: 1px solid #ff8a00;
   color: white;
   box-shadow: inset 0 0 0 0.125rem rgb(244, 117, 33);
   background-image: linear-gradient(to top left,#ff8a00,#da1b60);
 }
 
-textarea:hover, select:hover, input:hover {
+textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:focus {
   border-color: rgb(244, 117, 33);
 }
 
