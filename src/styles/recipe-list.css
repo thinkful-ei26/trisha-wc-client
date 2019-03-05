@@ -3,7 +3,9 @@
   padding: 1vh;
   list-style: none;
   border: 0.05px solid #e8e8e9;
-  margin-bottom: 10px;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
 }
 
 .recipe:hover, .recipe:focus  {

@@ -1,3 +1,6 @@
+.input-wrapper {
+  margin-bottom: 30px;
+}
 .cancel-add-recipe-btn, .clear-values-btn, .save-recipe-btn, .add-btn {
   color: #b0aebb;
   font-size: 1rem;
@@ -64,6 +67,7 @@
 
 .new-recipe-form {
   flex-direction: column;
+  max-width: 400px;
 }
 
 fieldset {
@@ -130,14 +134,14 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
     font-size: 0.9rem;
   }
 
-  h2 {
+  /* h2 {
     font-size: 1.2rem;
     font-weight: bolder;
-  }
+  } */
 
   legend {
     font-weight: 900;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     color: #b0aebb;
     width: 100%;
   }
@@ -146,7 +150,7 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
     width: 100%;
     background-color: #1b1a26;
     border: .125rem solid #b0aebb;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     font-weight: 500;
     color: #b0aebb;
     height: 12vh;
@@ -155,7 +159,7 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   select {
     width: 100%;
     background-color: inherit;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     font-weight: 500;
     color: #b0aebb;
   }
@@ -163,8 +167,8 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   input {
     background-color: #1b1a26;
     border: .125rem solid #b0aebb;
-    height: 2.375rem;
-    font-size: 1rem;
+    /* height: 2.375rem;
+    font-size: 1rem; */
     font-weight: 500;
     color: #b0aebb;
     width: 100%;
@@ -182,12 +186,12 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   }
 
   button {
-    font-size: 1rem;
+    /* font-size: 1rem; */
     font-weight: normal;
   }
 
   .add-btn, .save-recipe-btn, .clear-values-btn, .cancel-add-recipe-btn {
-    font-size: 1rem;
+    /* font-size: 1rem; */
     font-weight: normal;
   }
 
@@ -196,9 +200,9 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   }
 }  
 
-.remove-btn {
+/* .remove-btn {
   font-size: 1rem;
-}
+} */
 
 @media screen and (min-width: 768px) {
   .float {
@@ -214,6 +218,7 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
 
   .recipe {
     width: 100%;
+    margin-bottom: 15px;
   }
 
   .controls {
@@ -221,20 +226,20 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 20px;
   }
 
   .recipe-description {
-    font-size: 1.5rem;
+    font-size: 16px;
   }
 
   label {
-    font-size: 1.5rem;
+    font-size: 16px;
   }
 
   legend {
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 20px;
     color: #b0aebb;
     width: 100%;
   }
@@ -243,7 +248,7 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
     width: 100%;
     background-color: #1b1a26;
     border: .125rem solid #b0aebb;
-    font-size: 1.3rem;
+    font-size: 16px;
     font-weight: 500;
     color: #b0aebb;
     height: 15vh;
@@ -252,7 +257,7 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   select {
     width: 100%;
     background-color: inherit;
-    font-size: 1.3rem;
+    font-size: 16px;
     font-weight: 500;
     color: #b0aebb;
   }
@@ -261,8 +266,8 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
     background-color: #1b1a26;
     border: .125rem solid #b0aebb;
     height: 2.375rem;
-    line-height: 3.625rem;
-    font-size: 1.3rem;
+    line-height: 48px;
+    font-size: 16px;
     font-weight: 500;
     color: #b0aebb;
     width: 100%;
@@ -280,12 +285,12 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   }
 
   button {
-    font-size: 2rem;
+    font-size: 16px;
     font-weight: normal;
   }
 
   .add-btn, .save-recipe-btn, .clear-values-btn, .cancel-add-recipe-btn {
-    font-size: 1.5rem;
+    font-size: 16px;
     font-weight: normal;
   }
 
@@ -294,21 +299,21 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   }
 
   .detailed {
-    font-size: 1.5rem;
+    font-size: 16px;
   }
 
   .recipe-condensed {
-    font-size: 1.3rem;
+    font-size: 16px;
   }
 
   .surprise-btn, .show-all-btn {
-    font-size: 1.5rem;
+    font-size: 16px;
     margin: inherit;
     padding: 1vh;
   }
 
   .add-recipe-btn {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
 }
