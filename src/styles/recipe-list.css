@@ -1,11 +1,15 @@
 .recipe {
   max-width: 400px;
-  padding: 1vh;
   list-style: none;
   border: 0.05px solid #e8e8e9;
   width: 90%;
   margin: 10px auto;
   padding: 10px;
+}
+
+.recipe-img {
+  width: 99%;
+  margin: 0 auto;
 }
 
 .recipe:hover, .recipe:focus  {
@@ -30,7 +34,6 @@
 .recipe-list {
   max-width: 500px;
   overflow: hidden;
-  padding: 0 1.25rem;
   margin: 0 auto;
   padding-top: 5vh;
 }
@@ -67,7 +70,7 @@
 
 @media (min-width: 960px) {
   .recipe-list {
-    column-count: 2;
+    flex-wrap: wrap;
     justify-content: center;
   }
   .recipe {

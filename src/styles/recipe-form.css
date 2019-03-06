@@ -1,6 +1,11 @@
 .input-wrapper {
   margin-bottom: 30px;
 }
+
+#search-form {
+  margin-top: 25px;
+}
+
 .cancel-add-recipe-btn, .clear-values-btn, .save-recipe-btn, .add-btn {
   color: #b0aebb;
   font-size: 1rem;
@@ -68,6 +73,10 @@
 .new-recipe-form {
   flex-direction: column;
   max-width: 400px;
+}
+
+.new-recipe-form legend {
+  padding-top: 10px;
 }
 
 fieldset {
