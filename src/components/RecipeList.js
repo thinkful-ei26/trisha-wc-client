@@ -75,8 +75,6 @@ export class RecipeList extends React.Component {
           </button>
 
          {/* ========= SEARCH FORM ========== */}
-         <br/>
-         <br />
           <div className="search-section">
             <form 
               id="search-form"

@@ -41,7 +41,7 @@
 }
 
 .add-recipe-text:hover, .info-text:hover, .add-recipe-text:focus, .info-text:focus {
-  text-shadow: 1px 1px grey;
+  color: #ff8a00;
 }
 
 .header-content {

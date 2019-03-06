@@ -1,12 +1,11 @@
 import React from 'react';
 import { gotIt } from '../actions/nav';
 import { connect } from 'react-redux';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export function InfoModal(props) {  
   return (
-    <Router>
-    <div className="info-overlay float" id="modal"> 
+    <div className="info-overlay" id="modal"> 
       <div 
         className="info-content"
         aria-live="polite"
@@ -27,8 +26,6 @@ export function InfoModal(props) {
           >
             <Link to="/">Back to Recipes</Link>
           </button>
-          <br/>
-          <br/>
           <a
               className="github-repo" href="https://github.com/thinkful-ei26/trisha-wc-client"
           >
@@ -36,7 +33,6 @@ export function InfoModal(props) {
           </a>
       </div>
     </div>
-    </Router>
   );
 }
 
