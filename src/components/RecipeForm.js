@@ -83,7 +83,6 @@ export class ReportForm extends Component {
     }
     const renderField = ({ input, label, type, meta: { touched, error } }) => (
       <div className="ing-container">
-        <br/>
         <label>{label}</label>
           <div className="ing-items">
             <input 
@@ -265,7 +264,6 @@ export class ReportForm extends Component {
           >
             Save Recipe
           </button>
-          <br />
           <button 
             className="clear-values-btn"
             type="button" 
@@ -274,7 +272,6 @@ export class ReportForm extends Component {
           >
             <Link to="clear-values">Clear Values</Link>
           </button>
-          <br />
           <button 
             type='button'
             className="cancel-add-recipe-btn"

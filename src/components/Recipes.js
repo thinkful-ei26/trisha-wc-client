@@ -62,9 +62,7 @@ export class Recipes extends Component {
           <hr/>
           <p>
             <strong>Prep Time:</strong> {recipe.prep}
-            <br/>
             <strong>Cook Time:</strong> {recipe.cook}
-            <br/>
             <strong>Number of Servings:</strong> {recipe.serving}
           </p>
           <p>

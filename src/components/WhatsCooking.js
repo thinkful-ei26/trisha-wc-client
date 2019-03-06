@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../styles/WhatsCooking.css';
 import RecipeList from './RecipeList';
 import TopNav from './TopNav';
-import {BrowserRouter as Router} from 'react-router-dom';
 
 export class WhatsCooking extends Component {
   
@@ -51,7 +50,6 @@ export class WhatsCooking extends Component {
     //if this is user's first time visiting (i.e. localStorage doesn't have visited item, then render the app with info div 'first-timer')
     if(!this.state.visited && !this.state.close) {
      return (
-      <Router>
       <main className="whats-cooking">
         <div 
           className="first-timer"
@@ -69,7 +67,6 @@ export class WhatsCooking extends Component {
               <li>Add a new recipe to the "What's Cooking?" app by clicking on the "+ Add Recipe" button</li>
             </ul>
             <p>A user does not need to login in order to use my app.</p>         
-            <br/>
             <a
               className="github-repo" href="https://github.com/thinkful-ei26/trisha-wc-client"
             >
@@ -86,16 +83,13 @@ export class WhatsCooking extends Component {
         <TopNav />
         <RecipeList />
       </main>
-      </Router>
       )
     } else {
       return (
-        <Router>
-          <main className="whats-cooking">
+        <main className="whats-cooking">
           <TopNav />
           <RecipeList /> 
         </main> 
-        </Router>
       );
     }
   }
