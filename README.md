@@ -1,8 +1,8 @@
-# [What's Cooking App](https://protected-depths-66567.herokuapp.com/)
-[![Build Status](https://travis-ci.org/thinkful-ei26/trisha-wc-client.svg?branch=master)](https://travis-ci.org/thinkful-ei26/trisha-noteful-v4)
+# [What's Cooking App](https://whats-cooking-client.herokuapp.com/)
+
 ### Not sure what to cook for your next meal?
 
-[What's Cooking](https://protected-depths-66567.herokuapp.com/) is a full-stack app that can help you. On page load, a user can:
+[What's Cooking](https://whats-cooking-client.herokuapp.com/) is a full-stack app that can help you. On page load, a user can:
 
 - Browse through the recipe list for meal ideas
 - Click on a recipe to see detailed instructions to make the dish.
@@ -14,7 +14,7 @@
 -  My app only needs to do a GET/FETCH & POST for it's MVP, but extension features will include multiple users with the ability to save recipes, create, edit, and delete recipes on their dashboard.
 
 ## QuickLinks
-- [Deployed App](https://protected-depths-66567.herokuapp.com/)
+- [Deployed App](https://whats-cooking-client.herokuapp.com/)
 - [Server Repo](https://github.com/thinkful-ei26/trisha-wc-server.git)
 - [Client Repo](https://github.com/thinkful-ei26/trisha-wc-client.git)
 - [Curriculum Link](https://courses.thinkful.com/dev-301v1/assignment/2.9.4)
