@@ -51,6 +51,7 @@ export class WhatsCooking extends Component {
     if(!this.state.visited && !this.state.close) {
      return (
       <main className="whats-cooking">
+       <TopNav />
         <div 
           className="first-timer"
           aria-live="polite"
@@ -80,7 +81,6 @@ export class WhatsCooking extends Component {
             </button>
           </div>      
         </div> 
-        <TopNav />
         <RecipeList />
       </main>
       )
