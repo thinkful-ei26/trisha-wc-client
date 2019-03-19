@@ -2,7 +2,7 @@ import React from 'react';
 import { infoClick, addRecipe } from '../actions/nav';
 import { connect } from 'react-redux';
 import InfoModal from './InfoModal';
-import RecipeForm from './RecipeForm';
+// import RecipeForm from './RecipeForm';
 import '../styles/top-nav.css';
 import { Route, Link } from 'react-router-dom';
 
@@ -14,9 +14,9 @@ export function TopNav(props) {
     )
   } 
 
-  if(props.addRecipe) { 
-    return <RecipeForm />
-  }
+  // if(props.addRecipe) { 
+  //   return <RecipeForm />
+  // }
 
   return (
     <ul className="header-content">

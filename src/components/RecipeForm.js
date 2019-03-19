@@ -137,26 +137,7 @@ export class ReportForm extends Component {
       </ul>
     );
     
-    return (
-      <div>
-        <ul className="header-content">
-          <li className="header-left">
-            <Link to="/info">
-              <span className="info-text">INFO</span>
-            </Link>
-          </li>
-          <li className="header-center">
-            <h1 className="logo-content">
-              What's Cooking?
-            </h1>
-          </li>
-          <li className="header-right">
-            <Link to="/add-recipe">
-              Add Recipe
-            </Link>
-          </li>
-        </ul>
-     
+    return (     
       <div className="add-recipe-overlay">
         <form
           className="new-recipe-form float"
@@ -300,7 +281,6 @@ export class ReportForm extends Component {
           </button>
           </fieldset>
         </form>
-      </div>
       </div>
     );
   }
