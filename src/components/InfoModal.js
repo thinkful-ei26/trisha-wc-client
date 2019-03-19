@@ -27,7 +27,9 @@ export function InfoModal(props) {
             <Link to="/">Back to Recipes</Link>
           </button>
           <a
-              className="github-repo" href="https://github.com/thinkful-ei26/trisha-wc-client"
+            className="github-repo" 
+            // eslint-disable-next-line react/jsx-no-target-blank
+            href="https://github.com/thinkful-ei26/trisha-wc-client" target="_blank"
           >
             GitHub Repo
           </a>
