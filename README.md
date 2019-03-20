@@ -1,41 +1,24 @@
-# [What's Cooking App](https://whats-cooking-client.herokuapp.com/)
+# [What's Cooking](https://whats-cooking-client.herokuapp.com/)
 
 ### Not sure what to cook for your next meal?
 
-[What's Cooking](https://whats-cooking-client.herokuapp.com/) is a full-stack app that can help you. On page load, a user can:
+[What's Cooking](https://whats-cooking-client.herokuapp.com/) can help you. Without logging in, you can:
 
 - Browse through the recipe list for meal ideas
-- Click on a recipe to see detailed instructions to make the dish.
-- Click the "Surprise Me" button to generate a random recipe.
+- Click on a recipe to view detailed instructions
+- Need inspiration? Click the "Surprise Me" button to generate a random recipe.
 - Add a new recipe to the "What's Cooking?" app by clicking on the "+ Add Recipe" button
 
 **Note:**
-- A user does not need to login in order to use my app.
--  My app only needs to do a GET/FETCH & POST for it's MVP, but extension features will include multiple users with the ability to save recipes, create, edit, and delete recipes on their dashboard.
+- A user does not need to login in order to use my app
+- The current database only has about 20 recipes
+- Future/Extension features will include multiple users with the ability to save recipes, create, edit, and delete recipes on their dashboard
 
 ## QuickLinks
 - [Deployed App](https://whats-cooking-client.herokuapp.com/)
 - [Server Repo](https://github.com/thinkful-ei26/trisha-wc-server.git)
 - [Client Repo](https://github.com/thinkful-ei26/trisha-wc-client.git)
 - [Curriculum Link](https://courses.thinkful.com/dev-301v1/assignment/2.9.4)
-
-## Revision Requirements (resolved)
-
-This is the second time I'm submitting the project. I discussed my revision changes with my mentor (who approved them all). What did I do differently? I tried to see my app with fresh new eyes, being more sensitive to user flow and a11y changes. I hope this satisfies the revision requirements!
-
-:white_check_mark: **Valid markup**: Used Axe Chrome Exension to make sure that the App is a11y compatible & HTML is semantic (changed h3s to h2 tags)
-
-:grey_exclamation: **headers** After talking to my mentor, Jarod Reid, and being wary of the feedback, I've decided to leave off the header when adding a new recipe. I didn't make any changes because the add new recipe form is supposed to look like a new generated page while allowing access to the recipe list if the user scrolls down the page. This way, users can refer to other recipes while they make add a new recipe to the list.  
-
-:white_check_mark: Included **ARIA LIVE** tags on RecipeList & InfoModal components
-
-:white_check_mark: **Mobile first-design:** Fixed UI issues on 320px screen. Polished user feedback on new recipe form, I've added margins and padding for buttons. I also made the fonts responsive. 
-
-:white_check_mark: **Toggle Recipe** fixed. Users can click condense and detailed view for real.
-
-:grey_exclamation: **`ref`** on RecipeForm is needed so that the search form is able to access the input text. If I leave it out, my component dies. 
-
-:star: :star: :star: **React Router** When I submitted my first deployed version of the app, I was waiting to use React `Router` until I had enough time to code some of the POST MVP features like multi-user login and registration form. I ran this by my mentor, we agreed that since MVP features of my app is similar to a one-page application, we thought it didn't make sense to use React `Router` at that point. But, I added it in for you on the InfoModal, RecipeForm, and Surprise views so that the userflow is better and the endpoint makes sense whenever a user clicks on a different view. Hope this is okay. I realize this app is a work in progress. :smiley:
 
 ## MVP Requirements (completed)
 

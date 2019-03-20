@@ -64,11 +64,12 @@ export class WhatsCooking extends Component {
             How to use this app
           </h2>
           <p>
-            Get inspired by What’s Cooking, a public recipe database that can help you narrow down your choices. Without logging in, you can:
+            Get inspired by <strong>What’s Cooking</strong>, a public recipe database that can help you narrow down your choices. Without logging in, you can:
           </p>
           <ul className="info-text-list">
-            <li>Browse through the recipe list for meal ideas and click on a recipe for instructions to make the dish.</li>
-            <li>Not sure what to cook? Click the "Surprise Me" button to generate a random recipe.</li>
+            <li>Browse through the recipe list for meal ideas</li>
+            <li>Click on a recipe to view detailed instructions</li>
+            <li>Need inspiration? Click the "Surprise Me" button to generate a random recipe.</li>
             <li>Add a new recipe to the "What's Cooking?" app by clicking on the "+ Add Recipe" button</li>
           </ul>
 
