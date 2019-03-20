@@ -1,35 +1,4 @@
-.info-content {
-  padding: 30px; 
-  width: 100%;
-}
-
-.info-content li {
-  list-style-type: disc;
-}
-
-.info-overlay {
-  position: fixed;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(27, 26, 38, 0.9);
-  z-index: 2;
-}
-
-.info-text-list {
-  text-align: left;
-}
-
-.info-btn {
-  background-color: transparent;
-  color: white;
-  border: none;
-}
-
+/* ========== HEADER ========== */
 .header-content {
   position: fixed;
   left: 0;
@@ -43,7 +12,6 @@
   box-sizing: border-box;
   margin-top: 0;
 }
-
 
 .wc-header-bar {
   position: absolute;
@@ -77,6 +45,22 @@
   list-style-type: none;
 }
 
+/* ========== LOGO ========== */
+.logo-content {
+  font-size: calc(1rem + 2vmin);
+  font-weight: bolder;
+}
+
+.logo-content:hover, 
+.logo-content:focus  {
+  font-size: calc(1rem + 2vmin);
+  font-weight: bolder;
+  background: -webkit-linear-gradient(#ff8a00, #da1b60);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========== ADD RECIPE ========== */
 .add-recipe-container {
   margin-top: 80px;
 }
@@ -95,20 +79,7 @@
   color: #ff8a00;
 }
 
-.logo-content {
-  font-size: calc(1rem + 2vmin);
-  font-weight: bolder;
-}
-
-.logo-content:hover, 
-.logo-content:focus  {
-  font-size: calc(1rem + 2vmin);
-  font-weight: bolder;
-  background: -webkit-linear-gradient(#ff8a00, #da1b60);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
+/* ========== GITHUB ========== */
 .github-repo {
   color: #b0aebb;
   font-weight: 700;
@@ -122,6 +93,39 @@
   padding: 0.5rem;
   background-color: #474658;
   color: white;
+}
+
+/* ========== INFO ========== */
+.info-content {
+  padding: 30px; 
+  width: 100%;
+}
+
+.info-content li {
+  list-style-type: disc;
+}
+
+.info-overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(27, 26, 38, 0.9);
+  z-index: 2;
+}
+
+.info-text-list {
+  text-align: left;
+}
+
+.info-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
 }
 
 .got-it-btn {
