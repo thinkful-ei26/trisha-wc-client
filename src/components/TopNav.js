@@ -2,7 +2,7 @@ import React from 'react';
 import { infoClick } from '../actions/nav';
 import { connect } from 'react-redux';
 import InfoModal from './InfoModal';
-// import '../styles/top-nav.css';
+import '../styles/top-nav.css';
 import { Route, Link } from 'react-router-dom';
 
 export function TopNav(props) {

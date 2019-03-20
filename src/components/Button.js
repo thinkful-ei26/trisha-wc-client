@@ -11,7 +11,7 @@ export function Button(props) {
   }
 
   return (
-    <div className="header-content">
+    <div className="add-recipe-container">
         <button
           className="add-recipe-btn"
           aria-label="Create a new recipe"

@@ -30,20 +30,6 @@
   border: none;
 }
 
-.add-recipe-btn {
-  background-color: transparent;
-  color: #e8e8e9;
-  border: none;
-}
-
-.add-recipe-text, .info-text {
-  font-size: 2vh;
-}
-
-.add-recipe-text:hover, .info-text:hover, .add-recipe-text:focus, .info-text:focus {
-  color: #ff8a00;
-}
-
 .header-content {
   position: fixed;
   left: 0;
@@ -55,8 +41,18 @@
   padding-bottom: .125rem;
   background-color: #1b1a26;
   box-sizing: border-box;
-  z-index: 1000;
   margin-top: 0;
+}
+
+
+.wc-header-bar {
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: 100%;
+  height: .125rem;
+  background-image: linear-gradient(to top left,#ff8a00,#da1b60);
+  z-index: 99;
 }
 
 .header-left {
@@ -81,6 +77,24 @@
   list-style-type: none;
 }
 
+.add-recipe-container {
+  margin-top: 80px;
+}
+
+.add-recipe-btn {
+  background-color: transparent;
+  color: #e8e8e9;
+  border: none;
+}
+
+.add-recipe-text, .info-text {
+  font-size: 2vh;
+}
+
+.add-recipe-text:hover, .info-text:hover, .add-recipe-text:focus, .info-text:focus {
+  color: #ff8a00;
+}
+
 .logo-content {
   font-size: calc(1rem + 2vmin);
   font-weight: bolder;
@@ -93,16 +107,6 @@
   background: -webkit-linear-gradient(#ff8a00, #da1b60);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.wc-header-bar {
-  position: absolute;
-  left: 0;
-  top: 70px;
-  width: 100%;
-  height: .125rem;
-  background-image: linear-gradient(to top left,#ff8a00,#da1b60);
-  z-index: 99;
 }
 
 .github-repo {

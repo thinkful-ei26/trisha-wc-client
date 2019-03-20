@@ -67,7 +67,7 @@
   border-bottom: 2px solid rgb(244, 117, 33);
   padding-bottom: 1rem;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 70px;
 }
 
 .new-recipe-form {
@@ -189,7 +189,6 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   }
 
   .add-btn, .save-recipe-btn, .clear-values-btn, .cancel-add-recipe-btn {
-    /* font-size: 1rem; */
     font-weight: normal;
   }
 
