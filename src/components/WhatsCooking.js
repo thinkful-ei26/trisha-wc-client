@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/WhatsCooking.css';
 import RecipeList from './RecipeList';
 import TopNav from './TopNav';
-import RecipeForm from './RecipeForm';
+import Button from './Button';
 
 export class WhatsCooking extends Component {
   
@@ -10,7 +10,8 @@ export class WhatsCooking extends Component {
     super(props);
     this.state = {
       visited: false, 
-      close: false
+      close: false,
+      addRecipe: false
     }
   }
   
@@ -89,7 +90,7 @@ export class WhatsCooking extends Component {
       return (
         <main className="whats-cooking">
           <TopNav />
-          <RecipeForm/>
+          <Button />
           <RecipeList /> 
         </main> 
       );
