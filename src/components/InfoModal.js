@@ -2,6 +2,7 @@ import React from 'react';
 import { gotIt } from '../actions/nav';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import '../styles/info.css';
 
 export function InfoModal(props) {  
   return (
@@ -23,20 +24,26 @@ export function InfoModal(props) {
           <li>Add a new recipe to the "What's Cooking?" app by clicking on the "+ Add Recipe" button</li>
         </ul>
 
-        <h3>Search for a recipe and start using the app now!</h3>  
-        <button 
-        className="got-it-btn"
-        onClick={ () => props.dispatch(gotIt()) }
-        >
-          <Link to="/">Back to Recipes</Link>
-        </button>
-        <a
-          className="github-repo" 
-          // eslint-disable-next-line react/jsx-no-target-blank
-          href="https://github.com/thinkful-ei26/trisha-wc-client" target="_blank"
-        >
-          GitHub Repo
-        </a>
+        <h3>Search for a recipe and start using the app now!</h3>
+        <div className="info-btns">
+          <button 
+          className="got-it-btn"
+          onClick={ () => props.dispatch(gotIt()) }
+          >
+            <Link to="/">Back to Recipes</Link>
+          </button>
+          <button className="github-repo" >
+            <a
+              
+              // eslint-disable-next-line react/jsx-no-target-blank
+              href="https://github.com/thinkful-ei26/trisha-wc-client" target="_blank"
+            >
+              GitHub Repo
+            </a>
+          </button>
+  
+        </div>  
+       
       </div>
     </div>
   );

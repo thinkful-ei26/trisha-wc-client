@@ -1,21 +1,21 @@
 import React from 'react';
-import { infoClick } from '../actions/nav';
-import { connect } from 'react-redux';
-import InfoModal from './InfoModal';
+// import { infoClick } from '../actions/nav';
+// import { connect } from 'react-redux';
+// import InfoModal from './InfoModal';
 import '../styles/top-nav.css';
-import { Route, Link } from 'react-router-dom';
+// import { Route, Link } from 'react-router-dom';
 
 export function TopNav(props) {
   
-  if(props.info) { 
-    return (
-      <Route path="/info" component={InfoModal} />
-    )
-  } 
+  // if(props.info) { 
+  //   return (
+  //     <Route path="/info" component={InfoModal} />
+  //   )
+  // } 
 
   return (
     <ul className="header-content">
-      <li className="header-left">
+      {/* <li className="header-left">
         <button
           className="info-btn" href="#info"
           aria-label="How to use this app"
@@ -28,7 +28,7 @@ export function TopNav(props) {
             <span className="info-text">INFO</span>
           </Link>
         </button>
-      </li>
+      </li> */}
       <li className="header-center">
         <h1 className="logo-content">
           What's Cooking?
@@ -39,10 +39,10 @@ export function TopNav(props) {
   );
 }
 
-export const mapStateToProps = (state) => {
-  return {
-    info: state.navReducer.info,
-  }
-};
+// export const mapStateToProps = (state) => {
+//   return {
+//     info: state.navReducer.info,
+//   }
+// };
 
-export default connect(mapStateToProps)(TopNav);
+export default /* connect(mapStateToProps) */(TopNav);

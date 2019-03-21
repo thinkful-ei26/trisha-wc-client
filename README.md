@@ -10,7 +10,7 @@
 - Add a new recipe to the "What's Cooking?" app by clicking on the "+ Add Recipe" button
 
 **Note:**
-- A user does not need to login in order to use my app
+- :warning: A user does not need to login in order to use my app
 - The current database only has about 20 recipes
 - Future/Extension features will include multiple users with the ability to save recipes, create, edit, and delete recipes on their dashboard
 

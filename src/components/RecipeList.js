@@ -4,6 +4,8 @@ import Spinner from 'react-spinkit';
 import Recipes from './Recipes';
 import fetchRecipes, { surpriseRecipes }  from '../actions';
 import { searchRecipes } from '../actions/search';
+import { addRecipe } from '../actions/nav';
+import RecipeForm from './RecipeForm';
 import '../styles/recipe-list.css';
 import '../styles/controls.css';
 import {Link} from 'react-router-dom';
@@ -15,7 +17,7 @@ export class RecipeList extends React.Component {
   }
 
   renderResults() {
-    const { error, loading, surprise } = this.props;
+    const { error, loading, surprise, addRecipe } = this.props;
 
     if (loading) {
       return (
@@ -37,9 +39,22 @@ export class RecipeList extends React.Component {
         </div>
       )
     }
+
+    if(addRecipe) { 
+      return (
+        <div>
+          <RecipeForm />
+          <Recipes />
+        </div>
+
+      )
+    }
+
     //on success, render the Recipe component
     return ( <Recipes /> )
   }
+
+ 
 
   //grab the search value and dispatch the searchRecipe async fn
   search(e) {
@@ -54,6 +69,20 @@ export class RecipeList extends React.Component {
     return (
       <div className="container">
         <section className="controls">
+
+        {/* ========= ADD RECIPE BTN ========== */}
+          <button
+            className="add-recipe-btn"
+            aria-label="Create a new recipe"
+            onClick={() => {
+              this.props.dispatch(addRecipe() )
+              }
+            }
+          >
+            <Link to="/add-recipe">
+              + ADD RECIPE
+            </Link>  
+          </button>
 
         {/* ========= SURPRISE BTN ========== */}
           <button 
@@ -129,6 +158,7 @@ export class RecipeList extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
+    addRecipe: state.navReducer.addRecipe,
     recipes: state.recipeReducer.recipes,
     loading: state.recipeReducer.loading,
     error: state.recipeReducer.error,

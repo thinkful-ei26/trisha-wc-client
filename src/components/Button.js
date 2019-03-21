@@ -1,17 +1,38 @@
 import React from 'react';
-import { addRecipe } from '../actions/nav';
 import { connect } from 'react-redux';
-import RecipeForm from './RecipeForm';
-import { Link } from 'react-router-dom';
+import { infoClick/* , addRecipe */ } from '../actions/nav';
+// import RecipeForm from './RecipeForm';
+import InfoModal from './InfoModal';
+import { Route, Link } from 'react-router-dom';
 
 export function Button(props) {
-  
-  if(props.addRecipe) { 
-    return <RecipeForm />
-  }
+  if(props.info) { 
+    return (
+      <Route path="/info" component={InfoModal} />
+    )
+  } 
+
+  // if(props.addRecipe) { 
+  //   return <RecipeForm />
+  // }
 
   return (
-    <div className="add-recipe-container">
+    <section className="controls">
+      <div className="header-left">
+        <button
+          className="info-btn" href="#info"
+          aria-label="How to use this app"
+          onClick={ () => {
+            props.dispatch(infoClick()) 
+            }
+          }
+        >
+          <Link to="/info">
+            <span className="info-text">INFO</span>
+          </Link>
+        </button>
+      </div>
+      {/* <div className="add-recipe-container">
         <button
           className="add-recipe-btn"
           aria-label="Create a new recipe"
@@ -25,13 +46,16 @@ export function Button(props) {
           </Link>
           
         </button>
-    </div>
+      </div> */}
+    </section>
+   
   );
 }
 
 export const mapStateToProps = (state) => {
   return {
-    addRecipe: state.navReducer.addRecipe
+    /* addRecipe: state.navReducer.addRecipe, */
+    info: state.navReducer.info
   }
 };
 
