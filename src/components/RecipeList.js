@@ -54,7 +54,6 @@ export class RecipeList extends React.Component {
     return ( <Recipes /> )
   }
 
- 
 
   //grab the search value and dispatch the searchRecipe async fn
   search(e) {
@@ -68,10 +67,10 @@ export class RecipeList extends React.Component {
   render () {
     return (
       <div className="container">
-        <section className="controls">
+        {/* <ul className="controls"> */}
 
         {/* ========= ADD RECIPE BTN ========== */}
-          <button
+          {/* <button
             className="add-recipe-btn"
             aria-label="Create a new recipe"
             onClick={() => {
@@ -82,28 +81,72 @@ export class RecipeList extends React.Component {
             <Link to="/add-recipe">
               + ADD RECIPE
             </Link>  
-          </button>
+          </button> */}
 
         {/* ========= SURPRISE BTN ========== */}
-          <button 
+          {/* <button 
             className="surprise-btn"
             onClick={ () => {
               this.props.dispatch(surpriseRecipes())
             }}
           >
             <Link to={`/recipes/surprise`}>Surprise Me</Link>
-          </button>
+          </button> */}
 
         {/* ========= SHOW ALL RECIPES ========== */}
-          <button 
+          {/* <button 
             className="show-all-btn"
             onClick={ () => {
               this.props.dispatch(fetchRecipes());
             }}>
             <Link to="/recipes">Show All Recipes</Link>
           </button>
+        </ul> */}
 
-         {/* ========= SEARCH FORM ========== */}
+
+        <section className="header-middle-area controls">
+        <nav className="main-nav" id="main-nav">
+          <ul className="main-sections">
+            <li className="add-recipe">
+              <button
+                className="add-recipe-btn"
+                aria-label="Create a new recipe"
+                onClick={() => {
+                  this.props.dispatch(addRecipe() )
+                  }
+                }
+              >
+                <Link to="/add-recipe">
+                  + Add Recipe
+                </Link>  
+              </button>
+            </li>
+            <li className="surprise-me">
+              <button 
+              className="surprise-btn"
+              onClick={ () => {
+                this.props.dispatch(surpriseRecipes())
+              }}
+            >
+              <Link to={`/recipes/surprise`}>Surprise Me</Link>
+            </button>
+            </li>          
+            <li className="show-all-recipes">
+              <button 
+              className="show-all-btn"
+              onClick={ () => {
+                this.props.dispatch(fetchRecipes());
+              }}>
+                <Link to="/recipes">Show All Recipes</Link>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </section> 
+
+
+        <article>
+            {/* ========= SEARCH FORM ========== */}
           <div className="search-section">
             <form 
               id="search-form"
@@ -141,7 +184,7 @@ export class RecipeList extends React.Component {
               </div>
             </form>
           </div>
-        </section>
+        </article>
         
       {/* ========= ARIA-LIVE RECIPE-LIST ========== */}
         <ul 

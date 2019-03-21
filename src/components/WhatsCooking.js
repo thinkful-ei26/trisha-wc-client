@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../styles/WhatsCooking.css';
 import RecipeList from './RecipeList';
 import TopNav from './TopNav';
-import Button from './Button';
 
 export class WhatsCooking extends Component {
   
@@ -94,7 +93,6 @@ export class WhatsCooking extends Component {
       return (
         <main className="whats-cooking">
           <TopNav />
-          <Button />
           <RecipeList /> 
         </main> 
       );
