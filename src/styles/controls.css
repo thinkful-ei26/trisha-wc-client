@@ -108,21 +108,6 @@
     transition: all .3s ease;
     height: 4rem;
   }
-
-  .surprise-btn, .show-all-btn {
-    max-width: 30rem;
-    align-self: center;
-    margin-bottom: 10px;
-    margin: 1.25rem 0 0;
-  }
-
-  .search-section {
-    max-width: 30rem;
-  }
-  .controls {
-    margin: 10px;
-    padding: 10px;
-  }
 }
 
 .dashboard-nav {
@@ -146,7 +131,6 @@
 }
 
 .main-sections li:hover, .main-sections li:focus {
-  /* background-color:  rgba(19, 18, 18, 0.1); */
   color: white;
   box-shadow: inset 0 0 0 1px rgb(244, 117, 33);
   background-image: linear-gradient(to top left,#ff8a00,#da1b60);
