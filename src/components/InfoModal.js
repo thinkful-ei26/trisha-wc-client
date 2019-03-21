@@ -11,9 +11,7 @@ export function InfoModal(props) {
         className="info-content"
         aria-live="polite"
       >       
-        <h2>
-          How to use this app
-        </h2>
+        <h2>How to use this app</h2>
         <p>
           Get inspired by <strong>What’s Cooking</strong>, a public recipe database that can help you narrow down your choices. Without logging in, you can:
         </p>
@@ -41,9 +39,7 @@ export function InfoModal(props) {
               GitHub Repo
             </a>
           </button>
-  
         </div>  
-       
       </div>
     </div>
   );

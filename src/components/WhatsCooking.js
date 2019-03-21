@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/WhatsCooking.css';
-import RecipeList from './RecipeList';
 import TopNav from './TopNav';
+import RecipeList from './RecipeList';
 
 export class WhatsCooking extends Component {
   
