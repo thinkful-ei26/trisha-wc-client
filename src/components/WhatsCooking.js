@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/WhatsCooking.css';
-import RecipeList from './RecipeList';
 import TopNav from './TopNav';
+import RecipeList from './RecipeList';
 
 export class WhatsCooking extends Component {
   
@@ -9,7 +9,8 @@ export class WhatsCooking extends Component {
     super(props);
     this.state = {
       visited: false, 
-      close: false
+      close: false,
+      addRecipe: false
     }
   }
   
@@ -51,22 +52,27 @@ export class WhatsCooking extends Component {
     if(!this.state.visited && !this.state.close) {
      return (
       <main className="whats-cooking">
+       <TopNav />
         <div 
           className="first-timer"
           aria-live="polite"
           ref={(ref) => this._div = ref} 
         > 
-          <div className="first-timer-content">
-            <h3>How to use this app</h3> 
-            <p>
-              <strong>What's Cooking</strong> is a full-stack app that can help you narrow down your choices. On page load, a user can: 
-            </p>
-            <ul className="info-text-list">
-              <li>Browse through the recipe list for meal ideas and click on a recipe for instructions to make the dish.</li>
-              <li>Not sure what to cook? Click the "Surprise Me" button to generate a random recipe.</li>
-              <li>Add a new recipe to the "What's Cooking?" app by clicking on the "+ Add Recipe" button</li>
-            </ul>
-            <p>A user does not need to login in order to use my app.</p>         
+          <div className="first-timer-content"> 
+          <h2>
+            How to use this app
+          </h2>
+          <p>
+            Get inspired by <strong>What’s Cooking</strong>, a public recipe database that can help you narrow down your choices. Without logging in, you can:
+          </p>
+          <ul className="info-text-list">
+            <li>Browse through the recipe list for meal ideas</li>
+            <li>Click on a recipe to view detailed instructions</li>
+            <li>Need inspiration? Click the "Surprise Me" button to generate a random recipe.</li>
+            <li>Add a new recipe to the "What's Cooking?" app by clicking on the "+ Add Recipe" button</li>
+          </ul>
+
+          <h3>Search for a recipe and start using the app now!</h3>          
             <a
               className="github-repo" href="https://github.com/thinkful-ei26/trisha-wc-client"
             >
@@ -80,7 +86,6 @@ export class WhatsCooking extends Component {
             </button>
           </div>      
         </div> 
-        <TopNav />
         <RecipeList />
       </main>
       )

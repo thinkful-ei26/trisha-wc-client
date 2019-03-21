@@ -7,7 +7,7 @@ export class Recipes extends Component {
   render() { 
     const { recipes } = this.props;
 
-    /* ========= MAP NESTED OBJECTS IN RECIPES TO ACCESS INGREDIENTS & DIRECTIONS ========== */
+    /* ======= MAP NESTED OBJECTS IN RECIPES TO ACCESS INGREDIENTS & DIRECTIONS ======= */
     const ingredient = (ingredients) => {
       return ingredients.map((ingredient, index) => {
         return (
@@ -60,11 +60,11 @@ export class Recipes extends Component {
           style={{display: recipe.expanded ? 'block': 'none'}}
         >
           <hr/>
-          <p>
-            <strong>Prep Time:</strong> {recipe.prep}
-            <strong>Cook Time:</strong> {recipe.cook}
-            <strong>Number of Servings:</strong> {recipe.serving}
-          </p>
+          <ul className="recipe-details">
+            <li><strong>Prep Time:</strong> {recipe.prep} </li>
+            <li><strong>Cook Time:</strong> {recipe.cook}</li>
+            <li><strong>Number of Servings:</strong> {recipe.serving}</li>
+          </ul>
           <p>
             <strong>Ingredients:</strong> 
           </p>

@@ -137,8 +137,8 @@ export class ReportForm extends Component {
       </ul>
     );
     
-    return (
-      <div className="add-recipe-overlay">
+    return (     
+      <li className="add-recipe-overlay">
         <form
           className="new-recipe-form float"
           onSubmit={handleSubmit(values => this.onSubmit(values) )}
@@ -281,7 +281,7 @@ export class ReportForm extends Component {
           </button>
           </fieldset>
         </form>
-      </div>
+      </li>
     );
   }
 }

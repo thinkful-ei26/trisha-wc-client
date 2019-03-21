@@ -24,10 +24,6 @@
   padding-bottom: 50px;
 }
 
-.container {
-  margin-top: 80px;
-}
-
 a {
   color: #e8e8e9;
   text-decoration: none;
@@ -40,6 +36,7 @@ button {
 
 input, textarea {
   border-radius: 8px;
+  font-size: 16px;
 }
 
 .first-timer {

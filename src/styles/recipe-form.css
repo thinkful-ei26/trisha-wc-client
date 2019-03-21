@@ -67,7 +67,8 @@
   border-bottom: 2px solid rgb(244, 117, 33);
   padding-bottom: 1rem;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 .new-recipe-form {
@@ -143,14 +144,8 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
     font-size: 0.9rem;
   }
 
-  /* h2 {
-    font-size: 1.2rem;
-    font-weight: bolder;
-  } */
-
   legend {
     font-weight: 900;
-    /* font-size: 1.5rem; */
     color: #b0aebb;
     width: 100%;
   }
@@ -159,7 +154,6 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
     width: 100%;
     background-color: #1b1a26;
     border: .125rem solid #b0aebb;
-    /* font-size: 1rem; */
     font-weight: 500;
     color: #b0aebb;
     height: 12vh;
@@ -168,7 +162,6 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   select {
     width: 100%;
     background-color: inherit;
-    /* font-size: 1rem; */
     font-weight: 500;
     color: #b0aebb;
   }
@@ -176,8 +169,6 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   input {
     background-color: #1b1a26;
     border: .125rem solid #b0aebb;
-    /* height: 2.375rem;
-    font-size: 1rem; */
     font-weight: 500;
     color: #b0aebb;
     width: 100%;
@@ -195,12 +186,10 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   }
 
   button {
-    /* font-size: 1rem; */
     font-weight: normal;
   }
 
   .add-btn, .save-recipe-btn, .clear-values-btn, .cancel-add-recipe-btn {
-    /* font-size: 1rem; */
     font-weight: normal;
   }
 
@@ -209,10 +198,6 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   }
 }  
 
-/* .remove-btn {
-  font-size: 1rem;
-} */
-
 @media screen and (min-width: 768px) {
   .float {
     padding: 0;
@@ -220,7 +205,7 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   }
 
   .recipe-list {
-    padding: 0;
+    padding: 10px;
     margin: 0 auto;
     max-width: 85%;
   }
@@ -228,10 +213,6 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   .recipe {
     width: 100%;
     margin-bottom: 15px;
-  }
-
-  .controls {
-    margin-top: 1vh;
   }
 
   h2 {
