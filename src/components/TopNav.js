@@ -6,7 +6,6 @@ import '../styles/top-nav.css';
 import { Route, Link } from 'react-router-dom';
 
 export function TopNav(props) {
-  
   if(props.info) { 
     return (
       <Route path="/info" component={InfoModal} />
@@ -34,7 +33,7 @@ export function TopNav(props) {
           </Link>
         </button>
       </li>
-      <div className="wc-header-bar"></div>
+      <li className="wc-header-bar"></li>
     </ul>
   );
 }

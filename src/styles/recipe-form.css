@@ -68,6 +68,7 @@
   padding-bottom: 1rem;
   width: 100%;
   margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 .new-recipe-form {
@@ -131,7 +132,7 @@ textarea:hover, select:hover, input:hover, textarea:focus, select:focus, input:f
   }
 
   .recipe-list {
-    padding: 10px;
+    padding: 0;
     margin: 0 auto;
   }
 

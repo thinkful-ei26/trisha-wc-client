@@ -42,10 +42,10 @@ export class RecipeList extends React.Component {
 
     if(addRecipe) { 
       return (
-        <div>
+        <li>
           <RecipeForm />
           <Recipes />
-        </div>
+        </li>
 
       )
     }
@@ -67,43 +67,6 @@ export class RecipeList extends React.Component {
   render () {
     return (
       <div className="container">
-        {/* <ul className="controls"> */}
-
-        {/* ========= ADD RECIPE BTN ========== */}
-          {/* <button
-            className="add-recipe-btn"
-            aria-label="Create a new recipe"
-            onClick={() => {
-              this.props.dispatch(addRecipe() )
-              }
-            }
-          >
-            <Link to="/add-recipe">
-              + ADD RECIPE
-            </Link>  
-          </button> */}
-
-        {/* ========= SURPRISE BTN ========== */}
-          {/* <button 
-            className="surprise-btn"
-            onClick={ () => {
-              this.props.dispatch(surpriseRecipes())
-            }}
-          >
-            <Link to={`/recipes/surprise`}>Surprise Me</Link>
-          </button> */}
-
-        {/* ========= SHOW ALL RECIPES ========== */}
-          {/* <button 
-            className="show-all-btn"
-            onClick={ () => {
-              this.props.dispatch(fetchRecipes());
-            }}>
-            <Link to="/recipes">Show All Recipes</Link>
-          </button>
-        </ul> */}
-
-
         <section className="header-middle-area controls">
         <nav className="main-nav" id="main-nav">
           <ul className="main-sections">
